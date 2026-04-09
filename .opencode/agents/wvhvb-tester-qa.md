@@ -22,6 +22,8 @@ permission:
     "stack-standards": allow
     "ticket-execution": allow
     "review-audit-bridge": allow
+    "godot-android-game": allow
+    "free-asset-sourcing": allow
   task:
     "*": deny
   bash:
@@ -34,6 +36,8 @@ permission:
     "head *": allow
     "tail *": allow
     "git diff*": allow
+    "godot4 *": allow
+    "godot *": allow
     "npm test*": allow
     "npm run test*": allow
     "npm run lint*": allow

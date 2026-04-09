@@ -20,6 +20,8 @@ permission:
     "project-context": allow
     "ticket-execution": allow
     "review-audit-bridge": allow
+    "godot-android-game": allow
+    "free-asset-sourcing": allow
   task:
     "*": deny
     "wvhvb-utility-summarize": allow
@@ -33,6 +35,8 @@ permission:
     "head *": allow
     "tail *": allow
     "git diff*": allow
+    "godot4 *": allow
+    "godot *": allow
     "python -m py_compile*": allow
     "python -c *": allow
     "python3 -m py_compile*": allow

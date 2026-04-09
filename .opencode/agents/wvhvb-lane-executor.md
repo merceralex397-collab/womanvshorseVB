@@ -25,6 +25,8 @@ permission:
     "ticket-execution": allow
     "local-git-specialist": allow
     "isolation-guidance": allow
+    "godot-android-game": allow
+    "free-asset-sourcing": allow
   task:
     "*": deny
   bash:
@@ -37,6 +39,8 @@ permission:
     "tail *": allow
     "git status*": allow
     "git diff*": allow
+    "godot4 *": allow
+    "godot *": allow
     "npm *": allow
     "pnpm *": allow
     "yarn *": allow

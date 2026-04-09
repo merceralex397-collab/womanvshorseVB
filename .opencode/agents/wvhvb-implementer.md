@@ -40,6 +40,8 @@ permission:
     "tail *": allow
     "git status*": allow
     "git diff*": allow
+    "godot4 *": allow
+    "godot *": allow
     "npm *": allow
     "pnpm *": allow
     "yarn *": allow
