@@ -1,0 +1,91 @@
+{
+  "managed_repo": "/home/pc/projects/Scafforge",
+  "template_commit": "8e43aef27487f524ea93400d0a7a422afef78d71",
+  "template_commit_result": {
+    "success": true,
+    "commit": "8e43aef27487f524ea93400d0a7a422afef78d71",
+    "reason": null,
+    "detail": null
+  },
+  "template_asset_root": "skills/repo-scaffold-factory/assets/project-template",
+  "project_name": "Woman vs Horse VB",
+  "project_slug": "womanvshorsevb",
+  "package_name": "com.example.womanvshorsevb",
+  "agent_prefix": "wvhvb",
+  "generation_scope": "full",
+  "runtime_models": {
+    "tier": "standard",
+    "provider": "minimax-coding-plan",
+    "planner": "minimax-coding-plan/MiniMax-M2.7",
+    "implementer": "minimax-coding-plan/MiniMax-M2.7",
+    "utility": "minimax-coding-plan/MiniMax-M2.7"
+  },
+  "stack_label": "Godot Android",
+  "deliverable_kind": "Android game APK \u2014 woman fights waves of enemy horses",
+  "deliverable_artifact_path": null,
+  "product_finish_contract": {
+    "deliverable_kind": "Android game APK \u2014 woman fights waves of enemy horses",
+    "placeholder_policy": "No placeholder art. All sprites from free/open sources with proper attribution.",
+    "visual_finish_target": "2D top-down view with sourced sprite sheets. Polished look from curated open assets.",
+    "audio_finish_target": "SFX from Freesound.org (CC0). Optional background music from open sources.",
+    "content_source_plan": "Free/open-source assets: Kenney.nl, OpenGameArt.org, Freesound.org. All CC0 or CC-BY.",
+    "licensing_or_provenance_constraints": "All assets must be CC0 or CC-BY. Full provenance in assets/PROVENANCE.md. CC-BY requires credits scene.",
+    "finish_acceptance_signals": "APK compiles and installs. All waves playable. All assets have provenance entries. Credits scene shows attributions."
+  },
+  "bootstrap_steps": [
+    "repo-scaffold-factory/render-full-scaffold"
+  ],
+  "tracking": {
+    "invocation_log": ".opencode/state/invocation-log.jsonl",
+    "skill_ping_tool": "skill_ping",
+    "tracker_plugin": "invocation-tracker"
+  },
+  "workflow_contract": {
+    "process_version": 7,
+    "ticket_contract_version": 3,
+    "parallel_mode": "sequential",
+    "manager_hierarchy": {
+      "first_class_scaffold_profile": false,
+      "advanced_customization_allowed": true
+    },
+    "post_migration_verification": {
+      "enabled": true,
+      "backlog_verifier_agent": "wvhvb-backlog-verifier",
+      "ticket_creator_agent": "wvhvb-ticket-creator"
+    }
+  },
+  "managed_surfaces": {
+    "replace_on_retrofit": [
+      "opencode.jsonc",
+      ".opencode/tools",
+      ".opencode/plugins",
+      ".opencode/commands",
+      "scaffold-managed .opencode/skills",
+      "docs/process/workflow.md",
+      "docs/process/tooling.md",
+      "docs/process/model-matrix.md",
+      "docs/process/git-capability.md",
+      "START-HERE.md managed block"
+    ],
+    "project_specific_follow_up": [
+      ".opencode/skills",
+      ".opencode/agents",
+      "docs/process/agent-catalog.md"
+    ],
+    "preserve_project_sources": [
+      "docs/spec/CANONICAL-BRIEF.md",
+      "tickets/manifest.json",
+      "tickets/*.md",
+      ".opencode/state/artifacts",
+      ".opencode/state/bootstrap",
+      ".opencode/state/plans",
+      ".opencode/state/implementations",
+      ".opencode/state/reviews",
+      ".opencode/state/qa",
+      ".opencode/state/smoke-tests",
+      ".opencode/state/handoffs"
+    ]
+  },
+  "migration_history": [],
+  "repair_history": []
+}
