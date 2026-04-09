@@ -3,27 +3,38 @@
 <!-- SCAFFORGE:START_HERE_BLOCK START -->
 ## What This Repo Is
 
-Woman vs Horse VB
+Woman vs Horse VB — A 2D top-down arena action game for Android where a warrior woman fights waves of enemy horses. Built with Godot 4.6, using free/open-source sprites and audio from Kenney.nl, OpenGameArt.org, and Freesound.org.
 
 ## Current State
 
-The repo is operating under the managed OpenCode workflow. Use the canonical state files below instead of memory or raw ticket prose, and keep the single-lane-first execution posture unless bounded parallel work is explicitly justified.
+Scaffold complete. Skills populated with Godot 4.6 patterns, free asset sourcing procedures, and MiniMax-M2.7 operating constraints. Ticket pack loaded with 19 tickets across 6 waves. Ready for bootstrap and first ticket execution.
 
 ## Read In This Order
 
 1. README.md
 2. AGENTS.md
-3. docs/spec/CANONICAL-BRIEF.md
-4. docs/process/workflow.md
-5. tickets/manifest.json
-6. tickets/BOARD.md
+3. docs/AGENT-DELEGATION.md
+4. docs/spec/CANONICAL-BRIEF.md
+5. docs/process/workflow.md
+6. tickets/manifest.json
+7. tickets/BOARD.md
+
+## Key Skills
+
+- `godot-android-game` — Godot 4.6 GDScript patterns, scene structure, asset import, Android export
+- `free-asset-sourcing` — CC0/CC-BY asset sourcing from Kenney.nl, OpenGameArt.org, Freesound.org
+- `model-operating-profile` — MiniMax-M2.7 prompting constraints
+
+## Asset Sourcing Workflow
+
+All art, audio, and fonts come from verified CC0/CC-BY sources. Asset tickets (ASSET-001 through ASSET-005) are in wave 1 and block implementation work. Every asset must have an entry in `assets/PROVENANCE.md`. CC-BY assets require credits in the credits scene (UI-003).
 
 ## Current Or Next Ticket
 
 - ID: SETUP-001
-- Title: Bootstrap environment and confirm scaffold readiness
+- Title: Create main scene with arena
 - Wave: 0
-- Lane: repo-foundation
+- Lane: scene-setup
 - Stage: planning
 - Status: todo
 - Resolution: open
@@ -32,12 +43,12 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 ## Dependency Status
 
 - current_ticket_done: no
-- dependent_tickets_waiting_on_current: none
+- dependent_tickets_waiting_on_current: SETUP-002, ANDROID-001, ASSET-001..005
 - split_child_tickets: none
 
 ## Generation Status
 
-- handoff_status: bootstrap recovery required
+- handoff_status: scaffold complete — bootstrap required
 - process_version: 7
 - parallel_mode: sequential
 - pending_process_verification: false
@@ -60,7 +71,9 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 ## Known Risks
 
 - Validation can fail for environment reasons until bootstrap proof exists.
-- Historical completion should not be treated as current trust once defects or process drift are discovered.
+- Asset sourcing depends on external sites (Kenney.nl, OpenGameArt.org, Freesound.org) being available.
+- Horse sprites may be scarce in CC0 top-down packs — may need creative alternatives.
+- Delegation mistakes can cause lifecycle loops; check `docs/AGENT-DELEGATION.md` before improvising a new handoff path.
 
 ## Next Action
 

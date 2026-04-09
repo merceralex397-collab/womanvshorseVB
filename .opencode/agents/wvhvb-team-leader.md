@@ -37,6 +37,8 @@ permission:
     "research-delegation": allow
     "local-git-specialist": allow
     "isolation-guidance": allow
+    "godot-android-game": allow
+    "free-asset-sourcing": allow
   task:
     "*": deny
     "explore": allow
@@ -280,3 +282,23 @@ When this project targets Android (Godot game):
    - `JAVA_HOME`: check `echo $JAVA_HOME` or `/etc/profile.d/java.sh`
    - `ANDROID_HOME`: check `echo $ANDROID_HOME`
    - Debug keystore: check editor settings at `~/.config/godot/editor_settings-*.tres`
+
+## Asset Sourcing Workflow
+
+This project uses free/open assets exclusively. All art, audio, and fonts come from verified CC0/CC-BY sources.
+
+Routing rules for asset tickets:
+
+1. Asset tickets (ASSET-*) are in early waves and block implementation work
+2. Each asset ticket must produce files in `assets/` AND update `assets/PROVENANCE.md`
+3. CC-BY assets also require a credits entry for the credits scene (UI-003)
+4. Load `free-asset-sourcing` skill before delegating any asset sourcing work
+5. Implementation tickets should not start until their dependent asset tickets are done
+6. Verify provenance entries exist before marking an asset ticket as done
+
+Delegation brief additions for asset tickets:
+
+- Include the `free-asset-sourcing` skill reference
+- Specify target subdirectory under `assets/`
+- Specify license preference (CC0 preferred, CC-BY acceptable)
+- Require PROVENANCE.md update as part of acceptance
