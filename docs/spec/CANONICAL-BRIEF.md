@@ -1,74 +1,64 @@
-# Canonical Brief
+# Canonical Brief — Woman vs Horse VB
 
 ## Project Summary
 
-Replace this section with the normalized project brief.
+A 2D top-down arena action game for Android where a warrior woman fights waves of enemy horses. Built with Godot 4.6, using free/open-source sprites and audio from Kenney.nl, OpenGameArt.org, and Freesound.org. Full provenance tracking for all assets.
 
 ## Goals
 
-- Replace with explicit outcomes
+- Playable wave-based combat game on Android
+- Polished visuals from curated free/open sprite sheets
+- Touch controls: virtual joystick + attack buttons
+- Progressive difficulty across waves
+- Full asset provenance tracking in assets/PROVENANCE.md
+- Credits scene with CC-BY attributions
 
 ## Non-Goals
 
-- Replace with explicit exclusions
+- No story/narrative beyond gameplay
+- No character customization
+- No online features or IAP
+- No save system
 
 ## Constraints
 
-- Runtime: Ubuntu
-- Workflow: local-git-capable, ticketed, deterministic
-- Agent design: autonomous with internal gates, no `ask`
-- OpenCode layer: commands for humans, tools/plugins for autonomy
+- All assets from CC0 or CC-BY licensed sources only
+- assets/PROVENANCE.md must track every external asset
+- Credits scene required for CC-BY attributions
+- Android (Godot 4.6 export), landscape, touch-only
 
-## Tooling and Model Constraints
+## Core Game Design
 
-- Provider: `minimax-coding-plan`
-- Planner/reviewer model: `minimax-coding-plan/minimax-coding-plan/MiniMax-M2.7`
-- Implementer model: `minimax-coding-plan/minimax-coding-plan/MiniMax-M2.7`
-- Utility/helper model: `minimax-coding-plan/minimax-coding-plan/MiniMax-M2.7`
+Same core loop as VA: wave-based arena combat, virtual joystick movement, tap/hold attack, progressive difficulty. See game design document for full details.
 
-## Required Outputs
-
-- repo structure
-- docs
-- ticket pack
-- OpenCode agents, tools, plugins, commands, and local skills
-
-## Canonical Truth Map
-
-- Facts and decisions: `docs/spec/CANONICAL-BRIEF.md`
-- Queue state and artifact metadata: `tickets/manifest.json`
-- Transient stage state: `.opencode/state/workflow-state.json`
-- Artifact bodies: the stage-specific directories under `.opencode/state/`
-- Artifact registry: `.opencode/state/artifacts/registry.json`
-- Restart surface: `START-HERE.md`
+### Asset Sources (prioritized)
+1. Kenney.nl — CC0 top-down shooter/RPG packs
+2. OpenGameArt.org — CC0/CC-BY character and tileset packs
+3. Freesound.org — CC0 SFX (attack, damage, victory)
+4. Google Fonts — OFL fonts for UI
 
 ## Blocking Decisions
 
-- Replace with the recorded batched decision packet for this repo
-- Resolve every blocking item here before generation continues
-
-## Non-Blocking Open Questions
-
-- Replace with unresolved items
+- All resolved. Free/open asset route confirmed. CC0 preferred, CC-BY acceptable with credits.
 
 ## Backlog Readiness
 
-- Replace with whether the first execution wave can be generated immediately after the blocking decision packet is resolved
+- Ready for ticket generation after asset sourcing tickets are defined.
 
 ## Acceptance Signals
 
-- Replace with project-specific success criteria
-
-## Assumptions
-
-- Replace with any required assumptions
+- APK compiles and installs on Android
+- All sprites from verified free/open sources
+- assets/PROVENANCE.md has entry for every asset file
+- Credits scene displays all CC-BY attributions
+- All waves playable with proper sprite art
 
 ## Product Finish Contract
 
-- deliverable_kind: Android game APK — woman fights waves of enemy horses
-- placeholder_policy: No placeholder art. All sprites from free/open sources with proper attribution.
-- visual_finish_target: 2D top-down view with sourced sprite sheets. Polished look from curated open assets.
-- audio_finish_target: SFX from Freesound.org (CC0). Optional background music from open sources.
-- content_source_plan: Free/open-source assets: Kenney.nl, OpenGameArt.org, Freesound.org. All CC0 or CC-BY.
-- licensing_or_provenance_constraints: All assets must be CC0 or CC-BY. Full provenance in assets/PROVENANCE.md. CC-BY requires credits scene.
-- finish_acceptance_signals: APK compiles and installs. All waves playable. All assets have provenance entries. Credits scene shows attributions.
+- deliverable_kind: Android game APK
+- placeholder_policy: No placeholder art. All sprites from free/open sources.
+- visual_finish_target: 2D top-down with sourced sprite sheets. Polished look.
+- audio_finish_target: SFX from Freesound.org (CC0). Background music optional.
+- content_source_plan: Kenney.nl, OpenGameArt.org, Freesound.org. All CC0 or CC-BY.
+- licensing_or_provenance_constraints: Full provenance in assets/PROVENANCE.md. Credits scene for CC-BY.
+- finish_acceptance_signals: APK compiles. All waves playable. All assets tracked. Credits scene works.
