@@ -1,0 +1,91 @@
+{
+  "tracking_mode": "persistent_recorded_state",
+  "assertion_input_mode": "legacy_manual_assertion",
+  "cycle_id": "2026-04-10T15:39:23Z",
+  "created_at": "2026-04-10T15:39:23Z",
+  "last_updated_at": "2026-04-10T15:45:12Z",
+  "process_version": 7,
+  "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:540b74a8695e",
+  "repair_basis_path": "/home/pc/projects/womanvshorseVB/diagnosis/20260410-153139",
+  "pruned_unknown_stages": [],
+  "required_stages": [
+    "project-skill-bootstrap",
+    "ticket-pack-builder"
+  ],
+  "stage_records": {
+    "project-skill-bootstrap": {
+      "stage": "project-skill-bootstrap",
+      "owner": "project-skill-bootstrap",
+      "category": "repo_local_skills",
+      "status": "completed",
+      "reason": "Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+      "currently_required": true,
+      "last_checked_at": "2026-04-10T15:45:12Z",
+      "last_updated_at": "2026-04-10T15:45:12Z",
+      "completion_mode": "recorded_execution",
+      "completed_by": "project-skill-bootstrap",
+      "summary": "Regenerated repo-local skills for the current repair cycle and removed stack-standards placeholder/model drift.",
+      "evidence_paths": [
+        ".opencode/skills/stack-standards/SKILL.md",
+        ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
+      ],
+      "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:540b74a8695e",
+      "first_recorded_at": "2026-04-10T15:45:12Z",
+      "last_recorded_at": "2026-04-10T15:45:12Z"
+    },
+    "ticket-pack-builder": {
+      "stage": "ticket-pack-builder",
+      "owner": "ticket-pack-builder",
+      "category": "ticket_follow_up",
+      "status": "completed",
+      "reason": "Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
+      "currently_required": true,
+      "last_checked_at": "2026-04-10T15:45:12Z",
+      "last_updated_at": "2026-04-10T15:45:12Z",
+      "completion_mode": "recorded_execution",
+      "completed_by": "scafforge-repair",
+      "summary": "Routed repair follow-up findings into remediation tickets REMED-001 through REMED-003 during the current repair cycle.",
+      "evidence_paths": [
+        "diagnosis/20260410-153928/manifest.json",
+        "tickets/manifest.json"
+      ],
+      "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:540b74a8695e",
+      "first_recorded_at": "2026-04-10T15:45:12Z",
+      "last_recorded_at": "2026-04-10T15:45:12Z"
+    }
+  },
+  "history": [
+    {
+      "recorded_at": "2026-04-10T15:45:12Z",
+      "stage": "project-skill-bootstrap",
+      "owner": "project-skill-bootstrap",
+      "category": "repo_local_skills",
+      "status": "completed",
+      "completion_mode": "recorded_execution",
+      "completed_by": "project-skill-bootstrap",
+      "summary": "Regenerated repo-local skills for the current repair cycle and removed stack-standards placeholder/model drift.",
+      "evidence_paths": [
+        ".opencode/skills/stack-standards/SKILL.md",
+        ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
+      ],
+      "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:540b74a8695e",
+      "cycle_id": "2026-04-10T15:39:23Z"
+    },
+    {
+      "recorded_at": "2026-04-10T15:45:12Z",
+      "stage": "ticket-pack-builder",
+      "owner": "ticket-pack-builder",
+      "category": "ticket_follow_up",
+      "status": "completed",
+      "completion_mode": "recorded_execution",
+      "completed_by": "scafforge-repair",
+      "summary": "Routed repair follow-up findings into remediation tickets REMED-001 through REMED-003 during the current repair cycle.",
+      "evidence_paths": [
+        "diagnosis/20260410-153928/manifest.json",
+        "tickets/manifest.json"
+      ],
+      "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:540b74a8695e",
+      "cycle_id": "2026-04-10T15:39:23Z"
+    }
+  ]
+}

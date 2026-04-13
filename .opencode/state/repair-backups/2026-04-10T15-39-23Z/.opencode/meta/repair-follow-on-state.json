@@ -1,0 +1,91 @@
+{
+  "tracking_mode": "persistent_recorded_state",
+  "assertion_input_mode": "legacy_manual_assertion",
+  "cycle_id": "2026-04-10T06:04:26Z",
+  "created_at": "2026-04-10T06:04:26Z",
+  "last_updated_at": "2026-04-10T06:05:28Z",
+  "process_version": 7,
+  "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:fe1a9ab49109",
+  "repair_basis_path": "/home/pc/projects/womanvshorseVB/diagnosis/20260410-060007",
+  "pruned_unknown_stages": [],
+  "required_stages": [
+    "project-skill-bootstrap",
+    "ticket-pack-builder"
+  ],
+  "stage_records": {
+    "project-skill-bootstrap": {
+      "stage": "project-skill-bootstrap",
+      "owner": "project-skill-bootstrap",
+      "category": "repo_local_skills",
+      "status": "completed",
+      "reason": "Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+      "currently_required": true,
+      "last_checked_at": "2026-04-10T06:05:28Z",
+      "last_updated_at": "2026-04-10T06:05:28Z",
+      "completion_mode": "recorded_execution",
+      "completed_by": "project-skill-bootstrap",
+      "summary": "Rewrote stack-standards with repo-specific Godot Android, provenance, validation, and remediation guidance for repair cycle 2026-04-10T06:04:26Z.",
+      "evidence_paths": [
+        ".opencode/skills/stack-standards/SKILL.md",
+        ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
+      ],
+      "first_recorded_at": "2026-04-10T06:05:28Z",
+      "last_recorded_at": "2026-04-10T06:05:28Z"
+    },
+    "ticket-pack-builder": {
+      "stage": "ticket-pack-builder",
+      "owner": "ticket-pack-builder",
+      "category": "ticket_follow_up",
+      "status": "completed",
+      "reason": "Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
+      "currently_required": true,
+      "last_checked_at": "2026-04-10T06:05:28Z",
+      "last_updated_at": "2026-04-10T06:05:28Z",
+      "completion_mode": "recorded_execution",
+      "completed_by": "ticket-pack-builder",
+      "summary": "Preserved the EXEC-GODOT-005a and EXEC-REMED-001 follow-up tickets for repair cycle 2026-04-10T06:04:26Z.",
+      "evidence_paths": [
+        ".opencode/state/artifacts/history/repair/ticket-pack-builder-completion.md",
+        "tickets/REMED-001.md",
+        "tickets/REMED-002.md"
+      ],
+      "first_recorded_at": "2026-04-10T06:05:28Z",
+      "last_recorded_at": "2026-04-10T06:05:28Z"
+    }
+  },
+  "history": [
+    {
+      "recorded_at": "2026-04-10T06:05:28Z",
+      "stage": "project-skill-bootstrap",
+      "owner": "project-skill-bootstrap",
+      "category": "repo_local_skills",
+      "status": "completed",
+      "completion_mode": "recorded_execution",
+      "completed_by": "project-skill-bootstrap",
+      "summary": "Rewrote stack-standards with repo-specific Godot Android, provenance, validation, and remediation guidance for repair cycle 2026-04-10T06:04:26Z.",
+      "evidence_paths": [
+        ".opencode/skills/stack-standards/SKILL.md",
+        ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
+      ],
+      "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:fe1a9ab49109",
+      "cycle_id": "2026-04-10T06:04:26Z"
+    },
+    {
+      "recorded_at": "2026-04-10T06:05:28Z",
+      "stage": "ticket-pack-builder",
+      "owner": "ticket-pack-builder",
+      "category": "ticket_follow_up",
+      "status": "completed",
+      "completion_mode": "recorded_execution",
+      "completed_by": "ticket-pack-builder",
+      "summary": "Preserved the EXEC-GODOT-005a and EXEC-REMED-001 follow-up tickets for repair cycle 2026-04-10T06:04:26Z.",
+      "evidence_paths": [
+        ".opencode/state/artifacts/history/repair/ticket-pack-builder-completion.md",
+        "tickets/REMED-001.md",
+        "tickets/REMED-002.md"
+      ],
+      "repair_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:fe1a9ab49109",
+      "cycle_id": "2026-04-10T06:04:26Z"
+    }
+  ]
+}

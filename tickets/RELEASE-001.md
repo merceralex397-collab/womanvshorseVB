@@ -1,8 +1,8 @@
-# RELEASE-001: Android export and APK build
+# RELEASE-001: Build Android runnable proof (debug APK)
 
 ## Summary
 
-Produce and validate the canonical Android debug APK at build/android/womanvshorsevb-debug.apk. Run full export, verify APK file is produced, document the exact export command and any warnings.
+Produce and validate the canonical debug APK runnable proof at `build/android/womanvshorsevb-debug.apk` using the repo's resolved Godot binary and Android export pipeline.
 
 ## Wave
 
@@ -15,7 +15,7 @@ release-readiness
 ## Parallel Safety
 
 - parallel_safe: false
-- overlap_risk: high
+- overlap_risk: medium
 
 ## Stage
 
@@ -25,28 +25,31 @@ planning
 
 todo
 
+## Trust
+
+- resolution_state: open
+- verification_state: suspect
+- finding_source: WFLOW025
+- source_ticket_id: None
+- source_mode: net_new_scope
+
 ## Depends On
 
-- ANDROID-001
-- CORE-003
-- CORE-004
-- CORE-005
-- CORE-006
-- UI-001
-- UI-002
-- UI-003
-- POLISH-001
+POLISH-001
+
+## Follow-up Tickets
+
+None
 
 ## Decision Blockers
 
-- None
+None
 
 ## Acceptance Criteria
 
-- [ ] Debug APK produced at build/android/womanvshorsevb-debug.apk or exact blocker recorded
-- [ ] Export uses the Android Debug preset from ANDROID-001
-- [ ] APK file size is reasonable (not empty, not missing assets)
-- [ ] Release-readiness evidence names the exact export command and outcome
+- [ ] `godot --headless --path . --export-debug Android build/android/womanvshorsevb-debug.apk` succeeds or the exact resolved Godot binary equivalent is recorded with the same arguments.
+- [ ] The APK exists at `build/android/womanvshorsevb-debug.apk`.
+- [ ] `unzip -l build/android/womanvshorsevb-debug.apk` shows Android manifest and classes/resources content.
 
 ## Artifacts
 

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "generated_at": "2026-04-10T16:07:58Z",
+  "repo_root": "/home/pc/projects/womanvshorseVB",
+  "audit_package_commit": "d82df7b2b0550e2378b02b10809153089e0eadd9+dirty:3038c9517adb",
+  "allowed_classes": [
+    "managed_blocker",
+    "manual_prerequisite_blocker",
+    "source_follow_up",
+    "process_state_only",
+    "advisory"
+  ],
+  "finding_count": 3,
+  "findings": [
+    {
+      "code": "EXEC-GODOT-005a",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "project.godot",
+        "export_presets.cfg",
+        "android"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-001-review-reverification.md"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "SESSION002",
+      "severity": "error",
+      "disposition_class": "manual_prerequisite_blocker",
+      "legacy_disposition_class": "managed_blocker",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "transcript-backed and repo-validated",
+      "source_files": [
+        "/home/pc/projects/Scafforge/active-plans/agent-logs/wvhvb-opencode-2026-04-10T15-15-39.log"
+      ],
+      "provenance": "script"
+    }
+  ],
+  "counts": {
+    "managed_blocker": 0,
+    "manual_prerequisite_blocker": 1,
+    "source_follow_up": 2,
+    "process_state_only": 0,
+    "advisory": 0
+  },
+  "shadow_mode_deltas": [
+    {
+      "code": "SESSION002",
+      "legacy_disposition_class": "managed_blocker",
+      "disposition_class": "manual_prerequisite_blocker",
+      "route": "ticket-pack-builder",
+      "reason": "Legacy prefix classification would label SESSION002 as managed_blocker, but the authoritative bundle assigns manual_prerequisite_blocker."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+# Smoke Test
+
+## Ticket
+
+- UI-002
+
+## Overall Result
+
+Overall Result: PASS
+
+## Notes
+
+All detected deterministic smoke-test commands passed.
+
+## Commands
+
+### 1. command override 1
+
+- reason: Explicit smoke-test command override supplied by the caller.
+- command: `godot4 --headless --path . --quit`
+- exit_code: 0
+- duration_ms: 281
+- missing_executable: none
+- failure_classification: none
+- blocked_by_permissions: false
+
+#### stdout
+
+~~~~text
+Godot Engine v4.6.2.stable.official.71f334935 - https://godotengine.org
+~~~~
+
+#### stderr
+
+~~~~text
+WARNING: res://scenes/ui/title_screen.tscn:4 - ext_resource, invalid UID: uid://c5qm5g68f3q2x - using text path instead: res://assets/sprites/ui/button_square_gloss.png
+     at: load (scene/resources/resource_format_text.cpp:500)
+ERROR: No loader found for resource: res://assets/sprites/ui/button_square_gloss.png (expected type: Texture2D)
+   at: _load (core/io/resource_loader.cpp:358)
+~~~~

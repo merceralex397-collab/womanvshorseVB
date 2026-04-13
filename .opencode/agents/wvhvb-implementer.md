@@ -1,6 +1,6 @@
 ---
 description: Hidden implementer for approved ticket work
-model: minimax-coding-plan/minimax-coding-plan/MiniMax-M2.7
+model: minimax-coding-plan/MiniMax-M2.7
 mode: subagent
 hidden: true
 temperature: 1.0
@@ -25,8 +25,6 @@ permission:
     "ticket-execution": allow
     "local-git-specialist": allow
     "isolation-guidance": allow
-    "godot-android-game": allow
-    "free-asset-sourcing": allow
   task:
     "*": deny
   bash:
@@ -35,24 +33,41 @@ permission:
     "ls *": allow
     "find *": allow
     "rg *": allow
+    "grep *": allow
     "cat *": allow
     "head *": allow
     "tail *": allow
+    "file *": allow
+    "echo *": allow
+    "test -f *": allow
+    "test -d *": allow
+    "[ -f *": allow
+    "[ -d *": allow
+    "mkdir *": allow
+    "cp *": allow
+    "mv *": allow
     "git status*": allow
     "git diff*": allow
-    "godot4 *": allow
-    "godot *": allow
     "npm *": allow
     "pnpm *": allow
     "yarn *": allow
     "bun *": allow
     "node *": allow
     "python *": allow
+    "python3 *": allow
     "pytest *": allow
     "uv *": allow
+    "curl *": allow
+    "wget *": allow
+    "unzip *": allow
+    "tar *": allow
+    "zip *": allow
     "cargo *": allow
     "go *": allow
     "make *": allow
+    "/home/pc/.local/bin/godot *": allow
+    "godot *": allow
+    "godot4 *": allow
     "rm *": deny
     "git reset *": deny
     "git clean *": deny
@@ -90,18 +105,7 @@ Stack-specific notes:
 `opencode-team-bootstrap` must rewrite this section with project-specific build, verification, pitfalls, and configuration-file guidance before implementation begins.
 
 <!-- SCAFFORGE:STACK_SPECIFIC_IMPLEMENTATION_NOTES START -->
-- **Engine**: Godot 4.6, GDScript. Load `godot-android-game` skill for patterns.
-- **GDScript style**: Use typed variables, `@export`/`@onready`, `class_name` for reusable types.
-- **Scene structure**: CharacterBody2D for player/enemies, Area2D for hitboxes/hurtboxes, AnimatedSprite2D for animation.
-- **Movement**: `move_and_slide()` on CharacterBody2D. Virtual joystick for touch input.
-- **Asset import**: Place files in `assets/sprites/`, `assets/audio/`, `assets/fonts/`. Commit `.import` files. Never commit `.godot/` cache.
-- **Sprite import**: Set filter to `Nearest` for pixel art. Use `Texture2D` import type.
-- **Audio import**: `.wav` for SFX (AudioStreamSample), `.ogg` for music (AudioStreamOggVorbis).
-- **Asset sourcing**: Load `free-asset-sourcing` skill for asset ticket work. Update `assets/PROVENANCE.md` for every asset added.
-- **Touch input**: Use `InputEventScreenTouch` and `InputEventScreenDrag`. Left screen = joystick, right = attack.
-- **Build check**: `godot4 --headless --check-only` when available, or verify scene loads and autoloads resolve.
-- **Android export**: `godot4 --headless --path . --export-debug "Android Debug" build/android/womanvshorsevb-debug.apk`
-- **Pitfall**: Missing `textures/vram_compression/import_etc2_astc=true` in project.godot silently breaks APK.
+- Pending project-specific stack notes.
 <!-- SCAFFORGE:STACK_SPECIFIC_IMPLEMENTATION_NOTES END -->
 
 Rules:

@@ -1,0 +1,233 @@
+# Planning Artifact — CORE-004: HUD (health, wave, score)
+
+## 1. Scope
+
+Create `scenes/ui/hud.tscn` with a Control-rooted HUD that displays:
+- Player health bar (textured, updates on `health_changed` signal)
+- Wave number label (updates on `wave_started` / `wave_cleared` signals from wave_spawner)
+- Score label (updates on `died` signal from enemies, which carries a score value)
+
+The HUD is instanced inside `main.tscn`'s existing `CanvasLayer` node.
+
+---
+
+## 2. Scene Structure
+
+```
+hud.tscn (root: Control)
+└── HUD (Node / autoload-ready container)
+    ├── HealthBarContainer (HBoxContainer)
+    │   ├── HealthBarBackground  (TextureRect, stretches health_bar_background.png)
+    │   └── HealthBarFill        (TextureProgressBar, uses health_bar_middle.png as fill)
+    ├── WaveLabel                (Label, text "WAVE 1")
+    └── ScoreLabel               (Label, text "SCORE: 0")
+```
+
+**Node types and roles:**
+
+| Node | Type | Role |
+|---|---|---|
+| `hud` | `Control` | Root — placed inside main.tscn CanvasLayer; handles layout |
+| `HUD` | `Node` | Logical container, owns `_ready` signal connections |
+| `HealthBarContainer` | `HBoxContainer` | Layout wrapper for the health bar |
+| `HealthBarBackground` | `TextureRect` | Static background sprite, `health_bar_background.png` |
+| `HealthBarFill` | `TextureProgressBar` | Foreground fill bar driven by player health ratio, `health_bar_middle.png` |
+| `WaveLabel` | `Label` | Displays current wave number |
+| `ScoreLabel` | `Label` | Displays cumulative score |
+
+**Theme / Font:**  
+Both `WaveLabel` and `ScoreLabel` use `PressStart2P-Regular.ttf` loaded as a `DynamicFont`.  
+Set `theme_override_fonts/font` on each Label node in the scene inspector or via `_ready()`.
+
+---
+
+## 3. Signal Connections
+
+### 3a. Player `health_changed` → HUD update
+
+`player.gd` already defines:
+```gdscript
+signal health_changed(new_health: int)
+```
+
+**Connection:** In `hud.gd` (the script attached to the `HUD` node):
+```gdscript
+func _ready() -> void:
+    var player = get_node("/root/Main/Player")
+    player.health_changed.connect(_on_player_health_changed)
+
+func _on_player_health_changed(new_health: int) -> void:
+    var max_health = player.max_health  # assumes @export var max_health on player, default 100
+    var ratio = clampf(float(new_health) / float(max_health), 0.0, 1.0)
+    $HealthBarContainer/HealthBarFill.value = ratio * 100.0
+```
+
+> **NOTE:** If `max_health` is not yet an exported var on player, add `@export var max_health: int = 100` alongside the existing `health` export. This is a compatible additive change that does not break SETUP-002.
+
+### 3b. Wave spawner signals → HUD update
+
+`wave_spawner.gd` (CORE-003, not yet written) must emit:
+```gdscript
+signal wave_started(wave_num: int)
+signal wave_cleared(wave_num: int)
+```
+
+**Connection contract — hud.gd:**
+```gdscript
+func _ready() -> void:
+    var wave_spawner = get_node("/root/Main/WaveSpawner")  # or get_node_async if deferred
+    wave_spawner.wave_started.connect(_on_wave_started)
+    wave_spawner.wave_cleared.connect(_on_wave_cleared)
+
+func _on_wave_started(wave_num: int) -> void:
+    $WaveLabel.text = "WAVE %d" % wave_num
+
+func _on_wave_cleared(wave_num: int) -> void:
+    pass  # wave label already shows current wave; no change needed on clear
+```
+
+> **Blocker (CORE-003 dependency):** `wave_spawner.gd` does not exist yet. The HUD cannot connect to those signals until CORE-003 is implemented. However, the HUD scene can still be built, scripted, and verified structurally. The signal connections should be written defensively with a null-check or `add_to_group` pattern so the HUD does not hard-crash if WaveSpawner is absent during early testing.
+
+**Defensive pattern:**
+```gdscript
+func _ready() -> void:
+    var player = get_node("/root/Main/Player")
+    if player:
+        player.health_changed.connect(_on_player_health_changed)
+    var wave_spawner = get_node_or_null("/root/Main/WaveSpawner")
+    if wave_spawner:
+        wave_spawner.wave_started.connect(_on_wave_started)
+        wave_spawner.wave_cleared.connect(_on_wave_cleared)
+```
+
+### 3c. Score tracking via enemy death signals
+
+**Score emission:** Enemies (`horse_base.gd`, CORE-002) emit `died(score_value: int)` on death. The HUD listens for this `died` signal directly and increments its internal score counter.
+
+**Contract — enemy (horse_base.gd) emits:**
+```gdscript
+signal died(score_value: int)
+```
+
+**HUD update:**
+```gdscript
+var _score: int = 0
+
+func _on_enemy_died(score_value: int) -> void:
+    _score += score_value
+    $ScoreLabel.text = "SCORE: %d" % _score
+```
+
+> **Blocker (CORE-002 dependency):** `horse_base.gd` does not exist yet. The HUD script should have a stub `_on_enemy_died` and an internal `_score` counter so the score label is functional once CORE-002 wiring is in place. Score increments on `died` signal from any enemy.
+
+---
+
+## 4. Sourced Assets Used
+
+| Asset | Path | Role |
+|---|---|---|
+| `health_bar_background.png` | `assets/sprites/ui/` | HealthBarBackground TextureRect |
+| `health_bar_middle.png` | `assets/sprites/ui/` | HealthBarFill TextureProgressBar fill texture |
+| `PressStart2P-Regular.ttf` | `assets/fonts/` | DynamicFont for WaveLabel and ScoreLabel |
+
+Both UI sprites are 16×16 PNG segments (CC0, Kenney.nl). For a horizontal bar, 3–4 segments are tiled horizontally to span the screen width. The `TextureProgressBar` `under` texture property is set to `health_bar_background.png` (stretched), and `progress` texture is `health_bar_middle.png` (also stretched).
+
+---
+
+## 5. HUD Instantiation in main.tscn
+
+In `main.tscn`, add an `[ext_resource]` for `hud.tscn` and instance it as a child of the existing `CanvasLayer`:
+
+```toml
+# in main.tscn load_steps
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="2"]
+
+# CanvasLayer node (already exists in main.tscn)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("2")]
+```
+
+`main.tscn` already has a `CanvasLayer` node. The HUD scene root is a `Control` node (not another `CanvasLayer`) so it inherits the parent's draw layer correctly when instanced as a child.
+
+---
+
+## 6. Stack-Specific Godot 4.6 UI Patterns
+
+### TextureProgressBar (health bar fill)
+```gdscript
+var bar = TextureProgressBar.new()
+bar.texture_under = load("res://assets/sprites/ui/health_bar_background.png")
+bar.texture_progress = load("res://assets/sprites/ui/health_bar_middle.png")
+bar.stretch_mode = TextureRect.STRETCH_TILE
+bar.min_value = 0.0
+bar.max_value = 100.0
+bar.value = 100.0
+```
+
+### DynamicFont + Theme override (pixel font)
+```gdscript
+var font = DynamicFont.new()
+font.font_data = load("res://assets/fonts/PressStart2P-Regular.ttf")
+font.size = 16  # pixel font — use small size for crispness
+
+var label = Label.new()
+label.add_theme_font_override("font", font)
+label.text = "WAVE 1"
+```
+
+### Stretch mode for 16×16 tile-based bars
+Set `stretch_mode = TextureRect.STRETCH_TILE` on both the under and progress textures so the 16×16 segments tile cleanly instead of scaling/blurring.
+
+---
+
+## 7. Build / Verify Commands
+
+### Godot headless syntax check
+```bash
+godot4 --headless --path /home/pc/projects/womanvshorseVB --quit
+```
+Expected: exit code 0 with no parse errors for `hud.tscn` and `hud.gd`.
+
+### File existence check (pre-flight)
+```bash
+ls /home/pc/projects/womanvshorseVB/scenes/ui/hud.tscn && \
+ls /home/pc/projects/womanvshorseVB/scenes/ui/hud.gd && \
+ls /home/pc/projects/womanvshorseVB/assets/sprites/ui/health_bar_background.png && \
+ls /home/pc/projects/womanvshorseVB/assets/sprites/ui/health_bar_middle.png && \
+ls /home/pc/projects/womanvshorseVB/assets/fonts/PressStart2P-Regular.ttf
+```
+
+### Signal wiring smoke test (post-implementation)
+After `hud.gd` and signal connections are in place, run:
+```bash
+godot4 --headless --path /home/pc/projects/womanvshorseVB --quit
+```
+Any `connect` call to a non-existent signal will produce a runtime warning or error on load — caught by this headless run.
+
+---
+
+## 8. Dependencies and Blockers
+
+| Dependency | Status | Impact |
+|---|---|---|
+| SETUP-002 | done / trusted | Player scene and `health_changed` signal confirmed available |
+| ASSET-004 | done / trusted | UI sprites and Press Start 2P font confirmed at expected paths |
+| CORE-002 (horse_base) | not started | `died` signal not yet defined — HUD score stub needed as a forward-compatible placeholder |
+| CORE-003 (wave_spawner) | not started | `wave_started`/`wave_cleared` signals not yet defined — defensive null-check pattern required |
+
+**No blockers to starting implementation.** The HUD scene can be built fully. Signal connections to not-yet-existing scripts use defensive `get_node_or_null` pattern and will activate automatically once CORE-002 and CORE-003 are implemented.
+
+---
+
+## 9. Acceptance Criteria Mapping
+
+| # | Criterion | Implementation |
+|---|---|---|
+| 1 | `scenes/ui/hud.tscn` exists with health bar, wave label, score label | Scene created with HealthBarContainer (TextureRect + TextureProgressBar), WaveLabel (Label), ScoreLabel (Label) |
+| 2 | HUD updates health bar on player `health_changed` | `player.health_changed.connect(_on_player_health_changed)` in `_ready` |
+| 3 | HUD displays current wave number | Subscribed to `wave_spawner.wave_started`, updates `$WaveLabel.text` |
+| 4 | HUD displays and updates score | Listens for `died` signal from enemies, increments `_score`, updates `$ScoreLabel.text` |
+| 5 | HUD uses Press Start 2P font from `assets/fonts/` | `DynamicFont` loaded from `PressStart2P-Regular.ttf`, applied to WaveLabel and ScoreLabel via `add_theme_font_override` |
+
+(End of file - total 235 lines)

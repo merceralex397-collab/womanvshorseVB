@@ -1,0 +1,84 @@
+# Initial Codebase Review
+
+## Scope
+
+- subject repo: /home/pc/projects/womanvshorseVB
+- diagnosis timestamp: 2026-04-10T15:39:28Z
+- audit scope: managed workflow, restart, ticket, prompt, and execution surfaces
+- verification scope: current repo state plus supporting logs
+
+## Result State
+
+- result_state: validated failures found
+- finding_count: 4
+- errors: 3
+- warnings: 1
+
+## Validated Findings
+
+### Workflow Findings
+
+### SESSION002
+
+- finding_id: SESSION002
+- summary: The supplied session transcript shows repeated retries of the same rejected lifecycle transition.
+- severity: error
+- evidence_grade: transcript-backed and repo-validated
+- affected_files_or_surfaces: /home/pc/projects/Scafforge/active-plans/agent-logs/wvhvb-opencode-2026-04-10T15-15-39.log
+- observed_or_reproduced: Instead of treating the repeated `ticket_update` rejection as a contract contradiction, the agent kept probing the state machine and burned time without acquiring new evidence.
+- evidence:
+  - Repeated lifecycle blocker 2x -> [91m[1mError: [0mCannot move POLISH-001 to implementation before it passes through plan_review.
+- remaining_verification_gap: None recorded beyond the validated finding scope.
+
+### SKILL001
+
+- finding_id: SKILL001
+- summary: One or more repo-local skills still contain generic placeholder text instead of project-specific guidance.
+- severity: warning
+- evidence_grade: repo-state validation
+- affected_files_or_surfaces: .opencode/skills/stack-standards/SKILL.md
+- observed_or_reproduced: project-skill-bootstrap or later managed-surface repair left baseline local skills in a scaffold placeholder state, so agents lose concrete stack and validation guidance.
+- evidence:
+  - .opencode/skills/stack-standards/SKILL.md -> When the repo stack is finalized, rewrite this catalog so review and QA agents get the exact build, lint, reference-integrity, and test commands that belong to this project.
+  - .opencode/skills/stack-standards/SKILL.md -> - When the project stack is confirmed, replace this file's Universal Standards section with stack-specific rules using the `project-skill-bootstrap` skill.
+- remaining_verification_gap: None recorded beyond the validated finding scope.
+
+## Code Quality Findings
+
+### EXEC-GODOT-005a
+
+- finding_id: EXEC-GODOT-005a
+- summary: Android-targeted Godot repo is missing export surfaces or debug APK runnable proof.
+- severity: CRITICAL
+- evidence_grade: repo-state validation
+- affected_files_or_surfaces: project.godot, export_presets.cfg, android
+- observed_or_reproduced: The repo has started or closed Android release work but is still missing the repo-managed export preset, android/ support surfaces, or the canonical debug APK. Runnable proof requires export_presets.cfg, non-placeholder android/ surfaces, and a debug APK at the canonical build path.
+- evidence:
+  - open_ticket_count = 6
+  - release_lane_started_or_done = True
+  - repo_claims_completion = False
+  - missing runnable surfaces: debug APK runnable proof at build/android/womanvshorsevb-debug.apk
+
+### EXEC-REMED-001
+
+- finding_id: EXEC-REMED-001
+- summary: Remediation review artifact does not contain runnable command evidence.
+- severity: CRITICAL
+- evidence_grade: repo-state validation
+- affected_files_or_surfaces: tickets/manifest.json, .opencode/state/reviews/remed-001-review-reverification.md
+- observed_or_reproduced: A ticket created from a validated finding is being reviewed on prose alone, so the audit cannot confirm that the original failing command or canonical acceptance command was actually rerun after the fix.
+- evidence:
+  - ticket REMED-001 carries finding_source `EXEC-GODOT-005a`
+  - review artifact: .opencode/state/reviews/remed-001-review-reverification.md
+  - missing exact command record
+  - missing raw command output section with non-empty code block
+  - missing explicit post-fix PASS/FAIL result
+
+## Verification Gaps
+
+- The diagnosis pack validates the concrete failures above. It does not claim broader runtime-path coverage than the current audit and supporting evidence actually exercised.
+
+## Rejected or Outdated External Claims
+
+- None recorded separately. Supporting logs were incorporated into the validated findings above instead of being left as standalone unverified claims.
+

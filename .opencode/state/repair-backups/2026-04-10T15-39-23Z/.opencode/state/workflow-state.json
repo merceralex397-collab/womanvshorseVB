@@ -1,0 +1,153 @@
+{
+  "active_ticket": "POLISH-001",
+  "stage": "qa",
+  "status": "qa",
+  "approved_plan": true,
+  "bootstrap_blockers": [],
+  "ticket_state": {
+    "SETUP-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "SETUP-002": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "ANDROID-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "ASSET-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "ASSET-002": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "ASSET-003": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "ASSET-004": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "ASSET-005": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "CORE-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "CORE-002": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "CORE-003": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "CORE-004": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "CORE-005": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "CORE-006": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "UI-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "UI-002": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "UI-003": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "POLISH-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "RELEASE-001": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-002": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    }
+  },
+  "process_version": 7,
+  "process_last_changed_at": "2026-04-10T06:04:26.471Z",
+  "process_last_change_summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+  "pending_process_verification": false,
+  "parallel_mode": "sequential",
+  "repair_follow_on": {
+    "outcome": "source_follow_up",
+    "required_stages": [
+      "project-skill-bootstrap",
+      "ticket-pack-builder"
+    ],
+    "completed_stages": [
+      "project-skill-bootstrap",
+      "ticket-pack-builder"
+    ],
+    "blocking_reasons": [],
+    "verification_passed": false,
+    "handoff_allowed": true,
+    "last_updated_at": "2026-04-10T06:05:28Z",
+    "process_version": 7
+  },
+  "bootstrap": {
+    "status": "ready",
+    "last_verified_at": "2026-04-10T15:04:11.875Z",
+    "environment_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "proof_artifact": ".opencode/state/artifacts/history/polish-001/bootstrap/2026-04-10T15-04-11-874Z-environment-bootstrap.md"
+  },
+  "lane_leases": [
+    {
+      "ticket_id": "POLISH-001",
+      "lane": "polish",
+      "owner_agent": "wvhvb-team-leader",
+      "write_lock": true,
+      "claimed_at": "2026-04-10T14:56:40.176Z",
+      "expires_at": "2026-04-10T16:56:40.176Z",
+      "allowed_paths": []
+    }
+  ],
+  "state_revision": 242
+}
