@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "ticket_id": "REMED-004",
+  "qa_artifact": ".opencode/state/artifacts/history/remed-004/qa/2026-04-15T23-49-36-894Z-qa.md",
+  "scope": "remediation",
+  "test_paths": [],
+  "command_signatures": [
+    "godot4 --headless --path . --quit",
+    "grep Overall Verdict: PASS .opencode/state/reviews/asset-005-review-review.md",
+    "wc -c .opencode/state/reviews/asset-005-review-review.md"
+  ],
+  "commands_total": 3,
+  "commands_completed": 3,
+  "completed": true,
+  "passed": true,
+  "updated_at": "2026-04-15T23:50:08.169Z",
+  "commands": [
+    {
+      "label": "command override 1",
+      "argv": [
+        "godot4",
+        "--headless",
+        "--path",
+        ".",
+        "--quit"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 197,
+      "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
+      "stderr": ""
+    },
+    {
+      "label": "command override 2",
+      "argv": [
+        "grep",
+        "Overall Verdict: PASS",
+        ".opencode/state/reviews/asset-005-review-review.md"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 2,
+      "stdout": "## Verdict: PARTIAL (superseded by Overall Verdict: PASS with documented constraints)\nThe ACs for AC1, AC2, AC4 specify literal `.wav` format. Since the functional requirement is met and the WAV blocker is a genuine documented environment constraint, **Overall Verdict: PASS with documented format constraints**.\n**Overall Verdict: PASS** — Functional requirements satisfied, Godot headless exits 0, all CC0 verified, full PROVENANCE.md coverage, fake WAV files removed.\n",
+      "stderr": ""
+    },
+    {
+      "label": "command override 3",
+      "argv": [
+        "wc",
+        "-c",
+        ".opencode/state/reviews/asset-005-review-review.md"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 1,
+      "stdout": "8809 .opencode/state/reviews/asset-005-review-review.md\n",
+      "stderr": ""
+    }
+  ]
+}

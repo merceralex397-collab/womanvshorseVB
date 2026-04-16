@@ -70,3 +70,4 @@ None
 ## Notes
 
 Instance in main.tscn CanvasLayer. CORE-004 is parallel_safe since it only touches UI nodes.
+

@@ -28,7 +28,7 @@ done
 ## Trust
 
 - resolution_state: done
-- verification_state: trusted
+- verification_state: reverified
 - finding_source: SESSION002
 - source_ticket_id: POLISH-001
 - source_mode: split_scope
@@ -58,6 +58,8 @@ None
 - qa: .opencode/state/artifacts/history/remed-003/qa/2026-04-11T19-34-59-334Z-qa.md (qa) - QA PASS for REMED-003: Both ACs verified PASS, SESSION002 resolved through process documentation confirmation.
 - smoke-test: .opencode/state/artifacts/history/remed-003/smoke-test/2026-04-11T19-35-19-798Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test failed.
 - smoke-test: .opencode/state/artifacts/history/remed-003/smoke-test/2026-04-11T19-35-29-273Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- reverification: .opencode/state/artifacts/history/remed-003/review/2026-04-16T00-17-59-213Z-reverification.md (review) - Trust restored using REMED-003.
 
 ## Notes
+
 

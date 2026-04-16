@@ -73,3 +73,4 @@ None
 ## Notes
 
 Player uses a colored rectangle placeholder sprite until ASSET-001 provides real character art.
+

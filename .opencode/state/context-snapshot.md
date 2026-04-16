@@ -6,15 +6,15 @@ Woman vs Horse VB
 
 ## Active Ticket
 
-- ID: ASSET-005
-- Title: Source SFX from Freesound.org (CC0)
-- Stage: review
-- Status: review
-- Resolution: open
-- Verification: suspect
+- ID: REMED-012
+- Title: Batch remediate generated repo implementation and validation surfaces
+- Stage: closeout
+- Status: done
+- Resolution: done
+- Verification: trusted
 - Approved plan: yes
 - Needs reverification: no
-- Open split children: REMED-004, REMED-005, REMED-006
+- Open split children: none
 
 ## Bootstrap
 
@@ -26,9 +26,9 @@ Woman vs Horse VB
 ## Process State
 
 - process_version: 7
-- pending_process_verification: true
+- pending_process_verification: false
 - parallel_mode: sequential
-- state_revision: 310
+- state_revision: 416
 
 ## Repair Follow-On
 
@@ -36,7 +36,7 @@ Woman vs Horse VB
 - required: no
 - next_required_stage: none
 - verification_passed: true
-- last_updated_at: 2026-04-12T03:09:47Z
+- last_updated_at: 2026-04-15T03:07:12Z
 
 ## Pivot State
 
@@ -57,6 +57,8 @@ Woman vs Horse VB
 
 ## Recent Artifacts
 
-- plan: .opencode/state/artifacts/history/asset-005/planning/2026-04-11T19-36-36-599Z-plan.md (planning) - Plan for ASSET-005: Source SFX from Freesound.org (CC0). Covers 6 SFX types (attack, damage, horse, victory, game over, UI click), Freesound.org search strategy with CC0 license filter, directory structure, PROVENANCE.md format, Godot integration, and per-AC verification steps.
-- implementation: .opencode/state/artifacts/history/asset-005/implementation/2026-04-11T19-49-14-846Z-implementation.md (implementation) - Sourced 6 CC0 SFX files: 5 OGG from Kenney.nl packs + 1 WAV horse_neigh.wav from bigsoundbank. Freesound.org (canonical source) is inaccessible (HTTP 403). AC3 PASS, AC5 PASS, AC6 PASS; AC1/AC2/AC4 PARTIAL (OGG present, WAV blocked). Godot headless exits 0.
-- review: .opencode/state/artifacts/history/asset-005/review/2026-04-11T19-51-28-700Z-review.md (review) - PARTIAL verdict for ASSET-005: AC3/AC5/AC6 PASS, AC1/AC4 PARTIAL (OGG present but .wav not met), AC2 FAIL (no valid WAV damage SFX). Three fake WAV stub files found (HTTP error HTML). Godot headless exit 0. Team leader decision needed on format-agnostic AC revision vs. WAV requirement stand.
+- review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-53-42-881Z-review.md (review) [superseded] - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
+- review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-54-01-317Z-review.md (review) [superseded] - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
+- review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-55-30-812Z-review.md (review) - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
+- qa: .opencode/state/artifacts/history/remed-012/qa/2026-04-16T01-56-49-364Z-qa.md (qa) - QA PASS for REMED-012: AC1/AC2 verified PASS, finding EXEC-GODOT-008 does not reproduce, Godot headless exits 0, no uid:// references in title_screen.tscn
+- smoke-test: .opencode/state/artifacts/history/remed-012/smoke-test/2026-04-16T01-57-19-116Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.

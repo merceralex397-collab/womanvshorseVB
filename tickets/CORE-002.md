@@ -70,3 +70,4 @@ None
 ## Notes
 
 Use class_name HorseBase for variant extension in CORE-006.
+

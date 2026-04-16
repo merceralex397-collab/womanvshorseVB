@@ -70,3 +70,4 @@ None
 ## Notes
 
 Ties together attack system (CORE-001) and enemy base (CORE-002). Central gameplay integration point.
+

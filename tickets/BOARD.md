@@ -9,7 +9,7 @@
 | 1 | ASSET-002 | Source enemy horse sprites (CC0) | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | - |
 | 1 | ASSET-003 | Source arena tileset (CC0) | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | - |
 | 1 | ASSET-004 | Source UI sprites and fonts | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | - |
-| 1 | ASSET-005 | Source SFX from Freesound.org (CC0) | asset-sourcing | review | review | open | suspect | yes | low | SETUP-001 | REMED-004, REMED-005, REMED-006 |
+| 1 | ASSET-005 | Source SFX from Freesound.org (CC0) | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | REMED-004, REMED-005, REMED-006, REMED-012 |
 | 2 | CORE-001 | Implement attack system | core-gameplay | closeout | done | done | trusted | no | high | SETUP-002, ASSET-001 | - |
 | 2 | CORE-002 | Create enemy horse base class | core-gameplay | closeout | done | done | trusted | no | medium | SETUP-001, ASSET-002 | CORE-006 |
 | 2 | CORE-003 | Wave spawner | core-gameplay | closeout | done | done | trusted | no | medium | CORE-002 | - |
@@ -18,12 +18,18 @@
 | 2 | CORE-006 | Enemy variants | core-gameplay | closeout | done | done | trusted | no | medium | CORE-003 | - |
 | 3 | UI-001 | Title screen | ui | closeout | done | done | trusted | yes | low | ASSET-004 | - |
 | 3 | UI-002 | Game over screen | ui | closeout | done | done | trusted | yes | low | ASSET-004, CORE-005 | - |
-| 3 | UI-003 | Credits scene (CC-BY attributions) | ui | planning | todo | open | suspect | yes | low | ASSET-001, ASSET-002, ASSET-003, ASSET-004, ASSET-005 | - |
-| 4 | POLISH-001 | Particle effects | polish | closeout | done | done | trusted | yes | low | CORE-005 | REMED-003 |
-| 5 | RELEASE-001 | Build Android runnable proof (debug APK) | release-readiness | planning | todo | open | suspect | no | medium | POLISH-001 | - |
+| 3 | UI-003 | Credits scene (CC-BY attributions) | ui | closeout | done | done | trusted | yes | low | ASSET-001, ASSET-002, ASSET-003, ASSET-004, ASSET-005 | - |
+| 4 | POLISH-001 | Particle effects | polish | closeout | done | done | reverified | yes | low | CORE-005 | REMED-003 |
+| 5 | RELEASE-001 | Build Android runnable proof (debug APK) | release-readiness | closeout | done | done | trusted | no | medium | FINISH-VALIDATE-001 | - |
 | 6 | REMED-001 | Android-targeted Godot repo is missing export surfaces or debug APK runnable proof | remediation | closeout | done | done | reverified | no | low | - | - |
-| 7 | REMED-002 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | trusted | no | low | - | - |
-| 8 | REMED-003 | The supplied session transcript shows repeated retries of the same rejected lifecycle transition | remediation | closeout | done | done | trusted | no | low | - | - |
-| 9 | REMED-004 | Remediation review artifact does not contain runnable command evidence | remediation | planning | todo | open | suspect | no | low | - | - |
-| 10 | REMED-005 | Remediation review artifact does not contain runnable command evidence | remediation | planning | todo | open | suspect | no | low | - | - |
-| 11 | REMED-006 | Remediation review artifact does not contain runnable command evidence | remediation | planning | todo | open | suspect | no | low | - | - |
+| 7 | REMED-002 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | reverified | no | low | - | - |
+| 8 | REMED-003 | The supplied session transcript shows repeated retries of the same rejected lifecycle transition | remediation | closeout | done | done | reverified | no | low | - | - |
+| 9 | REMED-004 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | trusted | no | low | - | - |
+| 10 | REMED-005 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | trusted | no | low | - | - |
+| 11 | REMED-006 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | trusted | no | low | - | - |
+| 12 | VISUAL-001 | Own ship-ready visual finish | finish-visual | closeout | done | done | trusted | no | medium | SETUP-001 | - |
+| 13 | AUDIO-001 | Own ship-ready audio finish | finish-audio | closeout | done | done | trusted | no | medium | SETUP-001 | - |
+| 14 | FINISH-VALIDATE-001 | Validate product finish contract | finish-validation | closeout | done | done | trusted | no | medium | VISUAL-001, AUDIO-001 | - |
+| 15 | REMED-009 | Batch remediate generated repo implementation and validation surfaces | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 16 | REMED-011 | Batch remediate generated repo implementation and validation surfaces | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 17 | REMED-012 | Batch remediate generated repo implementation and validation surfaces | remediation | closeout | done | done | trusted | no | low | - | - |

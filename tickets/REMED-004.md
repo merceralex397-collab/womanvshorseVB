@@ -19,16 +19,16 @@ remediation
 
 ## Stage
 
-planning
+closeout
 
 ## Status
 
-todo
+done
 
 ## Trust
 
-- resolution_state: open
-- verification_state: suspect
+- resolution_state: done
+- verification_state: trusted
 - finding_source: EXEC-REMED-001
 - source_ticket_id: ASSET-005
 - source_mode: split_scope
@@ -52,7 +52,12 @@ None
 
 ## Artifacts
 
-- None yet
+- plan: .opencode/state/artifacts/history/remed-004/planning/2026-04-15T23-42-48-792Z-plan.md (planning) - Plan for REMED-004: Fix EXEC-REMED-001 by adding explicit overall PASS/FAIL verdict with three-part evidence format to ASSET-005 review artifact, plus format-agnostic AC revision recommendation.
+- implementation: .opencode/state/artifacts/history/remed-004/implementation/2026-04-15T23-46-59-521Z-implementation.md (implementation) - Implementation for REMED-004: Added explicit Overall Verdict section with three-part EXEC-REMED-001 compliant evidence format to ASSET-005 review artifact. Godot headless exits 0.
+- review: .opencode/state/artifacts/history/remed-004/review/2026-04-15T23-48-23-826Z-review.md (review) - Code review PASS for REMED-004: Both ACs verified PASS, EXEC-REMED-001 three-part format confirmed in ASSET-005 review artifact, Godot headless exits 0.
+- qa: .opencode/state/artifacts/history/remed-004/qa/2026-04-15T23-49-36-894Z-qa.md (qa) - QA PASS for REMED-004: All 3 checks verified PASS, three-part EXEC-REMED-001 format confirmed in ASSET-005 review, Godot headless exits 0, artifact 2253 bytes.
+- smoke-test: .opencode/state/artifacts/history/remed-004/smoke-test/2026-04-15T23-50-08-158Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
 
 ## Notes
+
 

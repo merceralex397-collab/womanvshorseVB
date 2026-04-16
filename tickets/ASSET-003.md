@@ -67,3 +67,4 @@ None
 ## Notes
 
 Load `free-asset-sourcing` skill. Tile size should be consistent with character sprite resolution.
+

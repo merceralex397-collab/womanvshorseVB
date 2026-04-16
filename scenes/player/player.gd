@@ -104,7 +104,7 @@ func _try_attack() -> void:
 		sprite.play("attack", true)
 	
 	# Play attack SFX if available
-	var sfx_path: String = "res://assets/audio/sfx/attack.wav"
+	var sfx_path: String = "res://assets/audio/sfx/attack_swing.ogg"
 	if ResourceLoader.exists(sfx_path):
 		var sfx_stream: AudioStream = load(sfx_path)
 		var sfx_player: AudioStreamPlayer = AudioStreamPlayer.new()

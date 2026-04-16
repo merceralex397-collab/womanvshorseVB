@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "ticket_id": "AUDIO-001",
+  "qa_artifact": ".opencode/state/artifacts/history/audio-001/qa/2026-04-16T01-27-22-141Z-qa.md",
+  "scope": "full-suite",
+  "test_paths": [],
+  "command_signatures": [
+    "godot4 --headless --path . --quit 2>&1"
+  ],
+  "commands_total": 1,
+  "commands_completed": 1,
+  "completed": true,
+  "passed": true,
+  "updated_at": "2026-04-16T01:27:56.882Z",
+  "commands": [
+    {
+      "label": "qa artifact command 1",
+      "argv": [
+        "godot4",
+        "--headless",
+        "--path",
+        ".",
+        "--quit",
+        "2>&1"
+      ],
+      "reason": "Current QA artifact records a deterministic smoke-test command.",
+      "exit_code": 0,
+      "duration_ms": 187,
+      "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
+      "stderr": ""
+    }
+  ]
+}

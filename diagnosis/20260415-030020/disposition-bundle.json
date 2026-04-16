@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "generated_at": "2026-04-15T03:00:20Z",
+  "repo_root": "/home/rowan/womanvshorseVB",
+  "audit_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
+  "allowed_classes": [
+    "managed_blocker",
+    "manual_prerequisite_blocker",
+    "source_follow_up",
+    "process_state_only",
+    "advisory"
+  ],
+  "finding_count": 8,
+  "findings": [
+    {
+      "code": "FINISH003",
+      "severity": "error",
+      "disposition_class": "managed_blocker",
+      "legacy_disposition_class": "managed_blocker",
+      "route": "scafforge-repair",
+      "repair_class": "safe Scafforge package change",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "docs/spec/CANONICAL-BRIEF.md",
+        "tickets/manifest.json"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "CONFIG010",
+      "severity": "warning",
+      "disposition_class": "managed_blocker",
+      "legacy_disposition_class": "managed_blocker",
+      "route": "scafforge-repair",
+      "repair_class": "safe Scafforge package change",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "assets/briefs",
+        "assets/models",
+        "assets/themes",
+        "assets/previews",
+        "assets/workfiles",
+        "assets/licenses",
+        "assets/import-reports",
+        "assets/pipeline.json",
+        "assets/briefs/README.md",
+        ".opencode/meta/asset-pipeline-bootstrap.json"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "CONFIG011",
+      "severity": "warning",
+      "disposition_class": "managed_blocker",
+      "legacy_disposition_class": "managed_blocker",
+      "route": "scafforge-repair",
+      "repair_class": "safe Scafforge package change",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "opencode.jsonc"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-GODOT-008",
+      "severity": "warning",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "project.godot"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "WFLOW026",
+      "severity": "error",
+      "disposition_class": "managed_blocker",
+      "legacy_disposition_class": "managed_blocker",
+      "route": "scafforge-repair",
+      "repair_class": "safe Scafforge package change",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        ".opencode/lib/workflow.ts",
+        "tickets/manifest.json",
+        ".opencode/state/artifacts/history/core-001/qa/2026-04-10T05-33-28-878Z-qa.md",
+        ".opencode/state/artifacts/history/core-001/review/2026-04-10T11-01-03-139Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/core-002/qa/2026-04-10T05-50-18-546Z-qa.md",
+        ".opencode/state/artifacts/history/core-002/review/2026-04-10T11-00-55-115Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/core-003/qa/2026-04-10T12-20-37-063Z-qa.md",
+        ".opencode/state/artifacts/history/core-006/review/2026-04-10T12-32-47-750Z-review.md",
+        ".opencode/state/artifacts/history/core-006/qa/2026-04-10T12-34-16-265Z-qa.md",
+        ".opencode/state/artifacts/history/ui-002/qa/2026-04-10T14-56-04-176Z-qa.md",
+        ".opencode/state/artifacts/history/remed-002/qa/2026-04-11T13-53-52-706Z-qa.md"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-001-review-reverification.md"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-002-review-reverification.md"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-003-review-review.md"
+      ],
+      "provenance": "script"
+    }
+  ],
+  "counts": {
+    "managed_blocker": 4,
+    "manual_prerequisite_blocker": 0,
+    "source_follow_up": 4,
+    "process_state_only": 0,
+    "advisory": 0
+  },
+  "shadow_mode_deltas": []
+}

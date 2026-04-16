@@ -19,16 +19,16 @@ remediation
 
 ## Stage
 
-planning
+closeout
 
 ## Status
 
-todo
+done
 
 ## Trust
 
-- resolution_state: open
-- verification_state: suspect
+- resolution_state: done
+- verification_state: trusted
 - finding_source: EXEC-REMED-001
 - source_ticket_id: ASSET-005
 - source_mode: split_scope
@@ -52,7 +52,12 @@ None
 
 ## Artifacts
 
-- None yet
+- plan: .opencode/state/artifacts/history/remed-006/planning/2026-04-15T23-59-58-866Z-plan.md (planning) - Plan for REMED-006: finding EXEC-REMED-001 already resolved — remed-003-review-review.md already has full three-part format. No edits required. Godot headless validation step included.
+- implementation: .opencode/state/artifacts/history/remed-006/implementation/2026-04-16T00-01-02-610Z-implementation.md (implementation) - No edits needed — finding already resolved. Godot headless verification passed (exit 0).
+- review: .opencode/state/artifacts/history/remed-006/review/2026-04-16T00-01-51-039Z-review.md (review) - Code review PASS — EXEC-REMED-001 does not reproduce, three-part format confirmed in remed-003-review-review.md, Godot headless exits 0.
+- qa: .opencode/state/artifacts/history/remed-006/qa/2026-04-16T00-08-21-839Z-qa.md (qa) - QA PASS for REMED-006: all 4 checks verified PASS, EXEC-REMED-001 does not reproduce, three-part format confirmed in review artifacts, Godot headless exits 0.
+- smoke-test: .opencode/state/artifacts/history/remed-006/smoke-test/2026-04-16T00-08-39-647Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
 
 ## Notes
+
 

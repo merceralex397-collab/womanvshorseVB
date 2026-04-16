@@ -69,3 +69,4 @@ None
 ## Notes
 
 Load `free-asset-sourcing` skill. Horse sprites must match the visual style of ASSET-001 player sprites.
+

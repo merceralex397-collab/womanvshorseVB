@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "generated_at": "2026-04-15T03:07:12Z",
+  "repo_root": "/home/rowan/womanvshorseVB",
+  "audit_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:579f1d3d63d6",
+  "allowed_classes": [
+    "managed_blocker",
+    "manual_prerequisite_blocker",
+    "source_follow_up",
+    "process_state_only",
+    "advisory"
+  ],
+  "finding_count": 4,
+  "findings": [
+    {
+      "code": "EXEC-GODOT-008",
+      "severity": "warning",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "project.godot"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-001-review-reverification.md"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-002-review-reverification.md"
+      ],
+      "provenance": "script"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error",
+      "disposition_class": "source_follow_up",
+      "legacy_disposition_class": "source_follow_up",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "evidence_grade": "repo-state validation",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-003-review-review.md"
+      ],
+      "provenance": "script"
+    }
+  ],
+  "counts": {
+    "managed_blocker": 0,
+    "manual_prerequisite_blocker": 0,
+    "source_follow_up": 4,
+    "process_state_only": 0,
+    "advisory": 0
+  },
+  "shadow_mode_deltas": []
+}

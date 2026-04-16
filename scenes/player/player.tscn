@@ -15,12 +15,14 @@ radius = 14.0
 radius = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_placeholder"]
-atlas = null
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("res://assets/sprites/kenney-topdown-shooter/PNG/Woman Green/womanGreen_gun.png")
+region = Rect2(0, 0, 64, 64)
+filter_clip_enabled = true
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_idle"]
-atlas = null
-region = Rect2(0, 0, 32, 32)
+atlas = ExtResource("res://assets/sprites/kenney-topdown-shooter/PNG/Woman Green/womanGreen_stand.png")
+region = Rect2(0, 0, 64, 64)
+filter_clip_enabled = true
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1"]
 animations = [{

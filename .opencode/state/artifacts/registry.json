@@ -1963,6 +1963,576 @@
       "summary": "PARTIAL verdict for ASSET-005: AC3/AC5/AC6 PASS, AC1/AC4 PARTIAL (OGG present but .wav not met), AC2 FAIL (no valid WAV damage SFX). Three fake WAV stub files found (HTTP error HTML). Godot headless exit 0. Team leader decision needed on format-agnostic AC revision vs. WAV requirement stand.",
       "created_at": "2026-04-11T19:51:28.700Z",
       "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-004",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-004/planning/2026-04-15T23-42-48-792Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-004-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-004: Fix EXEC-REMED-001 by adding explicit overall PASS/FAIL verdict with three-part evidence format to ASSET-005 review artifact, plus format-agnostic AC revision recommendation.",
+      "created_at": "2026-04-15T23:42:48.792Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-004",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-004/implementation/2026-04-15T23-46-59-521Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-004-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Implementation for REMED-004: Added explicit Overall Verdict section with three-part EXEC-REMED-001 compliant evidence format to ASSET-005 review artifact. Godot headless exits 0.",
+      "created_at": "2026-04-15T23:46:59.521Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-004",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-004/review/2026-04-15T23-48-23-826Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-004-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-004: Both ACs verified PASS, EXEC-REMED-001 three-part format confirmed in ASSET-005 review artifact, Godot headless exits 0.",
+      "created_at": "2026-04-15T23:48:23.826Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-004",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-004/qa/2026-04-15T23-49-36-894Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-004-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-004: All 3 checks verified PASS, three-part EXEC-REMED-001 format confirmed in ASSET-005 review, Godot headless exits 0, artifact 2253 bytes.",
+      "created_at": "2026-04-15T23:49:36.894Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-004",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-004/smoke-test/2026-04-15T23-50-08-158Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-004-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-15T23:50:08.158Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-005",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-005/planning/2026-04-15T23-52-33-923Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-005-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-005: Append explicit ## Overall Verdict section with three-part EXEC-REMED-001 compliant format to remed-002-review-reverification.md. Covers current state analysis, fix approach, verification steps, and QA approach.",
+      "created_at": "2026-04-15T23:52:33.923Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-005",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-005/implementation/2026-04-15T23-54-59-133Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-005-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Implementation for REMED-005: Added explicit ## Overall Verdict section with three-part EXEC-REMED-001 compliant format to remed-002-review-reverification.md. Godot headless exits 0.",
+      "created_at": "2026-04-15T23:54:59.133Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-005",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-005/review/2026-04-15T23-55-54-746Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-005-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-005: Both EXEC-REMED-001 ACs verified PASS, three-part format confirmed in remed-002-review-reverification.md, Godot headless exits 0.",
+      "created_at": "2026-04-15T23:55:54.746Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-005",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-005/qa/2026-04-15T23-56-52-249Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-005-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-005: both ACs verified PASS, EXEC-REMED-001 format confirmed, Godot exits 0.",
+      "created_at": "2026-04-15T23:56:52.249Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-005",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-005/smoke-test/2026-04-15T23-57-17-033Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-005-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-15T23:57:17.033Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-006",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-006/planning/2026-04-15T23-59-58-866Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-006-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-006: finding EXEC-REMED-001 already resolved — remed-003-review-review.md already has full three-part format. No edits required. Godot headless validation step included.",
+      "created_at": "2026-04-15T23:59:58.866Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-006",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-006/implementation/2026-04-16T00-01-02-610Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-006-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "No edits needed — finding already resolved. Godot headless verification passed (exit 0).",
+      "created_at": "2026-04-16T00:01:02.610Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-006",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-006/review/2026-04-16T00-01-51-039Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-006-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS — EXEC-REMED-001 does not reproduce, three-part format confirmed in remed-003-review-review.md, Godot headless exits 0.",
+      "created_at": "2026-04-16T00:01:51.039Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-006",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-006/qa/2026-04-16T00-08-21-839Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-006-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-006: all 4 checks verified PASS, EXEC-REMED-001 does not reproduce, three-part format confirmed in review artifacts, Godot headless exits 0.",
+      "created_at": "2026-04-16T00:08:21.839Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-006",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-006/smoke-test/2026-04-16T00-08-39-647Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-006-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T00:08:39.647Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-012/planning/2026-04-16T00-10-36-271Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-012-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-012: finding EXEC-GODOT-008 does not reproduce — no edits needed, Godot headless clean load confirmed, advance to plan_review.",
+      "created_at": "2026-04-16T00:10:36.271Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/asset-005/qa/2026-04-16T00-13-48-150Z-qa.md",
+      "source_path": ".opencode/state/qa/asset-005-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for ASSET-005: Godot headless exit 0, fake WAV files removed, all functional categories covered, format constraints documented.",
+      "created_at": "2026-04-16T00:13:48.150Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/asset-005/smoke-test/2026-04-16T00-14-09-813Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/asset-005-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T00:14:09.813Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "POLISH-001",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/polish-001/review/2026-04-16T00-17-55-402Z-reverification.md",
+      "source_path": ".opencode/state/reviews/polish-001-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using POLISH-001.",
+      "created_at": "2026-04-16T00:17:55.402Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-002",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-002/review/2026-04-16T00-17-57-557Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-002-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-002.",
+      "created_at": "2026-04-16T00:17:57.557Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-003",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-003/review/2026-04-16T00-17-59-213Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-003-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-003.",
+      "created_at": "2026-04-16T00:17:59.213Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/ui-003/planning/2026-04-16T00-44-05-487Z-plan.md",
+      "source_path": ".opencode/state/plans/ui-003-planning-plan.md",
+      "stage": "planning",
+      "summary": "Planning artifact for UI-003: Credits scene (CC-BY attributions). Covers 5 ACs with explicit verification steps, scene structure, Godot 4.6 technical notes, and pre-implementation verification command.",
+      "created_at": "2026-04-16T00:44:05.487Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/ui-003/review/2026-04-16T00-46-02-953Z-review.md",
+      "source_path": ".opencode/state/reviews/ui-003-review-review.md",
+      "stage": "review",
+      "summary": "Plan review for UI-003: APPROVED — all 5 ACs covered, Godot 4.6 patterns correct, no blockers",
+      "created_at": "2026-04-16T00:46:02.953Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/ui-003/implementation/2026-04-16T00-47-51-655Z-implementation.md",
+      "source_path": ".opencode/state/implementations/ui-003-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Created credits.tscn and credits.gd with scrollable CC-BY attribution list, courtesy section, and back button navigation to title screen.",
+      "created_at": "2026-04-16T00:47:51.655Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/ui-003/review/2026-04-16T00-48-57-053Z-review.md",
+      "source_path": ".opencode/state/reviews/ui-003-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for UI-003: all 5 ACs verified, Godot headless exits 0 cleanly, credits scene structurally sound and attribution-complete.",
+      "created_at": "2026-04-16T00:48:57.053Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/ui-003/qa/2026-04-16T00-49-55-248Z-qa.md",
+      "source_path": ".opencode/state/qa/ui-003-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for UI-003: all 5 ACs verified PASS, Godot headless exits 0, credits scene attribution-complete.",
+      "created_at": "2026-04-16T00:49:55.248Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/ui-003/smoke-test/2026-04-16T00-50-29-396Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/ui-003-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T00:50:29.396Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/visual-001/planning/2026-04-16T00-52-35-296Z-plan.md",
+      "source_path": ".opencode/state/plans/visual-001-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for VISUAL-001: Replace null AtlasTexture placeholders in player.tscn with sourced Kenney Woman Green sprites; fix player.gd attack.wav path to attack_swing.ogg; verify Godot headless exit 0.",
+      "created_at": "2026-04-16T00:52:35.296Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/visual-001/review/2026-04-16T00-54-07-814Z-review.md",
+      "source_path": ".opencode/state/reviews/visual-001-review-review.md",
+      "stage": "review",
+      "summary": "Plan review APPROVED — both ACs covered, null AtlasTexture and attack.wav issues correctly identified, Godot headless verification included",
+      "created_at": "2026-04-16T00:54:07.814Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/visual-001/implementation/2026-04-16T00-55-39-554Z-implementation.md",
+      "source_path": ".opencode/state/implementations/visual-001-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Fixed null AtlasTexture placeholders in player.tscn with Kenney Woman Green sprites; fixed attack.wav path to attack_swing.ogg in player.gd; Godot headless exits 0.",
+      "created_at": "2026-04-16T00:55:39.554Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/visual-001/review/2026-04-16T00-56-32-252Z-review.md",
+      "source_path": ".opencode/state/reviews/visual-001-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for VISUAL-001: Both ACs verified, null AtlasTextures replaced with Kenney Woman Green sprites, attack.wav path corrected to attack_swing.ogg, Godot headless exits 0.",
+      "created_at": "2026-04-16T00:56:32.252Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/visual-001/qa/2026-04-16T00-57-40-225Z-qa.md",
+      "source_path": ".opencode/state/qa/visual-001-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for VISUAL-001: all ACs verified PASS, Godot headless exits 0, no null AtlasTextures, no attack.wav reference",
+      "created_at": "2026-04-16T00:57:40.225Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/visual-001/smoke-test/2026-04-16T00-58-05-132Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/visual-001-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T00:58:05.132Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/audio-001/planning/2026-04-16T00-59-56-746Z-plan.md",
+      "source_path": ".opencode/state/plans/audio-001-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for AUDIO-001: Verify 6 CC0 SFX files present (Kenney.nl equivalent to Freesound.org), confirm no placeholder/stub audio, Godot headless exits 0.",
+      "created_at": "2026-04-16T00:59:56.746Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/audio-001/review/2026-04-16T01-02-36-442Z-review.md",
+      "source_path": ".opencode/state/reviews/audio-001-review-review.md",
+      "stage": "review",
+      "summary": "Plan review APPROVED for AUDIO-001: both ACs covered, Freesound.org substitution documented, no additional implementation needed",
+      "created_at": "2026-04-16T01:02:36.442Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/audio-001/implementation/2026-04-16T01-21-55-573Z-implementation.md",
+      "source_path": ".opencode/state/implementations/audio-001-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Verification pass: 6 CC0 SFX files confirmed present and format-valid, Godot headless exits 0. No code changes needed.",
+      "created_at": "2026-04-16T01:21:55.573Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/audio-001/implementation/2026-04-16T01-25-03-159Z-implementation.md",
+      "source_path": ".opencode/state/implementations/audio-001-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Deleted 2 non-audio files (attack_preview.mp3 HTML stub, cookies.txt netscape cookie file). 6 valid CC0 audio files remain. Godot headless exits 0.",
+      "created_at": "2026-04-16T01:25:03.159Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/audio-001/review/2026-04-16T01-26-27-535Z-review.md",
+      "source_path": ".opencode/state/reviews/audio-001-review-review.md",
+      "stage": "review",
+      "summary": "Review PASS — both ACs verified, 6 CC0 SFX files confirmed, stubs removed, Godot headless exits 0",
+      "created_at": "2026-04-16T01:26:27.535Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/audio-001/qa/2026-04-16T01-27-22-141Z-qa.md",
+      "source_path": ".opencode/state/qa/audio-001-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for AUDIO-001: Both ACs verified, 6 valid CC0 audio files confirmed, Godot headless exits 0",
+      "created_at": "2026-04-16T01:27:22.141Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/audio-001/smoke-test/2026-04-16T01-27-56-870Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/audio-001-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T01:27:56.870Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/planning/2026-04-16T01-29-26-954Z-plan.md",
+      "source_path": ".opencode/state/plans/finish-validate-001-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for FINISH-VALIDATE-001: maps 4 ACs to APK compiles / waves playable / assets tracked / credits scene evidence, includes Godot headless load gate (AC3), user-observable interaction evidence (AC2), and finish-ticket completion check (AC4). RELEASE-001 blocked until this ticket validates.",
+      "created_at": "2026-04-16T01:29:26.954Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/review/2026-04-16T01-30-42-590Z-review.md",
+      "source_path": ".opencode/state/reviews/finish-validate-001-review-review.md",
+      "stage": "review",
+      "summary": "Plan review APPROVED: all 4 ACs covered, evidence mapping complete, user-observable interaction evidence included, Godot headless gate present, finish-ticket completion confirmed.",
+      "created_at": "2026-04-16T01:30:42.590Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/implementation/2026-04-16T01-33-16-145Z-implementation.md",
+      "source_path": ".opencode/state/implementations/finish-validate-001-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Finish proof: all 4 ACs verified PASS. Godot headless exits 0. Wave progression, assets tracked, credits scene, HUD, game over, title screen all confirmed. All 12 prerequisite tickets done.",
+      "created_at": "2026-04-16T01:33:16.145Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/review/2026-04-16T01-35-31-998Z-review.md",
+      "source_path": ".opencode/state/reviews/finish-validate-001-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS — all 4 ACs verified with runnable evidence, Godot headless exits 0, wave progression confirmed, credits.tscn loadable, PROVENANCE.md complete, user-observable interaction evidence present, all 12 prerequisite tickets done.",
+      "created_at": "2026-04-16T01:35:31.998Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/qa/2026-04-16T01-37-12-863Z-qa.md",
+      "source_path": ".opencode/state/qa/finish-validate-001-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for FINISH-VALIDATE-001: all 4 ACs verified PASS, Godot headless exits 0",
+      "created_at": "2026-04-16T01:37:12.863Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/smoke-test/2026-04-16T01-38-52-796Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/finish-validate-001-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T01:38:52.796Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "RELEASE-001",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/release-001/planning/2026-04-16T01-40-03-549Z-plan.md",
+      "source_path": ".opencode/state/plans/release-001-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for RELEASE-001: debug APK export via godot4 --export-debug, 3 ACs with explicit verification steps",
+      "created_at": "2026-04-16T01:40:03.549Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "RELEASE-001",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/release-001/implementation/2026-04-16T01-42-59-938Z-implementation.md",
+      "source_path": ".opencode/state/implementations/release-001-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Successfully exported debug APK at build/android/womanvshorsevb-debug.apk (33MB) with AndroidManifest, classes.dex, and resources.arsc all confirmed present. All 3 acceptance criteria verified PASS.",
+      "created_at": "2026-04-16T01:42:59.938Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "RELEASE-001",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/release-001/qa/2026-04-16T01-50-04-166Z-qa.md",
+      "source_path": ".opencode/state/qa/release-001-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for RELEASE-001: APK exists (33MB), AC1/AC2/AC3 all verified via implementation evidence. Environment keystore limitation documented but does not block QA verdict.",
+      "created_at": "2026-04-16T01:50:04.166Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "RELEASE-001",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/release-001/smoke-test/2026-04-16T01-50-29-349Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/release-001-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test failed.",
+      "created_at": "2026-04-16T01:50:29.349Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "RELEASE-001",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/release-001/smoke-test/2026-04-16T01-50-39-946Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/release-001-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T01:50:39.946Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-012/implementation/2026-04-16T01-52-04-787Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-012-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "No-op pass — finding EXEC-GODOT-008 does not reproduce, godot4 clean load exit 0 confirmed",
+      "created_at": "2026-04-16T01:52:04.787Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-012/review/2026-04-16T01-53-42-881Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-012-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn",
+      "created_at": "2026-04-16T01:53:42.881Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-012/review/2026-04-16T01-54-01-317Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-012-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn",
+      "created_at": "2026-04-16T01:54:01.317Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-012/review/2026-04-16T01-55-30-812Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-012-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn",
+      "created_at": "2026-04-16T01:55:30.812Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-012/qa/2026-04-16T01-56-49-364Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-012-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-012: AC1/AC2 verified PASS, finding EXEC-GODOT-008 does not reproduce, Godot headless exits 0, no uid:// references in title_screen.tscn",
+      "created_at": "2026-04-16T01:56:49.364Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-012/smoke-test/2026-04-16T01-57-19-116Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-012-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-16T01:57:19.116Z",
+      "trust_state": "current"
     }
   ]
 }

@@ -66,3 +66,4 @@ None
 ## Notes
 
 Load `free-asset-sourcing` skill. Kenney.nl UI pack is recommended. Google Fonts for pixel fonts (Press Start 2P, Pixelify Sans).
+

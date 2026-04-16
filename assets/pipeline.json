@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "stack_label": "godot-2d-android-game",
+  "deliverable_kind": "Android game APK",
+  "placeholder_policy": "No placeholder art. All sprites from free/open sources.",
+  "art_style": "stylized-2d",
+  "target_platform": "android",
+  "route_mode": "hybrid",
+  "content_source_plan": "Kenney.nl, OpenGameArt.org, Freesound.org. All CC0 or CC-BY.",
+  "licensing_or_provenance_constraints": "Full provenance in assets/PROVENANCE.md. Credits scene for CC-BY.",
+  "finish_acceptance_signals": "APK compiles. All waves playable. All assets tracked. Credits scene works.",
+  "routes": {
+    "characters": {
+      "primary": "third-party-open-licensed",
+      "fallback": "godot-native-authored"
+    },
+    "environments": {
+      "primary": "godot-native-authored",
+      "fallback": "third-party-open-licensed"
+    },
+    "props": {
+      "primary": "third-party-open-licensed",
+      "fallback": "godot-native-authored"
+    },
+    "ui": {
+      "primary": "godot-native-authored",
+      "fallback": "third-party-open-licensed"
+    },
+    "audio": {
+      "primary": "third-party-open-licensed"
+    },
+    "vfx": {
+      "primary": "godot-native-authored",
+      "fallback": "third-party-open-licensed"
+    }
+  },
+  "route_families": [
+    "godot_native",
+    "third_party"
+  ],
+  "brief_targets": [],
+  "provenance_tracking": true,
+  "provenance_requirements": {
+    "machine_readable": "assets/pipeline.json",
+    "human_readable": "assets/PROVENANCE.md",
+    "briefs_dir": "assets/briefs",
+    "previews_dir": "assets/previews",
+    "workfiles_dir": "assets/workfiles",
+    "licenses_dir": "assets/licenses",
+    "import_reports_dir": "assets/import-reports",
+    "route_specific_finish_proof_required": true
+  },
+  "tool_license_policy": {
+    "allow_open_source_tools": true,
+    "allow_commercial_tools": false,
+    "notes": "Record tool licenses separately from model/checkpoint licenses when AI-assisted generation is used."
+  },
+  "model_license_policy": {
+    "allow_open_weights": true,
+    "allow_noncommercial_weights": false,
+    "notes": "If AI-assisted generation is used, record the exact model or checkpoint license separately from the tool stack."
+  },
+  "license_filter": [
+    "CC-BY"
+  ],
+  "texture_max_size": 1024,
+  "model_max_tris": 5000,
+  "initialized_by": "skills/asset-pipeline/scripts/init_asset_pipeline.py"
+}

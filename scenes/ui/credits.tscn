@@ -1,0 +1,120 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/credits.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ui/button_square_gloss.png" id="2"]
+
+[node name="Credits" type="Control"]
+script = ExtResource("1")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078, 0.078, 0.118, 1.0)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="ContentVBox" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="CreditsTitle" type="Label" parent="ScrollContainer/ContentVBox"]
+layout_mode = 2
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CCBYHeader" type="Label" parent="ScrollContainer/ContentVBox"]
+layout_mode = 2
+text = "CC-BY ATTRIBUTIONS (Required)"
+horizontal_alignment = 1
+
+[node name="CCBYVBox" type="VBoxContainer" parent="ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LPCEntry" type="HBoxContainer" parent="ScrollContainer/ContentVBox/CCBYVBox"]
+layout_mode = 2
+
+[node name="AssetName" type="Label" parent="ScrollContainer/ContentVBox/CCBYVBox/LPCEntry"]
+layout_mode = 2
+text = "LPC Horses Rework"
+
+[node name="Sep1" type="Label" parent="ScrollContainer/ContentVBox/CCBYVBox/LPCEntry"]
+layout_mode = 2
+text = " | "
+
+[node name="Authors" type="Label" parent="ScrollContainer/ContentVBox/CCBYVBox/LPCEntry"]
+layout_mode = 2
+text = "Jordan Irwin (AntumDeluge), bluecarrot16"
+
+[node name="Sep2" type="Label" parent="ScrollContainer/ContentVBox/CCBYVBox/LPCEntry"]
+layout_mode = 2
+text = " | "
+
+[node name="License" type="Label" parent="ScrollContainer/ContentVBox/CCBYVBox/LPCEntry"]
+layout_mode = 2
+text = "CC-BY-SA 3.0"
+
+[node name="SourceLabel" type="Label" parent="ScrollContainer/ContentVBox/CCBYVBox/LPCEntry"]
+layout_mode = 2
+text = " | https://opengameart.org/content/lpc-horses-rework"
+
+[node name="CourtesyHeader" type="Label" parent="ScrollContainer/ContentVBox"]
+layout_mode = 2
+text = "COURTESY (CC0 / OFL)"
+horizontal_alignment = 1
+
+[node name="CourtesyVBox" type="VBoxContainer" parent="ScrollContainer/ContentVBox"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="KenneyTopdown" type="Label" parent="ScrollContainer/ContentVBox/CourtesyVBox"]
+layout_mode = 2
+text = "Kenney Top-down Shooter — Kenney.nl"
+
+[node name="DungeonPack" type="Label" parent="ScrollContainer/ContentVBox/CourtesyVBox"]
+layout_mode = 2
+text = "Top Down Dungeon Pack — Screaming Brain Studios / OpenGameArt"
+
+[node name="KenneyUI" type="Label" parent="ScrollContainer/ContentVBox/CourtesyVBox"]
+layout_mode = 2
+text = "Kenney UI Pack — Kenney.nl"
+
+[node name="PressStart2P" type="Label" parent="ScrollContainer/ContentVBox/CourtesyVBox"]
+layout_mode = 2
+text = "Press Start 2P font — CodeMan38 (OFL)"
+
+[node name="SFXLabel" type="Label" parent="ScrollContainer/ContentVBox/CourtesyVBox"]
+layout_mode = 2
+text = "SFX — Kenney.nl, Joseph Sardin"
+
+[node name="Spacer" type="Control" parent="ScrollContainer/ContentVBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 20)
+
+[node name="BackButton" type="TextureButton" parent="."]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture_normal = ExtResource("2")

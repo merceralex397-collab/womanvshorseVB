@@ -1,7 +1,7 @@
 {
-  "active_ticket": "ASSET-005",
-  "stage": "review",
-  "status": "review",
+  "active_ticket": "REMED-012",
+  "stage": "closeout",
+  "status": "done",
   "approved_plan": true,
   "bootstrap_blockers": [],
   "ticket_state": {
@@ -86,7 +86,7 @@
       "needs_reverification": false
     },
     "UI-003": {
-      "approved_plan": false,
+      "approved_plan": true,
       "reopen_count": 0,
       "needs_reverification": false
     },
@@ -96,7 +96,7 @@
       "needs_reverification": false
     },
     "RELEASE-001": {
-      "approved_plan": false,
+      "approved_plan": true,
       "reopen_count": 0,
       "needs_reverification": false
     },
@@ -116,36 +116,58 @@
       "needs_reverification": false
     },
     "REMED-004": {
-      "approved_plan": false,
+      "approved_plan": true,
       "reopen_count": 0,
       "needs_reverification": false
     },
     "REMED-005": {
-      "approved_plan": false,
+      "approved_plan": true,
       "reopen_count": 0,
       "needs_reverification": false
     },
     "REMED-006": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-009": {
       "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-011": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-012": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "VISUAL-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "FINISH-VALIDATE-001": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "AUDIO-001": {
+      "approved_plan": true,
       "reopen_count": 0,
       "needs_reverification": false
     }
   },
   "process_version": 7,
-  "process_last_changed_at": "2026-04-12T03:07:34.554Z",
-  "process_last_change_summary": "Managed repair from diagnosis 20260412-030501 for WFLOW019 and routed EXEC-REMED-001 source follow-up.",
-  "pending_process_verification": true,
+  "process_last_changed_at": "2026-04-15T03:00:24.978Z",
+  "process_last_change_summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+  "pending_process_verification": false,
   "parallel_mode": "sequential",
   "repair_follow_on": {
     "outcome": "source_follow_up",
-    "required_stage_details": [
-      {
-        "stage": "ticket-pack-builder",
-        "owner": "ticket-pack-builder",
-        "category": "ticket_follow_up",
-        "reason": "Repair left remediation or reverification follow-up that must be routed into the repo ticket system."
-      }
-    ],
     "required_stages": [
       "ticket-pack-builder"
     ],
@@ -153,74 +175,11 @@
       "project-skill-bootstrap",
       "ticket-pack-builder"
     ],
-    "asserted_completed_stages": [],
-    "legacy_asserted_completed_stages": [],
-    "stage_completion_mode": "legacy_manual_assertion",
-    "tracking_mode": "persistent_recorded_state",
-    "follow_on_state_path": ".opencode/meta/repair-follow-on-state.json",
-    "recorded_stage_state": {
-      "project-skill-bootstrap": {
-        "stage": "project-skill-bootstrap",
-        "owner": "project-skill-bootstrap",
-        "category": "repo_local_skills",
-        "status": "completed",
-        "reason": "Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
-        "currently_required": false,
-        "last_checked_at": "2026-04-12T03:09:29Z",
-        "last_updated_at": "2026-04-12T03:09:29Z",
-        "completion_mode": "recorded_execution",
-        "completed_by": "project-skill-bootstrap",
-        "summary": "Regenerated repo-local stack standards with Godot 4.6 Android-specific workflow guidance for repair cycle 2026-04-12T03:07:34Z.",
-        "evidence_paths": [
-          ".opencode/skills/stack-standards/SKILL.md",
-          ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
-        ],
-        "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-        "first_recorded_at": "2026-04-12T03:09:29Z",
-        "last_recorded_at": "2026-04-12T03:09:29Z"
-      },
-      "ticket-pack-builder": {
-        "stage": "ticket-pack-builder",
-        "owner": "ticket-pack-builder",
-        "category": "ticket_follow_up",
-        "status": "completed",
-        "reason": "Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
-        "currently_required": true,
-        "last_checked_at": "2026-04-12T03:09:47Z",
-        "last_updated_at": "2026-04-12T03:09:29Z",
-        "completion_mode": "recorded_execution",
-        "completed_by": "ticket-pack-builder",
-        "summary": "Ran remediation follow-up from diagnosis 20260412-030745 and confirmed REMED-004, REMED-005, and REMED-006 for repair cycle 2026-04-12T03:07:34Z.",
-        "evidence_paths": [
-          ".opencode/state/artifacts/history/repair/ticket-pack-builder-completion.md",
-          "tickets/BOARD.md",
-          "tickets/manifest.json"
-        ],
-        "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-        "first_recorded_at": "2026-04-12T03:09:29Z",
-        "last_recorded_at": "2026-04-12T03:09:29Z"
-      }
-    },
-    "pruned_unknown_stages": [],
-    "invalidated_recorded_stages": [],
     "blocking_reasons": [],
     "verification_passed": true,
     "handoff_allowed": true,
-    "current_state_clean": false,
-    "causal_regression_verified": true,
-    "verification_blocking_codes": [],
-    "manual_prerequisite_codes": [],
-    "source_follow_up_codes": [
-      "EXEC-REMED-001",
-      "EXEC-REMED-001",
-      "EXEC-REMED-001"
-    ],
-    "process_state_codes": [],
-    "advisory_codes": [],
-    "contract_failures": [],
-    "last_updated_at": "2026-04-12T03:09:47Z",
-    "process_version": 7,
-    "allowed_follow_on_tickets": []
+    "last_updated_at": "2026-04-15T03:07:12Z",
+    "process_version": 7
   },
   "bootstrap": {
     "status": "ready",
@@ -229,5 +188,5 @@
     "proof_artifact": ".opencode/state/artifacts/history/android-001/bootstrap/2026-04-10T21-55-36-747Z-environment-bootstrap.md"
   },
   "lane_leases": [],
-  "state_revision": 310
+  "state_revision": 416
 }

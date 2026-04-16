@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "ticket_id": "REMED-005",
+  "qa_artifact": ".opencode/state/artifacts/history/remed-005/qa/2026-04-15T23-56-52-249Z-qa.md",
+  "scope": "remediation",
+  "test_paths": [],
+  "command_signatures": [
+    "godot4 --headless --path . --quit",
+    "grep -i Overall Verdict .opencode/state/reviews/remed-002-review-reverification.md",
+    "wc -c .opencode/state/reviews/remed-002-review-reverification.md"
+  ],
+  "commands_total": 3,
+  "commands_completed": 3,
+  "completed": true,
+  "passed": true,
+  "updated_at": "2026-04-15T23:57:17.064Z",
+  "commands": [
+    {
+      "label": "command override 1",
+      "argv": [
+        "godot4",
+        "--headless",
+        "--path",
+        ".",
+        "--quit"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 298,
+      "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
+      "stderr": ""
+    },
+    {
+      "label": "command override 2",
+      "argv": [
+        "grep",
+        "-i",
+        "Overall Verdict",
+        ".opencode/state/reviews/remed-002-review-reverification.md"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 7,
+      "stdout": "## Overall Verdict\n**Overall Verdict: PASS** — EXEC-REMED-001 three-part format confirmed, remediate work complete.\n",
+      "stderr": ""
+    },
+    {
+      "label": "command override 3",
+      "argv": [
+        "wc",
+        "-c",
+        ".opencode/state/reviews/remed-002-review-reverification.md"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 1,
+      "stdout": "1048 .opencode/state/reviews/remed-002-review-reverification.md\n",
+      "stderr": ""
+    }
+  ]
+}

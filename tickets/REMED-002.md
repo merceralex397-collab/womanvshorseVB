@@ -28,7 +28,7 @@ done
 ## Trust
 
 - resolution_state: done
-- verification_state: trusted
+- verification_state: reverified
 - finding_source: EXEC-REMED-001
 - source_ticket_id: None
 - source_mode: net_new_scope
@@ -57,13 +57,15 @@ None
 - implementation: .opencode/state/artifacts/history/remed-002/implementation/2026-04-10T22-21-49-792Z-implementation.md (implementation) - Implementation for REMED-002: Updated REMED-001 reverification artifact with correct three-element evidence format (exact command + raw output + explicit PASS). EXEC-REMED-001 resolved.
 - review: .opencode/state/artifacts/history/remed-002/review/2026-04-10T22-23-14-814Z-review.md (review) [superseded] - Review PASS for REMED-002: Both ACs verified PASS. EXEC-REMED-001 resolved. Template note documented in reverification artifact.
 - review: .opencode/state/artifacts/history/remed-002/review/2026-04-10T22-24-44-076Z-review.md (review) - Review PASS for REMED-002: Both ACs verified PASS. EXEC-REMED-001 resolved. Remediation evidence includes exact command record and explicit PASS result.
-- reverification: .opencode/state/artifacts/history/remed-002/review/2026-04-10T22-25-41-620Z-reverification.md (review) - Review PASS for REMED-002: Both ACs verified PASS. Remediation evidence includes exact command, raw output, explicit PASS.
+- reverification: .opencode/state/artifacts/history/remed-002/review/2026-04-10T22-25-41-620Z-reverification.md (review) [superseded] - Review PASS for REMED-002: Both ACs verified PASS. Remediation evidence includes exact command, raw output, explicit PASS.
 - qa: .opencode/state/artifacts/history/remed-002/qa/2026-04-11T13-53-52-706Z-qa.md (qa) - QA PASS for REMED-002: Both ACs verified PASS, EXEC-REMED-001 resolved, three-element evidence format confirmed in REMED-001 reverification artifact
 - smoke-test: .opencode/state/artifacts/history/remed-002/smoke-test/2026-04-11T13-54-30-252Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test failed.
 - smoke-test: .opencode/state/artifacts/history/remed-002/smoke-test/2026-04-11T13-54-52-835Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test failed.
 - smoke-test: .opencode/state/artifacts/history/remed-002/smoke-test/2026-04-11T19-24-49-976Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test failed.
 - smoke-test: .opencode/state/artifacts/history/remed-002/smoke-test/2026-04-11T19-25-12-686Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test failed.
 - smoke-test: .opencode/state/artifacts/history/remed-002/smoke-test/2026-04-11T19-25-28-575Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- reverification: .opencode/state/artifacts/history/remed-002/review/2026-04-16T00-17-57-557Z-reverification.md (review) - Trust restored using REMED-002.
 
 ## Notes
+
 

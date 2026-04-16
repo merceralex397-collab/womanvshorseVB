@@ -69,3 +69,4 @@ None
 ## Notes
 
 Integrate with player.gd from SETUP-002. Use sourced sprites from ASSET-001.
+

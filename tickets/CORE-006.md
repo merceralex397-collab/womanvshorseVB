@@ -65,3 +65,4 @@ None
 ## Notes
 
 Source ticket: CORE-002 (extends HorseBase class). Variants should feel meaningfully different in gameplay.
+

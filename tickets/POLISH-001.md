@@ -28,7 +28,7 @@ done
 ## Trust
 
 - resolution_state: done
-- verification_state: trusted
+- verification_state: reverified
 - finding_source: None
 - source_ticket_id: None
 - source_mode: None
@@ -67,7 +67,9 @@ CORE-005
 - smoke-test: .opencode/state/artifacts/history/polish-001/smoke-test/2026-04-10T21-40-55-782Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test passed.
 - smoke-test: .opencode/state/artifacts/history/polish-001/smoke-test/2026-04-10T21-42-45-173Z-smoke-test.md (smoke-test) [superseded] - Deterministic smoke test passed.
 - smoke-test: .opencode/state/artifacts/history/polish-001/smoke-test/2026-04-10T21-45-20-567Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- reverification: .opencode/state/artifacts/history/polish-001/review/2026-04-16T00-17-55-402Z-reverification.md (review) - Trust restored using POLISH-001.
 
 ## Notes
 
 No external particle textures needed — use Godot's built-in shapes and gradients.
+

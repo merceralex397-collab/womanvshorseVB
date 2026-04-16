@@ -1,12 +1,12 @@
 {
   "tracking_mode": "persistent_recorded_state",
   "assertion_input_mode": "legacy_manual_assertion",
-  "cycle_id": "2026-04-12T03:07:34Z",
-  "created_at": "2026-04-12T03:07:34Z",
-  "last_updated_at": "2026-04-12T03:09:47Z",
+  "cycle_id": "2026-04-15T03:00:24Z",
+  "created_at": "2026-04-15T03:00:24Z",
+  "last_updated_at": "2026-04-15T03:07:12Z",
   "process_version": 7,
-  "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-  "repair_basis_path": "/home/pc/projects/womanvshorseVB/diagnosis/20260412-030501",
+  "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:579f1d3d63d6",
+  "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260415-030020",
   "pruned_unknown_stages": [],
   "required_stages": [
     "ticket-pack-builder"
@@ -19,18 +19,17 @@
       "status": "completed",
       "reason": "Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
       "currently_required": false,
-      "last_checked_at": "2026-04-12T03:09:29Z",
-      "last_updated_at": "2026-04-12T03:09:29Z",
+      "last_checked_at": "2026-04-15T03:03:03Z",
+      "last_updated_at": "2026-04-15T03:03:03Z",
       "completion_mode": "recorded_execution",
       "completed_by": "project-skill-bootstrap",
-      "summary": "Regenerated repo-local stack standards with Godot 4.6 Android-specific workflow guidance for repair cycle 2026-04-12T03:07:34Z.",
+      "summary": "Replaced the placeholder stack standards skill with Godot 4.6 Android and sourced-asset rules for Woman vs Horse VB.",
       "evidence_paths": [
-        ".opencode/skills/stack-standards/SKILL.md",
-        ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
+        ".opencode/skills/stack-standards/SKILL.md"
       ],
-      "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-      "first_recorded_at": "2026-04-12T03:09:29Z",
-      "last_recorded_at": "2026-04-12T03:09:29Z"
+      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
+      "first_recorded_at": "2026-04-15T03:03:03Z",
+      "last_recorded_at": "2026-04-15T03:03:03Z"
     },
     "ticket-pack-builder": {
       "stage": "ticket-pack-builder",
@@ -39,54 +38,51 @@
       "status": "completed",
       "reason": "Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
       "currently_required": true,
-      "last_checked_at": "2026-04-12T03:09:47Z",
-      "last_updated_at": "2026-04-12T03:09:29Z",
+      "last_checked_at": "2026-04-15T03:07:12Z",
+      "last_updated_at": "2026-04-15T03:03:03Z",
       "completion_mode": "recorded_execution",
       "completed_by": "ticket-pack-builder",
-      "summary": "Ran remediation follow-up from diagnosis 20260412-030745 and confirmed REMED-004, REMED-005, and REMED-006 for repair cycle 2026-04-12T03:07:34Z.",
+      "summary": "Repair follow-up tickets are now present in tickets/manifest.json, including the asset-route and remediation backlog created from the current diagnosis pack.",
       "evidence_paths": [
-        ".opencode/state/artifacts/history/repair/ticket-pack-builder-completion.md",
-        "tickets/BOARD.md",
+        "diagnosis/20260415-030028/manifest.json",
         "tickets/manifest.json"
       ],
-      "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-      "first_recorded_at": "2026-04-12T03:09:29Z",
-      "last_recorded_at": "2026-04-12T03:09:29Z"
+      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
+      "first_recorded_at": "2026-04-15T03:03:03Z",
+      "last_recorded_at": "2026-04-15T03:03:03Z"
     }
   },
   "history": [
     {
-      "recorded_at": "2026-04-12T03:09:29Z",
+      "recorded_at": "2026-04-15T03:03:03Z",
       "stage": "project-skill-bootstrap",
       "owner": "project-skill-bootstrap",
       "category": "repo_local_skills",
       "status": "completed",
       "completion_mode": "recorded_execution",
       "completed_by": "project-skill-bootstrap",
-      "summary": "Regenerated repo-local stack standards with Godot 4.6 Android-specific workflow guidance for repair cycle 2026-04-12T03:07:34Z.",
+      "summary": "Replaced the placeholder stack standards skill with Godot 4.6 Android and sourced-asset rules for Woman vs Horse VB.",
       "evidence_paths": [
-        ".opencode/skills/stack-standards/SKILL.md",
-        ".opencode/state/artifacts/history/repair/project-skill-bootstrap-completion.md"
+        ".opencode/skills/stack-standards/SKILL.md"
       ],
-      "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-      "cycle_id": "2026-04-12T03:07:34Z"
+      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
+      "cycle_id": "2026-04-15T03:00:24Z"
     },
     {
-      "recorded_at": "2026-04-12T03:09:29Z",
+      "recorded_at": "2026-04-15T03:03:03Z",
       "stage": "ticket-pack-builder",
       "owner": "ticket-pack-builder",
       "category": "ticket_follow_up",
       "status": "completed",
       "completion_mode": "recorded_execution",
       "completed_by": "ticket-pack-builder",
-      "summary": "Ran remediation follow-up from diagnosis 20260412-030745 and confirmed REMED-004, REMED-005, and REMED-006 for repair cycle 2026-04-12T03:07:34Z.",
+      "summary": "Repair follow-up tickets are now present in tickets/manifest.json, including the asset-route and remediation backlog created from the current diagnosis pack.",
       "evidence_paths": [
-        ".opencode/state/artifacts/history/repair/ticket-pack-builder-completion.md",
-        "tickets/BOARD.md",
+        "diagnosis/20260415-030028/manifest.json",
         "tickets/manifest.json"
       ],
-      "repair_package_commit": "72acfbad2d953b04f73d10fc873102b70b9e8907+dirty:844bc63189c4",
-      "cycle_id": "2026-04-12T03:07:34Z"
+      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
+      "cycle_id": "2026-04-15T03:00:24Z"
     }
   ]
 }

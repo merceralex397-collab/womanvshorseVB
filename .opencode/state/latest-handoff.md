@@ -21,32 +21,32 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 
 ## Current Or Next Ticket
 
-- ID: ASSET-005
-- Title: Source SFX from Freesound.org (CC0)
-- Wave: 1
-- Lane: asset-sourcing
-- Stage: review
-- Status: review
-- Resolution: open
-- Verification: suspect
+- ID: REMED-012
+- Title: Batch remediate generated repo implementation and validation surfaces
+- Wave: 17
+- Lane: remediation
+- Stage: closeout
+- Status: done
+- Resolution: done
+- Verification: trusted
 
 ## Dependency Status
 
-- current_ticket_done: no
-- dependent_tickets_waiting_on_current: UI-003
-- split_child_tickets: REMED-004, REMED-005, REMED-006
+- current_ticket_done: yes
+- dependent_tickets_waiting_on_current: none
+- split_child_tickets: none
 
 ## Generation Status
 
-- handoff_status: workflow verification pending
+- handoff_status: ready for continued development
 - process_version: 7
 - parallel_mode: sequential
-- pending_process_verification: true
+- pending_process_verification: false
 - repair_follow_on_outcome: source_follow_up
 - repair_follow_on_required: false
 - repair_follow_on_next_stage: none
 - repair_follow_on_verification_passed: true
-- repair_follow_on_updated_at: 2026-04-12T03:09:47Z
+- repair_follow_on_updated_at: 2026-04-15T03:07:12Z
 - pivot_in_progress: false
 - pivot_class: none
 - pivot_changed_surfaces: none
@@ -63,7 +63,7 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 
 - audit_or_repair_follow_up: follow-up required
 - reopened_tickets: none
-- done_but_not_fully_trusted: POLISH-001, REMED-002, REMED-003
+- done_but_not_fully_trusted: none
 - pending_reverification: none
 - repair_follow_on_blockers: none
 - pivot_pending_stages: none
@@ -71,20 +71,16 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 
 ## Code Quality Status
 
-- last_build_result: unknown @ 2026-04-11T19:51:28.700Z
-- last_test_run_result: pass @ 2026-04-11T19:35:29.273Z
-- open_remediation_tickets: 4
+- last_build_result: pass @ 2026-04-16T01:57:19.116Z
+- last_test_run_result: pass @ 2026-04-16T01:57:19.116Z
+- open_remediation_tickets: 0
 - known_reference_integrity_issues: 0
 
 ## Known Risks
 
 - Managed repair converged, but source-layer follow-up still remains in the ticket graph.
-- Historical completion should not be treated as fully trusted until pending process verification or explicit reverification is cleared.
-- Some done tickets are not fully trusted yet: POLISH-001, REMED-002, REMED-003.
-- ASSET-005 is an open split parent; child tickets REMED-004, REMED-005, REMED-006 remain the active foreground work.
-- Downstream tickets UI-003 remain formally blocked until ASSET-005 reaches done.
 
 ## Next Action
 
-Keep ASSET-005 open as a split parent and continue the child ticket lanes: REMED-004, REMED-005, REMED-006.
+Continue the required internal lifecycle from the current ticket stage.
 <!-- SCAFFORGE:START_HERE_BLOCK END -->
