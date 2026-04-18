@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "ticket_id": "REMED-034",
+  "qa_artifact": ".opencode/state/artifacts/history/remed-034/qa/2026-04-17T18-20-41-809Z-qa.md",
+  "scope": "full-suite",
+  "test_paths": [],
+  "command_signatures": [
+    "grep -n Exact command\\|Raw output\\|Result .opencode/state/reviews/remed-026-review-review.md",
+    "godot4 --headless --path . --quit"
+  ],
+  "commands_total": 2,
+  "commands_completed": 2,
+  "completed": true,
+  "passed": true,
+  "updated_at": "2026-04-17T18:21:15.839Z",
+  "commands": [
+    {
+      "label": "command override 1",
+      "argv": [
+        "grep",
+        "-n",
+        "Exact command\\|Raw output\\|Result",
+        ".opencode/state/reviews/remed-026-review-review.md"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 7,
+      "stdout": "95:### AC1: Exact command\n97:grep -n \"Exact command\\|Raw output\\|Result\" .opencode/state/reviews/remed-026-review-review.md\n100:### AC1: Raw output\n102:95:### AC1: Exact command\n103:97:grep -n \"Exact command\\|Raw output\\|Result\\|PASS\\|FAIL\" .opencode/state/reviews/remed-026-review-review.md\n104:100:### AC1: Raw output\n105:105:### AC1: Result\n106:106:**FAIL** — Three-part EXEC-REMED-001 format absent. Only prose \"PASS\" on line 53. No structured `Exact command`, `Raw output`, or `Result: PASS/FAIL` sections.\n107:108:### AC2: Exact command\n108:113:### AC2: Raw output\n109:120:### AC2: Result\n112:### AC1: Result\n115:### AC2: Exact command\n120:### AC2: Raw output\n127:### AC2: Result\n",
+      "stderr": ""
+    },
+    {
+      "label": "command override 2",
+      "argv": [
+        "godot4",
+        "--headless",
+        "--path",
+        ".",
+        "--quit"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 173,
+      "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
+      "stderr": ""
+    }
+  ]
+}

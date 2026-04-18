@@ -6,21 +6,22 @@ Woman vs Horse VB
 
 ## Active Ticket
 
-- ID: REMED-012
-- Title: Batch remediate generated repo implementation and validation surfaces
+- ID: REMED-033
+- Title: Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync
 - Stage: closeout
 - Status: done
 - Resolution: done
 - Verification: trusted
 - Approved plan: yes
 - Needs reverification: no
+- Needs acceptance refresh: no
 - Open split children: none
 
 ## Bootstrap
 
 - status: ready
-- last_verified_at: 2026-04-10T21:55:36.748Z
-- proof_artifact: .opencode/state/artifacts/history/android-001/bootstrap/2026-04-10T21-55-36-747Z-environment-bootstrap.md
+- last_verified_at: 2026-04-17T02:32:03.546Z
+- proof_artifact: .opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T02-32-03-546Z-environment-bootstrap.md
 - blockers: none
 
 ## Process State
@@ -28,7 +29,7 @@ Woman vs Horse VB
 - process_version: 7
 - pending_process_verification: false
 - parallel_mode: sequential
-- state_revision: 416
+- state_revision: 574
 
 ## Repair Follow-On
 
@@ -36,7 +37,7 @@ Woman vs Horse VB
 - required: no
 - next_required_stage: none
 - verification_passed: true
-- last_updated_at: 2026-04-15T03:07:12Z
+- last_updated_at: 2026-04-17T17:16:26Z
 
 ## Pivot State
 
@@ -53,12 +54,12 @@ Woman vs Horse VB
 
 ## Lane Leases
 
-- No active lane leases
+- REMED-034: wvhvb-team-leader (remediation)
 
 ## Recent Artifacts
 
-- review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-53-42-881Z-review.md (review) [superseded] - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
-- review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-54-01-317Z-review.md (review) [superseded] - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
-- review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-55-30-812Z-review.md (review) - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
-- qa: .opencode/state/artifacts/history/remed-012/qa/2026-04-16T01-56-49-364Z-qa.md (qa) - QA PASS for REMED-012: AC1/AC2 verified PASS, finding EXEC-GODOT-008 does not reproduce, Godot headless exits 0, no uid:// references in title_screen.tscn
-- smoke-test: .opencode/state/artifacts/history/remed-012/smoke-test/2026-04-16T01-57-19-116Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- review: .opencode/state/artifacts/history/remed-033/review/2026-04-17T10-34-06-118Z-review.md (review) - PASS — All 3 ACs verified PASS. WFLOW033 resolved. ASSET-005 acceptance refreshed to format-agnostic. Three-part command evidence embedded in review artifact.
+- qa: .opencode/state/artifacts/history/remed-033/qa/2026-04-17T10-35-55-248Z-qa.md (qa) - QA PASS for REMED-033: all 3 ACs verified PASS, Godot headless exits 0, no history path mutations
+- smoke-test: .opencode/state/artifacts/history/remed-033/smoke-test/2026-04-17T10-36-20-992Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- backlog-verification: .opencode/state/artifacts/history/remed-033/review/2026-04-17T18-23-11-709Z-backlog-verification.md (review) - Backlog verification recorded during ticket_reverify for REMED-033.
+- reverification: .opencode/state/artifacts/history/remed-033/review/2026-04-17T18-23-11-716Z-reverification.md (review) - Trust restored using REMED-033.

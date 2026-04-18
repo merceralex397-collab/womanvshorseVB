@@ -1,0 +1,77 @@
+[
+  {
+    "id": "REMED-013",
+    "title": "Wave-based Godot gameplay defines a start_wave entrypoint that nothing in the runtime ever invokes",
+    "description": "Remediate EXEC-GODOT-010 by correcting the validated issue and rerunning the relevant quality checks.",
+    "affected_files": [
+      "project.godot",
+      "scripts/wave_spawner.gd"
+    ],
+    "suggested_fix_approach": "When a gameplay controller exposes start_wave() and wave_started, make one canonical runtime owner call start_wave() so the primary progression loop actually begins on the current build.",
+    "assignee": "implementer",
+    "source_finding_code": "EXEC-GODOT-010",
+    "source_finding_codes": [
+      "EXEC-GODOT-010"
+    ],
+    "severity": "error",
+    "route": "ticket-pack-builder",
+    "repair_class": "generated-repo remediation ticket",
+    "summary": "When a gameplay controller exposes start_wave() and wave_started, make one canonical runtime owner call start_wave() so the primary progression loop actually begins on the current build.",
+    "source_files": [
+      "project.godot",
+      "scripts/wave_spawner.gd"
+    ]
+  },
+  {
+    "id": "REMED-014",
+    "title": "Godot repo ships a game-over scene, but the death path only reloads the current scene instead of reaching that fail-state",
+    "description": "Remediate EXEC-GODOT-011 by correcting the validated issue and rerunning the relevant quality checks.",
+    "affected_files": [
+      "project.godot",
+      "scenes/ui/game_over.tscn",
+      "scenes/player/player.gd"
+    ],
+    "suggested_fix_approach": "If the repo ships a game-over scene or equivalent fail-state surface, route death/failure handlers into that scene instead of silently reloading the current level.",
+    "assignee": "implementer",
+    "source_finding_code": "EXEC-GODOT-011",
+    "source_finding_codes": [
+      "EXEC-GODOT-011"
+    ],
+    "severity": "error",
+    "route": "ticket-pack-builder",
+    "repair_class": "generated-repo remediation ticket",
+    "summary": "If the repo ships a game-over scene or equivalent fail-state surface, route death/failure handlers into that scene instead of silently reloading the current level.",
+    "source_files": [
+      "project.godot",
+      "scenes/ui/game_over.tscn",
+      "scenes/player/player.gd"
+    ]
+  },
+  {
+    "id": "REMED-022",
+    "title": "Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates",
+    "description": "Remediate EXEC-GODOT-012 by correcting the validated issue and rerunning the relevant quality checks.",
+    "affected_files": [
+      "project.godot",
+      "scripts/autoloads/game_manager.gd",
+      "scenes/ui/game_over.gd",
+      "scenes/ui/game_over.gd"
+    ],
+    "suggested_fix_approach": "When HUD or game-over surfaces read autoload gameplay state, ensure runtime scripts write those fields directly or call the singleton's mutator methods on the current gameplay path before claiming completion.",
+    "assignee": "implementer",
+    "source_finding_code": "EXEC-GODOT-012",
+    "source_finding_codes": [
+      "EXEC-GODOT-012"
+    ],
+    "severity": "error",
+    "route": "ticket-pack-builder",
+    "repair_class": "generated-repo remediation ticket",
+    "summary": "When HUD or game-over surfaces read autoload gameplay state, ensure runtime scripts write those fields directly or call the singleton's mutator methods on the current gameplay path before claiming completion.",
+    "source_files": [
+      "project.godot",
+      "scripts/autoloads/game_manager.gd",
+      "scenes/ui/game_over.gd",
+      "scenes/ui/game_over.gd"
+    ]
+  }
+]

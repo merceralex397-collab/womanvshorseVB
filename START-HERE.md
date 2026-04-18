@@ -21,9 +21,9 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 
 ## Current Or Next Ticket
 
-- ID: REMED-012
-- Title: Batch remediate generated repo implementation and validation surfaces
-- Wave: 17
+- ID: REMED-033
+- Title: Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync
+- Wave: 37
 - Lane: remediation
 - Stage: closeout
 - Status: done
@@ -46,7 +46,7 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 - repair_follow_on_required: false
 - repair_follow_on_next_stage: none
 - repair_follow_on_verification_passed: true
-- repair_follow_on_updated_at: 2026-04-15T03:07:12Z
+- repair_follow_on_updated_at: 2026-04-17T17:16:26Z
 - pivot_in_progress: false
 - pivot_class: none
 - pivot_changed_surfaces: none
@@ -56,7 +56,7 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 - pivot_completed_ticket_lineage_actions: none
 - post_pivot_verification_passed: false
 - bootstrap_status: ready
-- bootstrap_proof: .opencode/state/artifacts/history/android-001/bootstrap/2026-04-10T21-55-36-747Z-environment-bootstrap.md
+- bootstrap_proof: .opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T02-32-03-546Z-environment-bootstrap.md
 - bootstrap_blockers: none
 
 ## Post-Generation Audit Status
@@ -71,8 +71,8 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 
 ## Code Quality Status
 
-- last_build_result: pass @ 2026-04-16T01:57:19.116Z
-- last_test_run_result: pass @ 2026-04-16T01:57:19.116Z
+- last_build_result: unknown @ 2026-04-17T18:23:11.716Z
+- last_test_run_result: pass @ 2026-04-17T18:21:15.823Z
 - open_remediation_tickets: 0
 - known_reference_integrity_issues: 0
 
@@ -82,5 +82,5 @@ The repo is operating under the managed OpenCode workflow. Use the canonical sta
 
 ## Next Action
 
-Continue the required internal lifecycle from the current ticket stage.
+All tickets complete. Workflow fully drained at process version 7.
 <!-- SCAFFORGE:START_HERE_BLOCK END -->

@@ -38,6 +38,7 @@ func start_wave() -> void:
 		return
 	_current_wave += 1
 	_wave_active = true
+	GameManager.set_wave(_current_wave)
 	wave_started.emit(_current_wave)
 	_spawn_wave()
 

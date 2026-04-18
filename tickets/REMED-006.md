@@ -57,6 +57,7 @@ None
 - review: .opencode/state/artifacts/history/remed-006/review/2026-04-16T00-01-51-039Z-review.md (review) - Code review PASS — EXEC-REMED-001 does not reproduce, three-part format confirmed in remed-003-review-review.md, Godot headless exits 0.
 - qa: .opencode/state/artifacts/history/remed-006/qa/2026-04-16T00-08-21-839Z-qa.md (qa) - QA PASS for REMED-006: all 4 checks verified PASS, EXEC-REMED-001 does not reproduce, three-part format confirmed in review artifacts, Godot headless exits 0.
 - smoke-test: .opencode/state/artifacts/history/remed-006/smoke-test/2026-04-16T00-08-39-647Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- backlog-verification: .opencode/state/artifacts/history/remed-006/review/2026-04-17T03-38-14-564Z-backlog-verification.md (review) - Backlog verification PASS for REMED-006: both ACs verified, EXEC-REMED-001 does not reproduce, Godot headless exits 0, historical completion affirmed for process version 7.
 
 ## Notes
 

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "ticket_id": "REMED-024",
+  "qa_artifact": ".opencode/state/artifacts/history/remed-024/qa/2026-04-17T03-08-04-768Z-qa.md",
+  "scope": "single",
+  "test_paths": [],
+  "command_signatures": [
+    "godot4 --headless --path . --quit"
+  ],
+  "commands_total": 1,
+  "commands_completed": 1,
+  "completed": true,
+  "passed": true,
+  "updated_at": "2026-04-17T03:08:31.886Z",
+  "commands": [
+    {
+      "label": "command override 1",
+      "argv": [
+        "godot4",
+        "--headless",
+        "--path",
+        ".",
+        "--quit"
+      ],
+      "reason": "Explicit smoke-test command override supplied by the caller.",
+      "exit_code": 0,
+      "duration_ms": 176,
+      "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
+      "stderr": ""
+    }
+  ]
+}

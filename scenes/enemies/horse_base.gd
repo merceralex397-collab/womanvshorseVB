@@ -84,6 +84,8 @@ func take_damage(amount: int) -> void:
 
 
 func die() -> void:
+	# Update GameManager with score before emitting died signal
+	GameManager.add_score(contact_damage)
 	# Emit died signal with score value (contact damage as base score)
 	died.emit(contact_damage)
 	

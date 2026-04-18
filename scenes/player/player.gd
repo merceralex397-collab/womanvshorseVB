@@ -200,4 +200,4 @@ func _start_invincibility() -> void:
 
 func _die() -> void:
 	died.emit()
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/ui/game_over.tscn")

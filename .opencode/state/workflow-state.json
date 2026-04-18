@@ -1,5 +1,5 @@
 {
-  "active_ticket": "REMED-012",
+  "active_ticket": "REMED-033",
   "stage": "closeout",
   "status": "done",
   "approved_plan": true,
@@ -42,7 +42,7 @@
     },
     "ASSET-005": {
       "approved_plan": true,
-      "reopen_count": 0,
+      "reopen_count": 2,
       "needs_reverification": false
     },
     "CORE-001": {
@@ -159,10 +159,115 @@
       "approved_plan": true,
       "reopen_count": 0,
       "needs_reverification": false
+    },
+    "REMED-013": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-014": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-015": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-016": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-017": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-018": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-019": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-020": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-021": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-022": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-023": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-024": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-025": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-026": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-028": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-027": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-030": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-031": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-032": {
+      "approved_plan": false,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-033": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
+    },
+    "REMED-034": {
+      "approved_plan": true,
+      "reopen_count": 0,
+      "needs_reverification": false
     }
   },
   "process_version": 7,
-  "process_last_changed_at": "2026-04-15T03:00:24.978Z",
+  "process_last_changed_at": "2026-04-17T17:09:47.982Z",
   "process_last_change_summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
   "pending_process_verification": false,
   "parallel_mode": "sequential",
@@ -178,15 +283,25 @@
     "blocking_reasons": [],
     "verification_passed": true,
     "handoff_allowed": true,
-    "last_updated_at": "2026-04-15T03:07:12Z",
+    "last_updated_at": "2026-04-17T17:16:26Z",
     "process_version": 7
   },
   "bootstrap": {
     "status": "ready",
-    "last_verified_at": "2026-04-10T21:55:36.748Z",
-    "environment_fingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "proof_artifact": ".opencode/state/artifacts/history/android-001/bootstrap/2026-04-10T21-55-36-747Z-environment-bootstrap.md"
+    "last_verified_at": "2026-04-17T02:32:03.546Z",
+    "environment_fingerprint": "eb6950960d25a6457b1d34285494dcb5a9827f1cf386e2c25a4d3dc1105f91ba",
+    "proof_artifact": ".opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T02-32-03-546Z-environment-bootstrap.md"
   },
-  "lane_leases": [],
-  "state_revision": 416
+  "lane_leases": [
+    {
+      "ticket_id": "REMED-034",
+      "lane": "remediation",
+      "owner_agent": "wvhvb-team-leader",
+      "write_lock": true,
+      "claimed_at": "2026-04-17T18:12:47.011Z",
+      "expires_at": "2026-04-17T20:12:47.011Z",
+      "allowed_paths": []
+    }
+  ],
+  "state_revision": 574
 }

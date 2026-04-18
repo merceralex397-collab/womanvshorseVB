@@ -1,12 +1,12 @@
 {
   "tracking_mode": "persistent_recorded_state",
   "assertion_input_mode": "legacy_manual_assertion",
-  "cycle_id": "2026-04-15T03:00:24Z",
-  "created_at": "2026-04-15T03:00:24Z",
-  "last_updated_at": "2026-04-15T03:07:12Z",
+  "cycle_id": "2026-04-17T17:09:48Z",
+  "created_at": "2026-04-17T17:09:48Z",
+  "last_updated_at": "2026-04-17T17:16:26Z",
   "process_version": 7,
-  "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:579f1d3d63d6",
-  "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260415-030020",
+  "repair_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+  "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-170717",
   "pruned_unknown_stages": [],
   "required_stages": [
     "ticket-pack-builder"
@@ -19,17 +19,17 @@
       "status": "completed",
       "reason": "Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
       "currently_required": false,
-      "last_checked_at": "2026-04-15T03:03:03Z",
-      "last_updated_at": "2026-04-15T03:03:03Z",
+      "last_checked_at": "2026-04-17T17:12:15Z",
+      "last_updated_at": "2026-04-17T17:12:15Z",
       "completion_mode": "recorded_execution",
       "completed_by": "project-skill-bootstrap",
-      "summary": "Replaced the placeholder stack standards skill with Godot 4.6 Android and sourced-asset rules for Woman vs Horse VB.",
+      "summary": "Regenerated VB stack standards for Godot Android free-asset workflow.",
       "evidence_paths": [
         ".opencode/skills/stack-standards/SKILL.md"
       ],
-      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
-      "first_recorded_at": "2026-04-15T03:03:03Z",
-      "last_recorded_at": "2026-04-15T03:03:03Z"
+      "repair_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+      "first_recorded_at": "2026-04-17T17:12:15Z",
+      "last_recorded_at": "2026-04-17T17:12:15Z"
     },
     "ticket-pack-builder": {
       "stage": "ticket-pack-builder",
@@ -38,51 +38,51 @@
       "status": "completed",
       "reason": "Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
       "currently_required": true,
-      "last_checked_at": "2026-04-15T03:07:12Z",
-      "last_updated_at": "2026-04-15T03:03:03Z",
+      "last_checked_at": "2026-04-17T17:16:26Z",
+      "last_updated_at": "2026-04-17T17:15:24Z",
       "completion_mode": "recorded_execution",
       "completed_by": "ticket-pack-builder",
-      "summary": "Repair follow-up tickets are now present in tickets/manifest.json, including the asset-route and remediation backlog created from the current diagnosis pack.",
+      "summary": "Created VB remediation follow-up tickets for remaining EXEC-REMED evidence gaps.",
       "evidence_paths": [
-        "diagnosis/20260415-030028/manifest.json",
+        "tickets/REMED-034.md",
         "tickets/manifest.json"
       ],
-      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
-      "first_recorded_at": "2026-04-15T03:03:03Z",
-      "last_recorded_at": "2026-04-15T03:03:03Z"
+      "repair_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+      "first_recorded_at": "2026-04-17T17:15:24Z",
+      "last_recorded_at": "2026-04-17T17:15:24Z"
     }
   },
   "history": [
     {
-      "recorded_at": "2026-04-15T03:03:03Z",
+      "recorded_at": "2026-04-17T17:12:15Z",
       "stage": "project-skill-bootstrap",
       "owner": "project-skill-bootstrap",
       "category": "repo_local_skills",
       "status": "completed",
       "completion_mode": "recorded_execution",
       "completed_by": "project-skill-bootstrap",
-      "summary": "Replaced the placeholder stack standards skill with Godot 4.6 Android and sourced-asset rules for Woman vs Horse VB.",
+      "summary": "Regenerated VB stack standards for Godot Android free-asset workflow.",
       "evidence_paths": [
         ".opencode/skills/stack-standards/SKILL.md"
       ],
-      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
-      "cycle_id": "2026-04-15T03:00:24Z"
+      "repair_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+      "cycle_id": "2026-04-17T17:09:48Z"
     },
     {
-      "recorded_at": "2026-04-15T03:03:03Z",
+      "recorded_at": "2026-04-17T17:15:24Z",
       "stage": "ticket-pack-builder",
       "owner": "ticket-pack-builder",
       "category": "ticket_follow_up",
       "status": "completed",
       "completion_mode": "recorded_execution",
       "completed_by": "ticket-pack-builder",
-      "summary": "Repair follow-up tickets are now present in tickets/manifest.json, including the asset-route and remediation backlog created from the current diagnosis pack.",
+      "summary": "Created VB remediation follow-up tickets for remaining EXEC-REMED evidence gaps.",
       "evidence_paths": [
-        "diagnosis/20260415-030028/manifest.json",
+        "tickets/REMED-034.md",
         "tickets/manifest.json"
       ],
-      "repair_package_commit": "43aac98c73ce6a81653e88291215550ebfd3e709+dirty:62107c882ff9",
-      "cycle_id": "2026-04-15T03:00:24Z"
+      "repair_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+      "cycle_id": "2026-04-17T17:09:48Z"
     }
   ]
 }

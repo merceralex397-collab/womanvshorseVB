@@ -5,27 +5,26 @@
   "scope": "full-suite",
   "test_paths": [],
   "command_signatures": [
-    "godot4 --headless --path . --quit 2>&1"
+    "godot4 --headless --path . --quit"
   ],
   "commands_total": 1,
   "commands_completed": 1,
   "completed": true,
   "passed": true,
-  "updated_at": "2026-04-16T00:50:29.402Z",
+  "updated_at": "2026-04-17T03:35:26.272Z",
   "commands": [
     {
-      "label": "qa artifact command 1",
+      "label": "command override 1",
       "argv": [
         "godot4",
         "--headless",
         "--path",
         ".",
-        "--quit",
-        "2>&1"
+        "--quit"
       ],
-      "reason": "Current QA artifact records a deterministic smoke-test command.",
+      "reason": "Explicit smoke-test command override supplied by the caller.",
       "exit_code": 0,
-      "duration_ms": 168,
+      "duration_ms": 306,
       "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
       "stderr": ""
     }

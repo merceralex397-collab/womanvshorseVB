@@ -9,7 +9,7 @@
 | 1 | ASSET-002 | Source enemy horse sprites (CC0) | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | - |
 | 1 | ASSET-003 | Source arena tileset (CC0) | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | - |
 | 1 | ASSET-004 | Source UI sprites and fonts | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | - |
-| 1 | ASSET-005 | Source SFX from Freesound.org (CC0) | asset-sourcing | closeout | done | done | trusted | yes | low | SETUP-001 | REMED-004, REMED-005, REMED-006, REMED-012 |
+| 1 | ASSET-005 | Source SFX from Freesound.org (CC0) | asset-sourcing | closeout | done | done | reverified | yes | low | SETUP-001 | REMED-004, REMED-005, REMED-006, REMED-012 |
 | 2 | CORE-001 | Implement attack system | core-gameplay | closeout | done | done | trusted | no | high | SETUP-002, ASSET-001 | - |
 | 2 | CORE-002 | Create enemy horse base class | core-gameplay | closeout | done | done | trusted | no | medium | SETUP-001, ASSET-002 | CORE-006 |
 | 2 | CORE-003 | Wave spawner | core-gameplay | closeout | done | done | trusted | no | medium | CORE-002 | - |
@@ -33,3 +33,24 @@
 | 15 | REMED-009 | Batch remediate generated repo implementation and validation surfaces | remediation | closeout | done | superseded | reverified | no | low | - | - |
 | 16 | REMED-011 | Batch remediate generated repo implementation and validation surfaces | remediation | closeout | done | superseded | reverified | no | low | - | - |
 | 17 | REMED-012 | Batch remediate generated repo implementation and validation surfaces | remediation | closeout | done | done | trusted | no | low | - | - |
+| 18 | REMED-013 | Wave-based Godot gameplay defines a start_wave entrypoint that nothing in the runtime ever invokes | remediation | closeout | done | done | reverified | no | low | - | REMED-014, REMED-024 |
+| 19 | REMED-014 | Godot repo ships a game-over scene, but the death path only reloads the current scene instead of reaching that fail-state | remediation | closeout | done | done | reverified | no | low | - | - |
+| 20 | REMED-015 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 21 | REMED-016 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 22 | REMED-017 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 23 | REMED-018 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 24 | REMED-019 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 25 | REMED-020 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 26 | REMED-021 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 27 | REMED-022 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 28 | REMED-023 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 29 | REMED-024 | Player-facing Godot UI reads singleton gameplay state that no runtime code ever updates | remediation | closeout | done | done | reverified | no | low | - | - |
+| 30 | REMED-025 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 31 | REMED-026 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 32 | REMED-028 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 33 | REMED-027 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | superseded | reverified | no | low | - | REMED-030 |
+| 34 | REMED-030 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | done | trusted | no | low | - | - |
+| 35 | REMED-031 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | reverified | no | low | - | REMED-033 |
+| 36 | REMED-032 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | superseded | reverified | no | low | - | - |
+| 37 | REMED-033 | Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync | remediation | closeout | done | done | trusted | no | low | - | - |
+| 38 | REMED-034 | Remediation review artifact does not contain runnable command evidence | remediation | closeout | done | done | trusted | no | low | - | - |

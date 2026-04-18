@@ -41,7 +41,7 @@ type CommandResult = CommandSpec & {
   stdout: string
   stderr: string
   missing_executable?: string
-  failure_classification?: "missing_executable" | "permission_restriction" | "syntax_error" | "test_failure" | "configuration_error" | "command_error"
+  failure_classification?: "missing_executable" | "permission_restriction" | "syntax_error" | "tooling_parse_warning" | "test_failure" | "configuration_error" | "command_error"
   blocked_by_permissions?: boolean
 }
 
@@ -579,8 +579,16 @@ function isConfigurationErrorOutput(output: string): boolean {
 }
 
 function isGodotFatalDiagnosticOutput(output: string): boolean {
-  return /SCRIPT ERROR:.*(?:not declared in the current scope|not found in base self)/i.test(output)
+  return /SCRIPT ERROR:.*(?:not declared in the current scope|not found in base self|could not parse global class|could not resolve class)/i.test(output)
+    || /Parse Error:\s*(?:Could not parse global class|Could not resolve class)/i.test(output)
     || /Failed to load script "res:\/\//i.test(output)
+}
+
+function isClassNameReloadParseWarning(output: string, exitCode: number): boolean {
+  return exitCode === 0
+    && /Could not parse global class/i.test(output)
+    && /Could not resolve class/i.test(output)
+    && /GDScript::reload/i.test(output)
 }
 
 function classifyCommandFailure(args: {
@@ -595,7 +603,8 @@ function classifyCommandFailure(args: {
   if (args.missingExecutable) return "missing_executable"
   if (args.blockedByPermissions) return "permission_restriction"
   if (args.exitCode === 0) {
-    if (isGodotFatalDiagnosticOutput(output)) return "syntax_error"
+    if (isClassNameReloadParseWarning(output, args.exitCode)) return "tooling_parse_warning"
+    if (isGodotFatalDiagnosticOutput(output) || isSyntaxErrorOutput(output)) return "syntax_error"
     return undefined
   }
   if (isSyntaxErrorOutput(output)) return "syntax_error"

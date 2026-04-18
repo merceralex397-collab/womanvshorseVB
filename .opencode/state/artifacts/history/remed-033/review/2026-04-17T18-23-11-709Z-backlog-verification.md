@@ -1,0 +1,1 @@
+Backlog verification PASS for REMED-033: WFLOW033 resolved. Smoke-test PASS (godot4 exit 0), QA PASS (all 3 ACs PASS). ASSET-005 acceptance refreshed to format-agnostic. No regressions since process v7 change.

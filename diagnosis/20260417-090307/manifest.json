@@ -1,0 +1,156 @@
+{
+  "generated_at": "2026-04-17T09:03:07Z",
+  "repo_root": "/home/rowan/womanvshorseVB",
+  "finding_count": 2,
+  "finding_codes": [
+    "EXEC-REMED-001",
+    "WFLOW033"
+  ],
+  "source_findings": [
+    {
+      "code": "WFLOW033",
+      "severity": "error"
+    },
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error"
+    }
+  ],
+  "result_state": "validated failures found",
+  "diagnosis_kind": "post_repair_verification",
+  "evidence_mode": "transcript_backed",
+  "audit_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b+dirty:66e5736fbcda",
+  "report_files": {
+    "report_1": "01-initial-codebase-review.md",
+    "report_2": "02-scafforge-process-failures.md",
+    "report_3": "03-scafforge-prevention-actions.md",
+    "report_4": "04-live-repo-repair-plan.md"
+  },
+  "disposition_bundle_file": "disposition-bundle.json",
+  "disposition_bundle": {
+    "version": 1,
+    "generated_at": "2026-04-17T09:03:07Z",
+    "repo_root": "/home/rowan/womanvshorseVB",
+    "audit_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b+dirty:66e5736fbcda",
+    "allowed_classes": [
+      "managed_blocker",
+      "manual_prerequisite_blocker",
+      "source_follow_up",
+      "process_state_only",
+      "advisory"
+    ],
+    "finding_count": 2,
+    "findings": [
+      {
+        "code": "WFLOW033",
+        "severity": "error",
+        "disposition_class": "source_follow_up",
+        "legacy_disposition_class": "managed_blocker",
+        "route": "ticket-pack-builder",
+        "repair_class": "generated-repo remediation ticket",
+        "evidence_grade": "repo-state validation",
+        "source_files": [
+          "tickets/manifest.json",
+          ".opencode/state/workflow-state.json",
+          ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-31-54-183Z-issue-discovery.md",
+          "tickets/ASSET-005.md"
+        ],
+        "provenance": "script"
+      },
+      {
+        "code": "EXEC-REMED-001",
+        "severity": "error",
+        "disposition_class": "source_follow_up",
+        "legacy_disposition_class": "source_follow_up",
+        "route": "scafforge-repair",
+        "repair_class": "safe Scafforge package change",
+        "evidence_grade": "repo-state validation",
+        "source_files": [
+          "tickets/manifest.json",
+          ".opencode/state/reviews/remed-026-review-review.md"
+        ],
+        "provenance": "script"
+      }
+    ],
+    "counts": {
+      "managed_blocker": 0,
+      "manual_prerequisite_blocker": 0,
+      "source_follow_up": 2,
+      "process_state_only": 0,
+      "advisory": 0
+    },
+    "shadow_mode_deltas": [
+      {
+        "code": "WFLOW033",
+        "legacy_disposition_class": "managed_blocker",
+        "disposition_class": "source_follow_up",
+        "route": "ticket-pack-builder",
+        "reason": "Legacy prefix classification would label WFLOW033 as managed_blocker, but the authoritative bundle assigns source_follow_up."
+      }
+    ]
+  },
+  "ticket_recommendations": [
+    {
+      "id": "REMED-031",
+      "title": "Remediation review artifact does not contain runnable command evidence",
+      "description": "Remediate EXEC-REMED-001 by correcting the validated issue and rerunning the relevant quality checks.",
+      "affected_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-026-review-review.md"
+      ],
+      "suggested_fix_approach": "For remediation tickets with `finding_source`, require the review artifact to record the exact command run, include raw command output, and state the explicit PASS/FAIL result before the review counts as trustworthy closure.",
+      "assignee": "implementer",
+      "source_finding_code": "EXEC-REMED-001",
+      "source_finding_codes": [
+        "EXEC-REMED-001"
+      ],
+      "severity": "error",
+      "route": "scafforge-repair",
+      "repair_class": "safe Scafforge package change",
+      "summary": "For remediation tickets with `finding_source`, require the review artifact to record the exact command run, include raw command output, and state the explicit PASS/FAIL result before the review counts as trustworthy closure.",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-026-review-review.md"
+      ]
+    },
+    {
+      "id": "REMED-032",
+      "title": "Canonical ticket acceptance can drift after acceptance-imprecision intake, leaving artifacts and ticket truth out of sync",
+      "description": "Remediate WFLOW033 by correcting the validated issue and rerunning the relevant quality checks.",
+      "affected_files": [
+        "tickets/manifest.json",
+        ".opencode/state/workflow-state.json",
+        ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-31-54-183Z-issue-discovery.md",
+        "tickets/ASSET-005.md"
+      ],
+      "suggested_fix_approach": "When `issue_intake` invalidates a ticket because the accepted contract is wrong or imprecise, require the team leader to run `ticket_update(acceptance=[...])`, persist an acceptance-refresh artifact, and block review/closeout/handoff until that canonical refresh is complete.",
+      "assignee": "implementer",
+      "source_finding_code": "WFLOW033",
+      "source_finding_codes": [
+        "WFLOW033"
+      ],
+      "severity": "error",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "summary": "When `issue_intake` invalidates a ticket because the accepted contract is wrong or imprecise, require the team leader to run `ticket_update(acceptance=[...])`, persist an acceptance-refresh artifact, and block review/closeout/handoff until that canonical refresh is complete.",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/workflow-state.json",
+        ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-31-54-183Z-issue-discovery.md",
+        "tickets/ASSET-005.md"
+      ]
+    }
+  ],
+  "package_work_required_first": false,
+  "recommended_next_step": "subject_repo_source_follow_up",
+  "supporting_logs": [
+    "/home/rowan/Scafforge/reports/agent-runs/wvhvb-opencode-2026-04-17T04-13-58.log"
+  ],
+  "verification_kind": "post_repair",
+  "repair_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b+dirty:66e5736fbcda",
+  "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-085241",
+  "current_state_clean": false,
+  "causal_regression_verified": true,
+  "verification_basis": "transcript_backed",
+  "recommended_ticket_payload": "recommended-ticket-payload.json"
+}

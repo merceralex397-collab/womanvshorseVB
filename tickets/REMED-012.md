@@ -59,6 +59,7 @@ None
 - review: .opencode/state/artifacts/history/remed-012/review/2026-04-16T01-55-30-812Z-review.md (review) - Code review PASS for REMED-012: AC1/AC2 verified PASS, finding does not reproduce, Godot headless exits 0, no stale UID in title_screen.tscn
 - qa: .opencode/state/artifacts/history/remed-012/qa/2026-04-16T01-56-49-364Z-qa.md (qa) - QA PASS for REMED-012: AC1/AC2 verified PASS, finding EXEC-GODOT-008 does not reproduce, Godot headless exits 0, no uid:// references in title_screen.tscn
 - smoke-test: .opencode/state/artifacts/history/remed-012/smoke-test/2026-04-16T01-57-19-116Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- backlog-verification: .opencode/state/artifacts/history/remed-012/review/2026-04-17T03-38-15-571Z-backlog-verification.md (review) - Backlog verification PASS for REMED-012: both ACs verified, EXEC-GODOT-008 does not reproduce, Godot headless exits 0, historical completion affirmed for process version 7.
 
 ## Notes
 

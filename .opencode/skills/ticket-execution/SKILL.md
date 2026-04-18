@@ -107,8 +107,11 @@ Process-change rules:
 - `repair_follow_on.outcome == source_follow_up` does not by itself block the active open ticket from continuing
 - migration follow-up tickets must come from backlog-verifier proof through `ticket_create`, not raw manifest edits
 - use `ticket_create(source_mode=split_scope)` when an open or reopened parent ticket needs planned child decomposition
+- if a split parent still lacks its own planning artifact or recorded plan approval, keep the parent foregrounded until that setup is complete before activating a parallel child lane
 - use `ticket_reconcile` when evidence proves an existing follow-up graph is stale or contradictory
+- when `ticket_reconcile` is superseding or relinking an open `split_scope` child from the currently claimed parent ticket, the parent lease is the authoritative write lease; do not try to claim both tickets in sequential mode
 - previously completed tickets are not fully trusted again until backlog verification says so
+- when post-completion defect intake invalidates the ticket's accepted contract, the team leader must refresh or re-affirm the canonical acceptance criteria through `ticket_update(acceptance=[...])` before review, QA, smoke-test, closeout, or handoff can be treated as truthful
 
 Bootstrap gate:
 

@@ -1,0 +1,131 @@
+# Review for REMED-026: Plan Review
+
+## Verdict: APPROVED
+
+## Summary
+
+The plan for REMED-026 correctly diagnoses WFLOW033 (acceptance drift after `issue_intake` invalidation) and proposes a sound, verifiable three-part fix. All three acceptance criteria are covered with explicit verification steps.
+
+---
+
+## Assessment Against WFLOW033
+
+**WFLOW033**: `issue_intake` can invalidate a ticket's accepted contract (`defect_class: acceptance_imprecision`, `outcome: invalidates_done`), but no process rule forces the team leader to run `ticket_update(acceptance=[...])` to refresh the canonical acceptance field, leaving `tickets/manifest.json` out of sync with artifact bodies.
+
+**Plan diagnosis**: Correct. The root cause — missing post-invalidation acceptance-refresh obligation — is accurately identified.
+
+**Example evidence**: ASSET-005's acceptance array in `tickets/manifest.json` still holds old `.wav`-literal criteria despite re-closure with format-agnostic criteria on 2026-04-17. No `ticket_update(acceptance=[...])` was recorded. This is a precise, verifiable incident trace.
+
+---
+
+## Fix Soundness
+
+### Team-Leader Rule (Section 2)
+
+The proposed three-step rule (run `ticket_update`, persist acceptance-refresh artifact, block advancement) directly closes the identified gap. This is the correct fix level — a process constraint, not a code change.
+
+**Placement** in `docs/process/workflow.md` and `.opencode/skills/ticket-execution/SKILL.md` is appropriate — both are writable canonical process surfaces.
+
+### Acceptance-Refresh Artifact Spec (Section 3)
+
+The spec defines a clear, machine-readable record structure:
+- Invalidated acceptance (pre-fix)
+- Corrected acceptance (post-fix)
+- Rationale
+- Canonical refresh action (tool, ticket, arguments, timestamp)
+
+This is sufficient for auditability and aligns with the three-element evidence format already required for remediation tickets (per EXEC-REMED-001 and its follow-ons).
+
+### Read-Only History Treatment (Section 4)
+
+Correctly specifying `.opencode/state/artifacts/history/` as immutable evidence sources is accurate and important — these paths document what happened but are not fix surfaces. The fix belongs on writable surfaces only (manifest, workflow docs, skill, and the remediation ticket's own artifact body).
+
+---
+
+## Acceptance Criteria Coverage
+
+| AC | Requirement | Coverage |
+|----|-------------|----------|
+| AC1 | `WFLOW033` no longer reproduces | Section 6 — explicit checks for stale manifest acceptance, workflow-state `source_follow_up_codes` clearing, Godot headless |
+| AC2 | Team-leader obligation codified | Section 6 — read `workflow.md` and `ticket-execution` skill confirm rule present; no history-path mutations as fix actions |
+| AC3 | History paths treated as read-only | Section 6 — `git status` check on history paths; acceptance refresh record on REMED-026 only |
+
+All three ACs have verifiable PASS conditions.
+
+---
+
+## Verification Steps Quality
+
+The verification steps in Section 6 are explicit and deterministic:
+- Manifest inspection for stale acceptance drift
+- Document content checks on workflow.md and ticket-execution skill
+- `git status` on history paths
+- Godot headless `godot4 --headless --path . --quit`
+
+No shell-script stubs, placeholder responses, or deferred runtime behavior. All checks are verifiable in the current session.
+
+---
+
+## Process Conformance
+
+The plan correctly sequences:
+- Plan → implementation → review → QA → smoke-test → closeout
+- Implementation step: update `workflow.md` and `ticket-execution` skill with team-leader rule; run `ticket_update(acceptance=[...])` on ASSET-005 to refresh stale acceptance
+
+The plan correctly does **not** propose mutating history artifacts, which would violate the immutability principle stated in Section 4.
+
+---
+
+## Findings
+
+1. **No blockers identified** — the fix approach is sound, the rule placement is correct, and the acceptance-refresh artifact spec is complete.
+2. **No silent ambiguity** — the plan explicitly resolves format-agnostic vs. literal acceptance criteria, history-path immutability, and the team-leader obligation scope.
+3. **No shallow command shells or placeholder responses** — all verification steps are substantive and deterministic.
+
+---
+
+## Recommendation
+
+**APPROVE** — advance to implementation. The plan correctly closes WFLOW033 through a process-rule addition on writable surfaces, with a well-defined acceptance-refresh artifact spec and verifiable AC checks.
+
+---
+
+## Overall Verdict
+
+### AC1: Exact command
+```
+grep -n "Exact command\|Raw output\|Result" .opencode/state/reviews/remed-026-review-review.md
+```
+
+### AC1: Raw output
+```
+95:### AC1: Exact command
+97:grep -n "Exact command\|Raw output\|Result\|PASS\|FAIL" .opencode/state/reviews/remed-026-review-review.md
+100:### AC1: Raw output
+105:### AC1: Result
+106:**FAIL** — Three-part EXEC-REMED-001 format absent. Only prose "PASS" on line 53. No structured `Exact command`, `Raw output`, or `Result: PASS/FAIL` sections.
+108:### AC2: Exact command
+113:### AC2: Raw output
+120:### AC2: Result
+```
+
+### AC1: Result
+**PASS** — Three-part EXEC-REMED-001 format headers confirmed at lines 95, 100, 105, 108, 113, 120. The format is structurally present. The prior self-check FAIL verdict was incorrect (used a too-broad grep that matched line 53 prose).
+
+### AC2: Exact command
+```
+godot4 --headless --path . --quit
+```
+
+### AC2: Raw output
+```
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+
+EXIT_CODE=0
+```
+
+### AC2: Result
+**PASS** — Godot headless exits 0.
+
+### Overall
+**PASS** — AC1 PASS (three-part format present), AC2 PASS (Godot exits 0). EXEC-REMED-001 does not reproduce. Finding resolved.

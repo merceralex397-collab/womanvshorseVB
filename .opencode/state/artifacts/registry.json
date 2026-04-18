@@ -2533,6 +2533,886 @@
       "summary": "Deterministic smoke test passed.",
       "created_at": "2026-04-16T01:57:19.116Z",
       "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "environment-bootstrap",
+      "path": ".opencode/state/artifacts/history/remed-013/bootstrap/2026-04-16T20-39-27-216Z-environment-bootstrap.md",
+      "source_path": ".opencode/state/bootstrap/remed-013-bootstrap-environment-bootstrap.md",
+      "stage": "bootstrap",
+      "summary": "Environment bootstrap completed successfully.",
+      "created_at": "2026-04-16T20:39:27.216Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "environment-bootstrap",
+      "path": ".opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T00-11-46-273Z-environment-bootstrap.md",
+      "source_path": ".opencode/state/bootstrap/remed-013-bootstrap-environment-bootstrap.md",
+      "stage": "bootstrap",
+      "summary": "Environment bootstrap failed.",
+      "created_at": "2026-04-17T00:11:46.273Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "environment-bootstrap",
+      "path": ".opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T00-12-39-789Z-environment-bootstrap.md",
+      "source_path": ".opencode/state/bootstrap/remed-013-bootstrap-environment-bootstrap.md",
+      "stage": "bootstrap",
+      "summary": "Environment bootstrap failed.",
+      "created_at": "2026-04-17T00:12:39.789Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "environment-bootstrap",
+      "path": ".opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T02-17-32-373Z-environment-bootstrap.md",
+      "source_path": ".opencode/state/bootstrap/remed-013-bootstrap-environment-bootstrap.md",
+      "stage": "bootstrap",
+      "summary": "Environment bootstrap completed successfully.",
+      "created_at": "2026-04-17T02:17:32.373Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-013/planning/2026-04-17T02-18-58-578Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-013-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-013: Create scripts/main.gd attached to Main node in main.tscn to call WaveSpawner.start_wave() in _ready(), fixing EXEC-GODOT-010 (wave loop never starts). Canonical owner rationale, explicit AC verification steps, Godot headless command included.",
+      "created_at": "2026-04-17T02:18:58.578Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "environment-bootstrap",
+      "path": ".opencode/state/artifacts/history/remed-013/bootstrap/2026-04-17T02-32-03-546Z-environment-bootstrap.md",
+      "source_path": ".opencode/state/bootstrap/remed-013-bootstrap-environment-bootstrap.md",
+      "stage": "bootstrap",
+      "summary": "Environment bootstrap completed successfully.",
+      "created_at": "2026-04-17T02:32:03.546Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-013/implementation/2026-04-17T02-41-04-306Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-013-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Created scripts/main.gd to call WaveSpawner.start_wave(), attached to Main node in main.tscn. EXEC-GODOT-010 resolved.",
+      "created_at": "2026-04-17T02:41:04.306Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-013/review/2026-04-17T02-42-31-599Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-013-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-013: AC1 and AC2 both verified PASS, EXEC-GODOT-010 resolved, Godot headless exits 0.",
+      "created_at": "2026-04-17T02:42:31.599Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-013/qa/2026-04-17T02-51-28-457Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-013-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-013: AC1 and AC2 both verified PASS, EXEC-GODOT-010 resolved, Godot headless exits 0.",
+      "created_at": "2026-04-17T02:51:28.457Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-013/smoke-test/2026-04-17T02-51-54-309Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-013-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T02:51:54.309Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-014/planning/2026-04-17T02-53-23-957Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-014-planning-plan.md",
+      "stage": "planning",
+      "summary": "Planning for REMED-014: Fix EXEC-GODOT-011 — change player.gd _die() to route to game_over scene instead of reload_current_scene(). Single-line fix, Godot headless verification included.",
+      "created_at": "2026-04-17T02:53:23.957Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-014/review/2026-04-17T02-54-53-227Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-014-review-review.md",
+      "stage": "review",
+      "summary": "Review for REMED-014: APPROVED — both ACs covered, fix is sound, game_over scene fully implemented, no blockers",
+      "created_at": "2026-04-17T02:54:53.227Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-014/implementation/2026-04-17T02-56-15-099Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-014-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Changed player.gd _die() to route to game_over.tscn instead of reload_current_scene(). Godot headless exits 0. Both ACs verified PASS.",
+      "created_at": "2026-04-17T02:56:15.099Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-014/qa/2026-04-17T02-57-46-804Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-014-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-014: Both ACs verified PASS. Death path now routes to game_over.tscn via change_scene_to_file().",
+      "created_at": "2026-04-17T02:57:46.804Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-014/smoke-test/2026-04-17T02-58-17-979Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-014-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T02:58:17.979Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-024/planning/2026-04-17T03-00-05-070Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-024-planning-plan.md",
+      "stage": "planning",
+      "summary": "Planning for REMED-024: Fix orphaned GameManager singleton reads in game_over.gd. WaveSpawner.start_wave() must call GameManager.set_wave(_current_wave); horse_base.gd _die() must call GameManager.add_score(score_value). Godot headless verification included.",
+      "created_at": "2026-04-17T03:00:05.070Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-024/review/2026-04-17T03-02-52-163Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-024-review-review.md",
+      "stage": "review",
+      "summary": "Plan review APPROVED — both ACs covered, orphaned GameManager reads confirmed, fixes sound, next stage: implementation",
+      "created_at": "2026-04-17T03:02:52.163Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-024/implementation/2026-04-17T03-04-44-526Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-024-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Added GameManager.set_wave() in wave_spawner.gd start_wave() and GameManager.add_score() in horse_base.gd _die() to wire orphaned singleton reads in HUD/game-over UI. Godot headless exit 0.",
+      "created_at": "2026-04-17T03:04:44.526Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-024/review/2026-04-17T03-06-57-663Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-024-review-review.md",
+      "stage": "review",
+      "summary": "Code review PASS for REMED-024: both ACs verified, GameManager.set_wave in wave_spawner.gd and GameManager.add_score in horse_base.gd confirmed, Godot headless exit 0.",
+      "created_at": "2026-04-17T03:06:57.663Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-024/qa/2026-04-17T03-08-04-768Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-024-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-024: both ACs verified PASS, EXEC-GODOT-012 resolved, GameManager.set_wave and GameManager.add_score confirmed in source, Godot headless exits 0.",
+      "created_at": "2026-04-17T03:08:04.768Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-024/smoke-test/2026-04-17T03-08-31-880Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-024-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T03:08:31.880Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/asset-005/smoke-test/2026-04-17T03-27-58-232Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/asset-005-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T03:27:58.232Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-28-20-663Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/asset-005-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification NEEDS_FOLLOW_UP for ASSET-005: AC1/AC2/AC4 have unmet .wav requirements (OGG substitutes present but literal AC not satisfied), AC3/AC5/AC6 PASS, Godot headless exit 0, fake WAV files confirmed removed, no prior backlog-verification artifact existed",
+      "created_at": "2026-04-17T03:28:20.663Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-30-42-941Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/asset-005-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification NEEDS_FOLLOW_UP for ASSET-005: AC1/AC2/AC4 have unmet .wav requirements (OGG substitutes present but literal AC not satisfied), AC3/AC5/AC6 PASS, Godot headless exit 0, fake WAV files confirmed removed",
+      "created_at": "2026-04-17T03:30:42.941Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "issue-discovery",
+      "path": ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-31-54-183Z-issue-discovery.md",
+      "source_path": ".opencode/state/reviews/asset-005-review-issue-discovery.md",
+      "stage": "review",
+      "summary": "acceptance_imprecision intake routed to invalidates_done.",
+      "created_at": "2026-04-17T03:31:54.183Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/ui-003/smoke-test/2026-04-17T03-35-26-252Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/ui-003-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T03:35:26.252Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "UI-003",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/ui-003/review/2026-04-17T03-35-46-583Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/ui-003-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for UI-003: all 5 ACs verified, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:35:46.583Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "RELEASE-001",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/release-001/review/2026-04-17T03-38-04-507Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/release-001-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for RELEASE-001: all 3 ACs verified, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:04.507Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "VISUAL-001",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/visual-001/review/2026-04-17T03-38-06-131Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/visual-001-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for VISUAL-001: all 2 ACs verified, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:06.131Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "AUDIO-001",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/audio-001/review/2026-04-17T03-38-07-707Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/audio-001-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for AUDIO-001: all 2 ACs verified, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:07.707Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "FINISH-VALIDATE-001",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/finish-validate-001/review/2026-04-17T03-38-09-173Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/finish-validate-001-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for FINISH-VALIDATE-001: all 4 ACs verified, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:09.173Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-004",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-004/review/2026-04-17T03-38-10-664Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-004-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-004: both ACs verified, EXEC-REMED-001 resolved, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:10.664Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-005",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-005/review/2026-04-17T03-38-13-024Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-005-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-005: both ACs verified, EXEC-REMED-001 resolved, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:13.024Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-006",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-006/review/2026-04-17T03-38-14-564Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-006-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-006: both ACs verified, EXEC-REMED-001 does not reproduce, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:14.564Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-012",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-012/review/2026-04-17T03-38-15-571Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-012-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-012: both ACs verified, EXEC-GODOT-008 does not reproduce, Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T03:38:15.571Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/asset-005/planning/2026-04-17T03-39-20-671Z-plan.md",
+      "source_path": ".opencode/state/plans/asset-005-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for ASSET-005 format-agnostic AC revision (OGG accepted as equivalent to WAV)",
+      "created_at": "2026-04-17T03:39:20.671Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-41-07-053Z-review.md",
+      "source_path": ".opencode/state/reviews/asset-005-review-review.md",
+      "stage": "review",
+      "summary": "APPROVED — all 4 verification checks pass, format-agnostic AC revision sound, no regressions, provenance complete",
+      "created_at": "2026-04-17T03:41:07.053Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/asset-005/implementation/2026-04-17T03-42-27-750Z-implementation.md",
+      "source_path": ".opencode/state/implementations/asset-005-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Format-agnostic AC revision for ASSET-005: 6 SFX files confirmed (5 OGG + 1 WAV), Godot headless exits 0, PROVENANCE.md complete. All 6 ACs PASS.",
+      "created_at": "2026-04-17T03:42:27.750Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/asset-005/review/2026-04-17T03-43-22-565Z-review.md",
+      "source_path": ".opencode/state/reviews/asset-005-review-review.md",
+      "stage": "review",
+      "summary": "APPROVED — all 6 ACs PASS, format-agnostic revision, Godot headless exit 0, 6 SFX files confirmed, PROVENANCE.md complete, no regressions",
+      "created_at": "2026-04-17T03:43:22.565Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/asset-005/qa/2026-04-17T03-44-21-650Z-qa.md",
+      "source_path": ".opencode/state/qa/asset-005-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for ASSET-005: All 6 ACs verified PASS under format-agnostic criteria. Godot headless exit 0. 6 SFX files (5 OGG + 1 WAV), all CC0. PROVENANCE.md complete.",
+      "created_at": "2026-04-17T03:44:21.650Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/asset-005/smoke-test/2026-04-17T03-45-08-637Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/asset-005-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T03:45:08.637Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-026",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-026/planning/2026-04-17T08-21-55-751Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-026-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-026: documents WFLOW033 (acceptance drift after issue_intake invalidation), current state of affected surfaces, team-leader rule requiring ticket_update(acceptance=[...]) after invalidation, acceptance-refresh artifact spec, read-only treatment of history paths, Godot verification, and explicit AC verification steps.",
+      "created_at": "2026-04-17T08:21:55.751Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-026",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-026/review/2026-04-17T08-32-40-511Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-026-review-review.md",
+      "stage": "review",
+      "summary": "Plan review for REMED-026: APPROVED. WFLOW033 fix is sound, verifiable, and correctly targets writable surfaces only.",
+      "created_at": "2026-04-17T08:32:40.511Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-030/planning/2026-04-17T09-09-54-719Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-030-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-030: Documents WFLOW033 acceptance drift finding, current state of affected surfaces (stale .wav acceptance in ASSET-005 manifest entry), team-leader discipline rule requiring ticket_update(acceptance=[...]) immediately after issue_intake invalidation for acceptance_imprecision, acceptance-refresh artifact requirement before review/closeout/handoff, read-only treatment of history paths, and explicit AC verification steps. No code changes — Godot headless exits 0.",
+      "created_at": "2026-04-17T09:09:54.719Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-030/planning/2026-04-17T09-15-24-712Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-030-planning-plan.md",
+      "stage": "planning",
+      "summary": "Revised plan for REMED-030: clarifies fix scope is purely a future-prevention discipline rule, removes contradictory statements, redesigns AC1 to verify rule documentation (not manifest acceptance state), and explicitly documents that this ticket does NOT correct the stale ASSET-005 acceptance.",
+      "created_at": "2026-04-17T09:15:24.712Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-030/implementation/2026-04-17T09-18-08-514Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-030-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Implementation for REMED-030: Future-prevention discipline rule documented. All 3 ACs verified PASS. Godot headless exits 0. No code changes made.",
+      "created_at": "2026-04-17T09:18:08.514Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-030/review/2026-04-17T09-20-11-564Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-030-review-review.md",
+      "stage": "review",
+      "summary": "Review PASS for REMED-030: all 3 ACs verified, future-prevention discipline rule documented, no code changes, Godot headless exit 0.",
+      "created_at": "2026-04-17T09:20:11.564Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-030/qa/2026-04-17T09-21-50-447Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-030-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-030: AC1/AC2/AC3 all verified PASS. All 3 acceptance criteria confirmed. Godot headless exits 0. No history path mutations. QA artifact 3577 bytes.",
+      "created_at": "2026-04-17T09:21:50.447Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-030/smoke-test/2026-04-17T09-22-22-494Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-030-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T09:22:22.494Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-013/review/2026-04-17T09-24-29-204Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-013-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-013: EXEC-GODOT-010 resolved via scripts/main.gd calling WaveSpawner.start_wave(), Godot headless exits 0, historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T09:24:29.204Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-013",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-013/review/2026-04-17T09-25-05-761Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-013-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-013.",
+      "created_at": "2026-04-17T09:25:05.761Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-014/review/2026-04-17T09-26-13-801Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-014-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-014: EXEC-GODOT-011 no longer reproduces, Godot headless exits 0, no prior backlog-verification existed. Historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T09:26:13.801Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-014",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-014/review/2026-04-17T09-26-43-042Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-014-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-014.",
+      "created_at": "2026-04-17T09:26:43.042Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-024/review/2026-04-17T09-28-14-209Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-024-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-024: all 3 checks verified, EXEC-GODOT-012 no longer reproduces, Godot headless exits 0, no prior backlog-verification existed. Historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T09:28:14.209Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-024/review/2026-04-17T09-28-22-740Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-024-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-024.",
+      "created_at": "2026-04-17T09:28:22.740Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-024",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-024/review/2026-04-17T09-28-51-579Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-024-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-024.",
+      "created_at": "2026-04-17T09:28:51.579Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-031/planning/2026-04-17T09-57-53-244Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-031-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-031: Fix EXEC-REMED-001 by appending three-part runnable command evidence format to remed-026-review-review.md. AC1 verifies format presence, AC2 verifies Godot headless exit 0.",
+      "created_at": "2026-04-17T09:57:53.244Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-031/review/2026-04-17T10-00-21-217Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-031-review-review.md",
+      "stage": "review",
+      "summary": "Plan review for REMED-031: APPROVED — plan correctly identifies missing three-part EXEC-REMED-001 format in remed-026-review-review.md, fix approach sound, AC1/AC2 both have verifiable steps. Advances to implementation.",
+      "created_at": "2026-04-17T10:00:21.217Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-031/implementation/2026-04-17T10-02-35-117Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-031-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Implementation for REMED-031: AC1 FAIL (three-part format absent in remed-026-review-review.md), AC2 PASS (Godot headless exits 0). EXEC-REMED-001 confirmed open.",
+      "created_at": "2026-04-17T10:02:35.117Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-031/implementation/2026-04-17T10-06-34-836Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-031-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Updated implementation: AC1 PASS (three-part format now present in remed-026-review-review.md), AC2 PASS (Godot headless exits 0). EXEC-REMED-001 resolved.",
+      "created_at": "2026-04-17T10:06:34.836Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-031/review/2026-04-17T10-09-23-484Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-031-review-review.md",
+      "stage": "review",
+      "summary": "Review PASS for REMED-031: AC1 PASS (three-part format present in remed-026-review-review.md lines 95-124), AC2 PASS (Godot headless exits 0). EXEC-REMED-001 resolved.",
+      "created_at": "2026-04-17T10:09:23.484Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-031/qa/2026-04-17T10-10-59-484Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-031-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-031: AC1 PASS (three-part format present in remed-026-review-review.md), AC2 PASS (Godot headless exits 0). EXEC-REMED-001 does not reproduce.",
+      "created_at": "2026-04-17T10:10:59.484Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-031/smoke-test/2026-04-17T10-11-14-926Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-031-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test failed.",
+      "created_at": "2026-04-17T10:11:14.926Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-031/smoke-test/2026-04-17T10-11-28-475Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-031-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T10:11:28.475Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-030",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-030/review/2026-04-17T10-13-35-120Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-030-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification PASS for REMED-030: all 3 ACs verified, WFLOW033 addressed via future-prevention discipline rule, Godot headless exits 0, no prior backlog-verification existed (first run), historical completion affirmed for process version 7.",
+      "created_at": "2026-04-17T10:13:35.120Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-033/planning/2026-04-17T10-15-39-358Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-033-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-033: Correct stale ASSET-005 manifest acceptance (format-agnostic OGG=WAV revision). Closes residual gap from REMED-030 which documented the future-prevention rule but left the stale acceptance uncorrected. All 3 ACs with explicit verification steps.",
+      "created_at": "2026-04-17T10:15:39.358Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-033/review/2026-04-17T10-18-11-250Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-033-review-review.md",
+      "stage": "review",
+      "summary": "Plan review APPROVED for REMED-033. All 3 ACs have explicit verifiable steps. WFLOW033 residual gap correctly identified (stale ASSET-005 manifest acceptance confirmed via ticket_lookup). Fix approach sound: ticket_update(acceptance=[...]) on ASSET-005. No history path mutations. Ready to advance to implementation.",
+      "created_at": "2026-04-17T10:18:11.250Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "acceptance-refresh",
+      "path": ".opencode/state/artifacts/history/asset-005/planning/2026-04-17T10-21-50-791Z-acceptance-refresh.md",
+      "source_path": ".opencode/state/plans/asset-005-planning-acceptance-refresh.md",
+      "stage": "planning",
+      "summary": "Canonical acceptance refreshed for ASSET-005.",
+      "created_at": "2026-04-17T10:21:50.791Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-033/implementation/2026-04-17T10-22-24-564Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-033-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Refreshed stale ASSET-005 manifest acceptance from literal .wav to format-agnostic (.wav or .ogg) criteria via ticket_update. Godot headless exits 0. WFLOW033 resolved.",
+      "created_at": "2026-04-17T10:22:24.564Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/asset-005/plan-review/2026-04-17T10-26-06-825Z-review.md",
+      "source_path": ".opencode/state/artifacts/asset-005-plan-review-review.md",
+      "stage": "plan_review",
+      "summary": "APPROVED — all 6 ACs verified PASS under refreshed format-agnostic acceptance; implementation, QA, smoke-test evidence sufficient; no blockers; advance to implementation",
+      "created_at": "2026-04-17T10:26:06.825Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/asset-005/implementation/2026-04-17T10-27-17-131Z-implementation.md",
+      "source_path": ".opencode/state/implementations/asset-005-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "Fresh implementation evidence: 6 SFX files confirmed present, Godot headless exit 0, all 6 ACs PASS under format-agnostic acceptance",
+      "created_at": "2026-04-17T10:27:17.131Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/asset-005/review/2026-04-17T10-28-50-964Z-review.md",
+      "source_path": ".opencode/state/reviews/asset-005-review-review.md",
+      "stage": "review",
+      "summary": "PASS — all 6 ACs verified PASS under refreshed format-agnostic acceptance; Godot headless exits 0; 6 SFX files confirmed; no blockers; advance to QA",
+      "created_at": "2026-04-17T10:28:50.964Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/asset-005/qa/2026-04-17T10-30-19-942Z-qa.md",
+      "source_path": ".opencode/state/qa/asset-005-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for ASSET-005: all 6 ACs verified under refreshed format-agnostic acceptance; Godot headless exits 0; 6 SFX files confirmed; PROVENANCE.md complete",
+      "created_at": "2026-04-17T10:30:19.942Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "ASSET-005",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/asset-005/smoke-test/2026-04-17T10-30-45-042Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/asset-005-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T10:30:45.042Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-033/review/2026-04-17T10-33-03-919Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-033-review-review.md",
+      "stage": "review",
+      "summary": "PASS — All 3 ACs verified PASS. WFLOW033 resolved. ASSET-005 acceptance refreshed to format-agnostic. No history path mutations. Godot headless exits 0.",
+      "created_at": "2026-04-17T10:33:03.919Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-033/review/2026-04-17T10-34-06-118Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-033-review-review.md",
+      "stage": "review",
+      "summary": "PASS — All 3 ACs verified PASS. WFLOW033 resolved. ASSET-005 acceptance refreshed to format-agnostic. Three-part command evidence embedded in review artifact.",
+      "created_at": "2026-04-17T10:34:06.118Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-033/qa/2026-04-17T10-35-55-248Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-033-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-033: all 3 ACs verified PASS, Godot headless exits 0, no history path mutations",
+      "created_at": "2026-04-17T10:35:55.248Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-033/smoke-test/2026-04-17T10-36-20-992Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-033-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T10:36:20.992Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-034",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-034/planning/2026-04-17T18-12-08-288Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-034-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-034: Fix EXEC-REMED-001 by appending three-part runnable command evidence to remed-026-review-review.md. AC1 verifies format presence, AC2 verifies Godot headless exit 0.",
+      "created_at": "2026-04-17T18:12:08.288Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-034",
+      "kind": "plan",
+      "path": ".opencode/state/artifacts/history/remed-034/planning/2026-04-17T18-15-09-249Z-plan.md",
+      "source_path": ".opencode/state/plans/remed-034-planning-plan.md",
+      "stage": "planning",
+      "summary": "Plan for REMED-034 revised: clarifies no manifest mutation needed, replaces conflicting FAIL block (lines 93-124) with PASS verdict, uses correct grep raw output for AC1, and addresses REMED-026 verification_state linkage.",
+      "created_at": "2026-04-17T18:15:09.249Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-034",
+      "kind": "implementation",
+      "path": ".opencode/state/artifacts/history/remed-034/implementation/2026-04-17T18-17-55-582Z-implementation.md",
+      "source_path": ".opencode/state/implementations/remed-034-implementation-implementation.md",
+      "stage": "implementation",
+      "summary": "AC1 PASS (three-part format confirmed at lines 95-120 in remed-026-review-review.md), AC2 PASS (Godot headless exits 0). EXEC-REMED-001 resolved via in-place edit of lines 93-124.",
+      "created_at": "2026-04-17T18:17:55.582Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-034",
+      "kind": "review",
+      "path": ".opencode/state/artifacts/history/remed-034/review/2026-04-17T18-19-53-556Z-review.md",
+      "source_path": ".opencode/state/reviews/remed-034-review-review.md",
+      "stage": "review",
+      "summary": "Review PASS for REMED-034: three-part format confirmed in remed-026-review-review.md, Godot headless exits 0, EXEC-REMED-001 resolved.",
+      "created_at": "2026-04-17T18:19:53.556Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-034",
+      "kind": "qa",
+      "path": ".opencode/state/artifacts/history/remed-034/qa/2026-04-17T18-20-41-809Z-qa.md",
+      "source_path": ".opencode/state/qa/remed-034-qa-qa.md",
+      "stage": "qa",
+      "summary": "QA PASS for REMED-034: AC1 PASS (three-part format confirmed in remed-026-review-review.md at lines 95-127), AC2 PASS (Godot headless exits 0). EXEC-REMED-001 does not reproduce.",
+      "created_at": "2026-04-17T18:20:41.809Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-034",
+      "kind": "smoke-test",
+      "path": ".opencode/state/artifacts/history/remed-034/smoke-test/2026-04-17T18-21-15-823Z-smoke-test.md",
+      "source_path": ".opencode/state/smoke-tests/remed-034-smoke-test-smoke-test.md",
+      "stage": "smoke-test",
+      "summary": "Deterministic smoke test passed.",
+      "created_at": "2026-04-17T18:21:15.823Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-031/review/2026-04-17T18-23-00-262Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-031-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification recorded during ticket_reverify for REMED-031.",
+      "created_at": "2026-04-17T18:23:00.262Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-031",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-031/review/2026-04-17T18-23-00-281Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-031-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-031.",
+      "created_at": "2026-04-17T18:23:00.281Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "backlog-verification",
+      "path": ".opencode/state/artifacts/history/remed-033/review/2026-04-17T18-23-11-709Z-backlog-verification.md",
+      "source_path": ".opencode/state/reviews/remed-033-review-backlog-verification.md",
+      "stage": "review",
+      "summary": "Backlog verification recorded during ticket_reverify for REMED-033.",
+      "created_at": "2026-04-17T18:23:11.709Z",
+      "trust_state": "current"
+    },
+    {
+      "ticket_id": "REMED-033",
+      "kind": "reverification",
+      "path": ".opencode/state/artifacts/history/remed-033/review/2026-04-17T18-23-11-716Z-reverification.md",
+      "source_path": ".opencode/state/reviews/remed-033-review-reverification.md",
+      "stage": "review",
+      "summary": "Trust restored using REMED-033.",
+      "created_at": "2026-04-17T18:23:11.716Z",
+      "trust_state": "current"
     }
   ]
 }

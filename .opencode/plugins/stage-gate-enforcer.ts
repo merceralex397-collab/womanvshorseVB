@@ -13,6 +13,7 @@ import {
   isBlockingArtifactVerdict,
   isPlanApprovedForTicket,
   latestArtifact,
+  latestReviewArtifact,
   loadManifest,
   loadWorkflowState,
   readArtifactContent,
@@ -127,6 +128,17 @@ async function ensureTargetTicketWriteLease(ticketId: string) {
       next_action_args: ticketClaimBlockerArgs(ticketId),
     })
   }
+}
+
+function sourceLeaseCoversSplitScopeTargetMutation(args: {
+  sourceTicket: ReturnType<typeof getTicket>
+  targetTicket: ReturnType<typeof getTicket>
+  replacementSourceTicket: ReturnType<typeof getTicket>
+}) {
+  return (
+    args.targetTicket.source_mode === "split_scope"
+    && args.targetTicket.source_ticket_id === args.sourceTicket.id
+  )
 }
 
 function isWorkflowProcessVerificationClearOnly(args: Record<string, unknown>): boolean {
@@ -347,10 +359,19 @@ export const StageGateEnforcer: Plugin = async () => {
         const sourceTicket = getTicket(manifest, sourceTicketId)
         const targetTicket = getTicket(manifest, targetTicketId)
         const replacementSourceTicket = replacementSourceTicketId ? getTicket(manifest, replacementSourceTicketId) : sourceTicket
+        const parentLeaseAuthorizesSplitChildMutation = sourceLeaseCoversSplitScopeTargetMutation({
+          sourceTicket,
+          targetTicket,
+          replacementSourceTicket,
+        })
         if (["open", "reopened"].includes(sourceTicket.resolution_state) && sourceTicket.status !== "done") {
           await ensureTargetTicketWriteLease(sourceTicket.id)
         }
-        if (["open", "reopened"].includes(targetTicket.resolution_state) && targetTicket.status !== "done") {
+        if (
+          ["open", "reopened"].includes(targetTicket.resolution_state)
+          && targetTicket.status !== "done"
+          && !parentLeaseAuthorizesSplitChildMutation
+        ) {
           await ensureTargetTicketWriteLease(targetTicket.id)
         }
         if (
@@ -368,6 +389,11 @@ export const StageGateEnforcer: Plugin = async () => {
         const ticket = getTicket(manifest, ticketId)
         if (!ticketEligibleForTrustRestoration(ticket)) {
           throw new Error(`Ticket ${ticket.id} must still be a historical done or reopened ticket before ticket_reverify can restore trust.`)
+        }
+        if (getTicketWorkflowState(workflow, ticket.id).needs_acceptance_refresh) {
+          throw new Error(
+            `Ticket ${ticket.id} still needs canonical acceptance refresh. Re-run ticket_update with acceptance=[...] before ticket_reverify can restore trust.`,
+          )
         }
         const hasEvidenceArtifactPath = typeof output.args.evidence_artifact_path === "string" && output.args.evidence_artifact_path.trim()
         const hasVerificationContent = typeof output.args.verification_content === "string" && output.args.verification_content.trim()
@@ -433,6 +459,7 @@ export const StageGateEnforcer: Plugin = async () => {
           stage: typeof output.args.stage === "string" ? output.args.stage : undefined,
           status: typeof output.args.status === "string" ? output.args.status : undefined,
         })
+        const acceptanceProvided = Array.isArray(output.args.acceptance)
         const blockedTicketUnblockOnly = isBlockedTicketUnblockOnly(ticket, requested, output.args)
         if (!(processVerificationClearOnly && processVerification.clearable_now) && !blockedTicketUnblockOnly) {
           await ensureTargetTicketWriteLease(ticketId)
@@ -473,7 +500,9 @@ export const StageGateEnforcer: Plugin = async () => {
               `Cannot route ${ticket.id} back to implementation from ${backwardStage} — no ${backwardStage} artifact exists. Produce an artifact with a blocking verdict before routing backward.`,
             )
           }
-          const latestBackwardArtifact = latestArtifact(ticket, { stage: backwardStage, trust_state: "current" })
+          const latestBackwardArtifact = backwardStage === "review"
+            ? latestReviewArtifact(ticket)
+            : latestArtifact(ticket, { stage: backwardStage, trust_state: "current" })
           const backwardVerdict = extractArtifactVerdict(await readArtifactContent(latestBackwardArtifact))
           if (backwardVerdict.verdict_unclear) {
             throw new Error(
@@ -513,6 +542,16 @@ export const StageGateEnforcer: Plugin = async () => {
           await ensureBootstrapReadyForValidation()
         }
 
+        if (
+          getTicketWorkflowState(workflow, ticket.id).needs_acceptance_refresh
+          && ["review", "qa", "smoke-test", "closeout"].includes(requested.stage)
+          && !acceptanceProvided
+        ) {
+          throw new Error(
+            `Ticket ${ticket.id} still needs canonical acceptance refresh before it can advance to ${requested.stage}. Re-run ticket_update with acceptance=[...] first.`,
+          )
+        }
+
         if (getTicketWorkflowState(workflow, ticket.id).needs_reverification && requested.status === "done" && ticket.resolution_state !== "reopened") {
           throw new Error(`Ticket ${ticket.id} still needs reverification and cannot be closed from a non-reopened state.`)
         }
@@ -536,6 +575,10 @@ export const StageGateEnforcer: Plugin = async () => {
         )
         if (blockingReverification.length > 0) {
           throw new Error(`Cannot publish handoff while active or reopened tickets still need reverification: ${blockingReverification.map((ticket) => ticket.id).join(", ")}.`)
+        }
+        const acceptanceRefreshTickets = manifest.tickets.filter((ticket) => getTicketWorkflowState(workflow, ticket.id).needs_acceptance_refresh)
+        if (acceptanceRefreshTickets.length > 0) {
+          throw new Error(`Cannot publish handoff while canonical acceptance refresh remains pending for: ${acceptanceRefreshTickets.map((ticket) => ticket.id).join(", ")}.`)
         }
       }
     },

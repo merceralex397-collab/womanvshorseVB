@@ -1,9 +1,9 @@
 {
   "managed_repo": "/home/rowan/Scafforge",
-  "template_commit": "43aac98c73ce6a81653e88291215550ebfd3e709",
+  "template_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4",
   "template_commit_result": {
     "success": true,
-    "commit": "43aac98c73ce6a81653e88291215550ebfd3e709",
+    "commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4",
     "reason": null,
     "detail": null
   },
@@ -1837,11 +1837,1223 @@
         "summary": "Repo already uses the current process contract.",
         "migration_id": null
       }
+    },
+    {
+      "repair_id": "2026-04-16T20:26:56Z",
+      "repaired_at": "2026-04-16T20:26:56Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "b9f1187c3f67f023d2aeb089e14832b77ba34cc3",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "tickets/manifest.json",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "tickets/manifest.json",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/lib/workflow.ts",
+          ".opencode/plugins/stage-gate-enforcer.ts",
+          ".opencode/skills/review-audit-bridge/SKILL.md",
+          ".opencode/skills/stack-standards/SKILL.md",
+          ".opencode/skills/ticket-execution/SKILL.md",
+          ".opencode/tools/environment_bootstrap.ts",
+          ".opencode/tools/repair_follow_on_refresh.ts",
+          ".opencode/tools/smoke_test.ts",
+          ".opencode/tools/ticket_lookup.ts",
+          "START-HERE.md",
+          "docs/process/workflow.md",
+          "tickets/manifest.json"
+        ]
+      },
+      "audit_findings_addressed": [
+        "BOOT003",
+        "FINISH004"
+      ],
+      "verification_passed": false,
+      "verification_findings": [
+        "SKILL001",
+        "EXEC-GODOT-010",
+        "EXEC-GODOT-011",
+        "EXEC-GODOT-012"
+      ],
+      "remediation_ticket_ids": [
+        "REMED-013",
+        "REMED-014",
+        "REMED-015"
+      ],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 4,
+        "error_count": 3,
+        "warning_count": 1,
+        "codes": [
+          "SKILL001",
+          "EXEC-GODOT-010",
+          "EXEC-GODOT-011",
+          "EXEC-GODOT-012"
+        ],
+        "blocking_codes": [
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [
+          "EXEC-GODOT-010",
+          "EXEC-GODOT-011",
+          "EXEC-GODOT-012"
+        ],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "current_state_only",
+        "basis_requires_causal_replay": false,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260416-202636",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": true,
+          "pre_existing_codes": [
+            "EXEC-GODOT-010",
+            "EXEC-GODOT-011",
+            "EXEC-GODOT-012"
+          ],
+          "persistent_codes": [
+            "EXEC-GODOT-010",
+            "EXEC-GODOT-011",
+            "EXEC-GODOT-012"
+          ],
+          "resolved_codes": [],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 5,
+          "delta_count": 0,
+          "deltas": []
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-16T20:36:04Z",
+      "repaired_at": "2026-04-16T20:36:04Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "b9f1187c3f67f023d2aeb089e14832b77ba34cc3",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/skills/stack-standards/SKILL.md",
+          "START-HERE.md"
+        ]
+      },
+      "audit_findings_addressed": [
+        "SKILL001"
+      ],
+      "verification_passed": false,
+      "verification_findings": [
+        "SKILL001",
+        "EXEC-GODOT-010",
+        "EXEC-GODOT-011",
+        "EXEC-GODOT-012"
+      ],
+      "remediation_ticket_ids": [
+        "REMED-013",
+        "REMED-014",
+        "REMED-017"
+      ],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 4,
+        "error_count": 3,
+        "warning_count": 1,
+        "codes": [
+          "SKILL001",
+          "EXEC-GODOT-010",
+          "EXEC-GODOT-011",
+          "EXEC-GODOT-012"
+        ],
+        "blocking_codes": [
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [
+          "EXEC-GODOT-010",
+          "EXEC-GODOT-011",
+          "EXEC-GODOT-012"
+        ],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "current_state_only",
+        "basis_requires_causal_replay": false,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260416-202701",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": true,
+          "pre_existing_codes": [
+            "EXEC-GODOT-010",
+            "EXEC-GODOT-011",
+            "EXEC-GODOT-012"
+          ],
+          "persistent_codes": [
+            "EXEC-GODOT-010",
+            "EXEC-GODOT-011",
+            "EXEC-GODOT-012"
+          ],
+          "resolved_codes": [],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 4,
+          "delta_count": 0,
+          "deltas": []
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-17T02:26:03Z",
+      "repaired_at": "2026-04-17T02:26:04Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "a7754f5955b5df9f7f37d19bb1969db2542d6825",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/lib/workflow.ts",
+          ".opencode/skills/stack-standards/SKILL.md",
+          ".opencode/tools/environment_bootstrap.ts",
+          ".opencode/tools/smoke_test.ts",
+          "START-HERE.md"
+        ]
+      },
+      "audit_findings_addressed": [],
+      "verification_passed": false,
+      "verification_findings": [
+        "SKILL001",
+        "EXEC-GODOT-010",
+        "EXEC-GODOT-011",
+        "EXEC-GODOT-012"
+      ],
+      "remediation_ticket_ids": [
+        "REMED-013",
+        "REMED-014",
+        "REMED-023"
+      ],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 4,
+        "error_count": 3,
+        "warning_count": 1,
+        "codes": [
+          "SKILL001",
+          "EXEC-GODOT-010",
+          "EXEC-GODOT-011",
+          "EXEC-GODOT-012"
+        ],
+        "blocking_codes": [
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [
+          "EXEC-GODOT-010",
+          "EXEC-GODOT-011",
+          "EXEC-GODOT-012"
+        ],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "transcript_backed",
+        "basis_requires_causal_replay": true,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260416-212736",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": true,
+          "pre_existing_codes": [
+            "EXEC-GODOT-010",
+            "EXEC-GODOT-011",
+            "EXEC-GODOT-012"
+          ],
+          "persistent_codes": [
+            "EXEC-GODOT-010",
+            "EXEC-GODOT-011",
+            "EXEC-GODOT-012"
+          ],
+          "resolved_codes": [],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 3,
+          "delta_count": 0,
+          "deltas": []
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-17T04:09:45Z",
+      "repaired_at": "2026-04-17T04:09:45Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/lib/workflow.ts",
+          ".opencode/plugins/invocation-tracker.ts",
+          ".opencode/plugins/session-compactor.ts",
+          ".opencode/plugins/stage-gate-enforcer.ts",
+          ".opencode/plugins/ticket-sync.ts",
+          ".opencode/skills/stack-standards/SKILL.md",
+          ".opencode/skills/ticket-execution/SKILL.md",
+          ".opencode/tools/artifact_register.ts",
+          ".opencode/tools/artifact_write.ts",
+          ".opencode/tools/context_snapshot.ts",
+          ".opencode/tools/environment_bootstrap.ts",
+          ".opencode/tools/handoff_publish.ts",
+          ".opencode/tools/issue_intake.ts",
+          ".opencode/tools/lease_cleanup.ts",
+          ".opencode/tools/repair_follow_on_refresh.ts",
+          ".opencode/tools/skill_ping.ts",
+          ".opencode/tools/smoke_test.ts",
+          ".opencode/tools/ticket_claim.ts",
+          ".opencode/tools/ticket_create.ts",
+          ".opencode/tools/ticket_lookup.ts",
+          ".opencode/tools/ticket_reconcile.ts",
+          ".opencode/tools/ticket_release.ts",
+          ".opencode/tools/ticket_reopen.ts",
+          ".opencode/tools/ticket_reverify.ts",
+          ".opencode/tools/ticket_update.ts",
+          "START-HERE.md"
+        ]
+      },
+      "audit_findings_addressed": [
+        "WFLOW025"
+      ],
+      "verification_passed": false,
+      "verification_findings": [
+        "WFLOW025",
+        "SKILL001"
+      ],
+      "remediation_ticket_ids": [],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation, reverification, or target-completion follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification did not inherit the transcript-backed repair basis; rerun the public repair runner with the causal transcript evidence before handoff."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 2,
+        "error_count": 1,
+        "warning_count": 1,
+        "codes": [
+          "WFLOW025",
+          "SKILL001"
+        ],
+        "blocking_codes": [
+          "WFLOW025",
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "transcript_backed",
+        "basis_requires_causal_replay": true,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-040931",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": false,
+          "pre_existing_codes": [],
+          "persistent_codes": [],
+          "resolved_codes": [],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 1,
+          "delta_count": 0,
+          "deltas": []
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-17T06:55:59Z",
+      "repaired_at": "2026-04-17T06:55:59Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/skills/stack-standards/SKILL.md",
+          ".opencode/tools/repair_follow_on_refresh.ts",
+          ".opencode/tools/ticket_reverify.ts",
+          "START-HERE.md"
+        ]
+      },
+      "audit_findings_addressed": [
+        "WFLOW010",
+        "WFLOW025"
+      ],
+      "verification_passed": false,
+      "verification_findings": [
+        "WFLOW025",
+        "SKILL001"
+      ],
+      "remediation_ticket_ids": [],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation, reverification, or target-completion follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 2,
+        "error_count": 1,
+        "warning_count": 1,
+        "codes": [
+          "WFLOW025",
+          "SKILL001"
+        ],
+        "blocking_codes": [
+          "WFLOW025",
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "transcript_backed",
+        "basis_requires_causal_replay": true,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-042304",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": false,
+          "pre_existing_codes": [],
+          "persistent_codes": [],
+          "resolved_codes": [],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [
+          "/home/rowan/Scafforge/reports/agent-runs/wvhvb-opencode-2026-04-17T04-13-58.log"
+        ],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 3,
+          "delta_count": 0,
+          "deltas": []
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-17T08:52:36Z",
+      "repaired_at": "2026-04-17T08:52:36Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/skills/stack-standards/SKILL.md",
+          ".opencode/skills/ticket-execution/SKILL.md",
+          "START-HERE.md",
+          "docs/process/workflow.md"
+        ]
+      },
+      "audit_findings_addressed": [],
+      "verification_passed": false,
+      "verification_findings": [
+        "WFLOW033",
+        "SKILL001",
+        "EXEC-REMED-001"
+      ],
+      "remediation_ticket_ids": [
+        "REMED-028"
+      ],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation, reverification, or target-completion follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 3,
+        "error_count": 2,
+        "warning_count": 1,
+        "codes": [
+          "WFLOW033",
+          "SKILL001",
+          "EXEC-REMED-001"
+        ],
+        "blocking_codes": [
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [
+          "WFLOW033",
+          "EXEC-REMED-001"
+        ],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "transcript_backed",
+        "basis_requires_causal_replay": true,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-075028",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": true,
+          "pre_existing_codes": [
+            "WFLOW033"
+          ],
+          "persistent_codes": [],
+          "resolved_codes": [
+            "WFLOW033"
+          ],
+          "introduced_codes": [
+            "EXEC-REMED-001"
+          ],
+          "introduced_critical_codes": [
+            "EXEC-REMED-001"
+          ]
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [
+          "/home/rowan/Scafforge/reports/agent-runs/wvhvb-opencode-2026-04-17T04-13-58.log"
+        ],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 1,
+          "delta_count": 1,
+          "deltas": [
+            {
+              "code": "WFLOW033",
+              "legacy_disposition_class": "managed_blocker",
+              "disposition_class": "source_follow_up",
+              "route": "ticket-pack-builder",
+              "reason": "Legacy prefix classification would label WFLOW033 as managed_blocker, but the authoritative bundle assigns source_follow_up."
+            }
+          ]
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-17T09:51:36Z",
+      "repaired_at": "2026-04-17T09:51:37Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "1e7d1e86ca976d17c4273b3cd879bfee44ec0c6b",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/commands/issue-triage.md",
+          ".opencode/commands/reverify-ticket.md",
+          ".opencode/lib/workflow.ts",
+          ".opencode/plugins/stage-gate-enforcer.ts",
+          ".opencode/skills/stack-standards/SKILL.md",
+          ".opencode/tools/ticket_lookup.ts",
+          ".opencode/tools/ticket_reverify.ts",
+          "START-HERE.md",
+          "docs/process/workflow.md"
+        ]
+      },
+      "audit_findings_addressed": [],
+      "verification_passed": false,
+      "verification_findings": [
+        "WFLOW033",
+        "SKILL001",
+        "EXEC-REMED-001"
+      ],
+      "remediation_ticket_ids": [
+        "REMED-031",
+        "REMED-032"
+      ],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation, reverification, or target-completion follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 3,
+        "error_count": 2,
+        "warning_count": 1,
+        "codes": [
+          "WFLOW033",
+          "SKILL001",
+          "EXEC-REMED-001"
+        ],
+        "blocking_codes": [
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [
+          "WFLOW033",
+          "EXEC-REMED-001"
+        ],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "transcript_backed",
+        "basis_requires_causal_replay": true,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-094133",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": true,
+          "pre_existing_codes": [
+            "EXEC-REMED-001",
+            "WFLOW033"
+          ],
+          "persistent_codes": [
+            "EXEC-REMED-001"
+          ],
+          "resolved_codes": [
+            "WFLOW033"
+          ],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [
+          "/home/rowan/Scafforge/reports/agent-runs/wvhvb-opencode-2026-04-17T04-13-58.log"
+        ],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 2,
+          "delta_count": 1,
+          "deltas": [
+            {
+              "code": "WFLOW033",
+              "legacy_disposition_class": "managed_blocker",
+              "disposition_class": "source_follow_up",
+              "route": "ticket-pack-builder",
+              "reason": "Legacy prefix classification would label WFLOW033 as managed_blocker, but the authoritative bundle assigns source_follow_up."
+            }
+          ]
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
+    },
+    {
+      "repair_id": "2026-04-17T17:09:47Z",
+      "repaired_at": "2026-04-17T17:09:48Z",
+      "repair_type": "managed-surface-replacement",
+      "repair_kind": "deterministic-workflow-engine-replacement",
+      "repair_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4",
+      "summary": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
+      "surfaces_replaced": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "replaced_surfaces": [
+        "opencode.jsonc",
+        ".opencode/tools",
+        ".opencode/lib",
+        ".opencode/plugins",
+        ".opencode/commands",
+        "scaffold-managed .opencode/skills",
+        ".opencode/agents",
+        "docs/process/workflow.md",
+        "docs/process/tooling.md",
+        "docs/process/model-matrix.md",
+        "docs/process/git-capability.md",
+        "START-HERE.md managed block",
+        ".opencode/state/.gitignore"
+      ],
+      "diff_summary": {
+        "files_added": [],
+        "files_removed": [],
+        "files_modified": [
+          ".opencode/lib/workflow.ts",
+          ".opencode/plugins/stage-gate-enforcer.ts",
+          ".opencode/skills/stack-standards/SKILL.md",
+          "START-HERE.md"
+        ]
+      },
+      "audit_findings_addressed": [
+        "WFLOW026"
+      ],
+      "verification_passed": false,
+      "verification_findings": [
+        "SKILL001",
+        "EXEC-REMED-001"
+      ],
+      "remediation_ticket_ids": [
+        "REMED-034"
+      ],
+      "process_version_before": 7,
+      "process_version_after": 7,
+      "backup_path": null,
+      "project_specific_follow_up": [
+        ".opencode/skills",
+        ".opencode/agents",
+        "docs/process/agent-catalog.md"
+      ],
+      "repair_follow_on_outcome": "managed_blocked",
+      "handoff_allowed": false,
+      "blocking_reasons": [
+        "project-skill-bootstrap must still run: Repo-local skills still contain generic placeholder/model drift that must be regenerated with project-specific content.",
+        "ticket-pack-builder must still run: Repair left remediation or reverification follow-up that must be routed into the repo ticket system.",
+        "Post-repair verification failed repair-contract consistency checks: placeholder_local_skills_survived_refresh."
+      ],
+      "verification_summary": {
+        "performed": true,
+        "finding_count": 2,
+        "error_count": 1,
+        "warning_count": 1,
+        "codes": [
+          "SKILL001",
+          "EXEC-REMED-001"
+        ],
+        "blocking_codes": [
+          "SKILL001"
+        ],
+        "manual_prerequisite_codes": [],
+        "source_follow_up_codes": [
+          "EXEC-REMED-001"
+        ],
+        "process_state_codes": [],
+        "advisory_codes": [],
+        "pending_process_verification": true,
+        "verification_basis": "transcript_backed",
+        "basis_requires_causal_replay": true,
+        "repair_basis_path": "/home/rowan/womanvshorseVB/diagnosis/20260417-170717",
+        "current_state_clean": false,
+        "causal_regression_verified": false,
+        "source_regression_summary": {
+          "comparison_available": true,
+          "pre_existing_codes": [
+            "EXEC-REMED-001"
+          ],
+          "persistent_codes": [
+            "EXEC-REMED-001"
+          ],
+          "resolved_codes": [],
+          "introduced_codes": [],
+          "introduced_critical_codes": []
+        },
+        "contract_failures": [
+          "placeholder_local_skills_survived_refresh"
+        ],
+        "contract_passed": false,
+        "verification_passed": false,
+        "supporting_logs": [
+          "/home/rowan/Scafforge/reports/agent-runs/wvhvb-opencode-2026-04-17T04-13-58.log"
+        ],
+        "disposition_shadow_mode": {
+          "bundle_available": true,
+          "bundle_version": 1,
+          "bundle_finding_count": 2,
+          "delta_count": 0,
+          "deltas": []
+        }
+      },
+      "migration_stage": {
+        "stage": "legacy-contract-migration",
+        "state": "current",
+        "policy": "current",
+        "required": false,
+        "migration_history_count": 0,
+        "from_process_version": 7,
+        "workflow_process_version": 7,
+        "repair_follow_on_process_version": 7,
+        "target_process_version": 7,
+        "compatibility_shim_scope": "package-internal",
+        "compatibility_shim_temporary": true,
+        "reasons": [],
+        "summary": "Repo already uses the current process contract.",
+        "migration_id": null
+      }
     }
   ],
   "restart_surface_regeneration_history": [
     {
-      "generated_at": "2026-04-15T03:00:25Z",
+      "generated_at": "2026-04-17T17:09:48Z",
       "source": "scafforge-repair",
       "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
       "regenerated": [
@@ -1852,7 +3064,7 @@
       "verification": "pending_or_failed"
     },
     {
-      "generated_at": "2026-04-15T03:00:25Z",
+      "generated_at": "2026-04-17T17:09:48Z",
       "source": "scafforge-repair",
       "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
       "regenerated": [
@@ -1862,7 +3074,7 @@
       ]
     },
     {
-      "generated_at": "2026-04-15T03:00:26Z",
+      "generated_at": "2026-04-17T17:09:51Z",
       "source": "scafforge-repair",
       "reason": "Refined repair follow-up tickets after managed repair.",
       "regenerated": [
@@ -1873,7 +3085,7 @@
       "verification": "pending_or_failed"
     },
     {
-      "generated_at": "2026-04-15T03:00:27Z",
+      "generated_at": "2026-04-17T17:09:53Z",
       "source": "scafforge-repair",
       "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
       "regenerated": [
@@ -1884,7 +3096,18 @@
       "verification": "pending_or_failed"
     },
     {
-      "generated_at": "2026-04-15T03:03:23Z",
+      "generated_at": "2026-04-17T17:15:38Z",
+      "source": "reconcile_repair_follow_on",
+      "reason": "repair-follow-on-reconcile: all required stages complete, outcome updated to source_follow_up",
+      "regenerated": [
+        "START-HERE.md",
+        ".opencode/state/context-snapshot.md",
+        ".opencode/state/latest-handoff.md"
+      ],
+      "verification": "pending_or_failed"
+    },
+    {
+      "generated_at": "2026-04-17T17:16:22Z",
       "source": "scafforge-repair",
       "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
       "regenerated": [
@@ -1894,39 +3117,7 @@
       ]
     },
     {
-      "generated_at": "2026-04-15T03:03:24Z",
-      "source": "scafforge-repair",
-      "reason": "Refined repair follow-up tickets after managed repair.",
-      "regenerated": [
-        "START-HERE.md",
-        ".opencode/state/context-snapshot.md",
-        ".opencode/state/latest-handoff.md"
-      ],
-      "verification": "pending_or_failed"
-    },
-    {
-      "generated_at": "2026-04-15T03:03:26Z",
-      "source": "scafforge-repair",
-      "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
-      "regenerated": [
-        "START-HERE.md",
-        ".opencode/state/context-snapshot.md",
-        ".opencode/state/latest-handoff.md"
-      ],
-      "verification": "pending_or_failed"
-    },
-    {
-      "generated_at": "2026-04-15T03:07:09Z",
-      "source": "scafforge-repair",
-      "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
-      "regenerated": [
-        "START-HERE.md",
-        ".opencode/state/context-snapshot.md",
-        ".opencode/state/latest-handoff.md"
-      ]
-    },
-    {
-      "generated_at": "2026-04-15T03:07:11Z",
+      "generated_at": "2026-04-17T17:16:24Z",
       "source": "scafforge-repair",
       "reason": "Refined repair follow-up tickets after managed repair.",
       "regenerated": [
@@ -1937,7 +3128,7 @@
       "verification": "passed"
     },
     {
-      "generated_at": "2026-04-15T03:07:12Z",
+      "generated_at": "2026-04-17T17:16:26Z",
       "source": "scafforge-repair",
       "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
       "regenerated": [
@@ -1949,7 +3140,7 @@
     }
   ],
   "last_restart_surface_regeneration": {
-    "generated_at": "2026-04-15T03:07:12Z",
+    "generated_at": "2026-04-17T17:16:26Z",
     "source": "scafforge-repair",
     "reason": "Managed Scafforge repair runner refreshed deterministic workflow surfaces and evaluated downstream repair obligations.",
     "regenerated": [

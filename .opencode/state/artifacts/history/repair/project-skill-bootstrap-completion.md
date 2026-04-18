@@ -1,9 +1,9 @@
 # Repair Follow-On Completion
 
 - completed_stage: project-skill-bootstrap
-- cycle_id: 2026-04-12T03:07:34Z
+- cycle_id: 2026-04-17T09:51:37Z
 - completed_by: project-skill-bootstrap
 
 ## Summary
 
-- Regenerated the repo-local `stack-standards` skill with Godot 4.6 Android-specific conventions, validation commands, asset provenance rules, and release-proof guidance for the current repair cycle.
+- Replaced the generic placeholder stack standards skill with project-specific Godot Android, provenance, and ticket-truth guidance for Woman vs Horse VB.

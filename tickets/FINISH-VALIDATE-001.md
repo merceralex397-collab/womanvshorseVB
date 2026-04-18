@@ -49,6 +49,7 @@ None
 
 - [ ] Finish proof artifact explicitly maps current evidence to the declared acceptance signals: APK compiles. All waves playable. All assets tracked. Credits scene works.
 - [ ] Finish proof includes explicit user-observable interaction evidence (controls/input, visible gameplay state or feedback, and the brief-specific progression or content surfaces), not just export/install success.
+- [ ] Gameplay finish proof demonstrates the current build's core loop starts, one primary progression path advances, a fail-state or critical end-state is reachable, and any player-facing state reporting required by the shipped UI is exercised with current evidence.
 - [ ] `godot4 --headless --path . --quit` succeeds so finish validation is based on a loadable product, not just exported artifacts
 - [ ] All finish-direction, visual, audio, or content ownership tickets required by the contract are completed before closeout
 
@@ -60,6 +61,7 @@ None
 - review: .opencode/state/artifacts/history/finish-validate-001/review/2026-04-16T01-35-31-998Z-review.md (review) - Code review PASS — all 4 ACs verified with runnable evidence, Godot headless exits 0, wave progression confirmed, credits.tscn loadable, PROVENANCE.md complete, user-observable interaction evidence present, all 12 prerequisite tickets done.
 - qa: .opencode/state/artifacts/history/finish-validate-001/qa/2026-04-16T01-37-12-863Z-qa.md (qa) - QA PASS for FINISH-VALIDATE-001: all 4 ACs verified PASS, Godot headless exits 0
 - smoke-test: .opencode/state/artifacts/history/finish-validate-001/smoke-test/2026-04-16T01-38-52-796Z-smoke-test.md (smoke-test) - Deterministic smoke test passed.
+- backlog-verification: .opencode/state/artifacts/history/finish-validate-001/review/2026-04-17T03-38-09-173Z-backlog-verification.md (review) - Backlog verification PASS for FINISH-VALIDATE-001: all 4 ACs verified, Godot headless exits 0, historical completion affirmed for process version 7.
 
 ## Notes
 

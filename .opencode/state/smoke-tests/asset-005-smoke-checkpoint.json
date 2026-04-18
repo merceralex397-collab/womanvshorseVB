@@ -1,8 +1,8 @@
 {
   "version": 1,
   "ticket_id": "ASSET-005",
-  "qa_artifact": ".opencode/state/artifacts/history/asset-005/qa/2026-04-16T00-13-48-150Z-qa.md",
-  "scope": "ticket",
+  "qa_artifact": ".opencode/state/artifacts/history/asset-005/qa/2026-04-17T10-30-19-942Z-qa.md",
+  "scope": "full-suite",
   "test_paths": [],
   "command_signatures": [
     "godot4 --headless --path . --quit"
@@ -11,10 +11,10 @@
   "commands_completed": 1,
   "completed": true,
   "passed": true,
-  "updated_at": "2026-04-16T00:14:09.830Z",
+  "updated_at": "2026-04-17T10:30:45.089Z",
   "commands": [
     {
-      "label": "qa artifact command 1",
+      "label": "command override 1",
       "argv": [
         "godot4",
         "--headless",
@@ -22,9 +22,9 @@
         ".",
         "--quit"
       ],
-      "reason": "Current QA artifact records a deterministic smoke-test command.",
+      "reason": "Explicit smoke-test command override supplied by the caller.",
       "exit_code": 0,
-      "duration_ms": 184,
+      "duration_ms": 185,
       "stdout": "Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org\n\n",
       "stderr": ""
     }

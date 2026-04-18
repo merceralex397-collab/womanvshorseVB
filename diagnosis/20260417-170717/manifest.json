@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-04-17T17:07:17Z",
+  "repo_root": "/home/rowan/womanvshorseVB",
+  "finding_count": 2,
+  "finding_codes": [
+    "EXEC-REMED-001",
+    "WFLOW026"
+  ],
+  "source_findings": [
+    {
+      "code": "EXEC-REMED-001",
+      "severity": "error"
+    }
+  ],
+  "result_state": "validated failures found",
+  "diagnosis_kind": "post_package_revalidation",
+  "evidence_mode": "current_state_only",
+  "audit_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+  "report_files": {
+    "report_1": "01-initial-codebase-review.md",
+    "report_2": "02-scafforge-process-failures.md",
+    "report_3": "03-scafforge-prevention-actions.md",
+    "report_4": "04-live-repo-repair-plan.md"
+  },
+  "disposition_bundle_file": "disposition-bundle.json",
+  "disposition_bundle": {
+    "version": 1,
+    "generated_at": "2026-04-17T17:07:17Z",
+    "repo_root": "/home/rowan/womanvshorseVB",
+    "audit_package_commit": "b2205a14fc57390317ff7b52a5c79e7a6a29adf4+dirty:9098717018f7",
+    "allowed_classes": [
+      "managed_blocker",
+      "manual_prerequisite_blocker",
+      "source_follow_up",
+      "process_state_only",
+      "advisory"
+    ],
+    "finding_count": 2,
+    "findings": [
+      {
+        "code": "WFLOW026",
+        "severity": "error",
+        "disposition_class": "managed_blocker",
+        "legacy_disposition_class": "managed_blocker",
+        "route": "scafforge-repair",
+        "repair_class": "safe Scafforge package change",
+        "evidence_grade": "repo-state validation",
+        "source_files": [
+          ".opencode/lib/workflow.ts",
+          "tickets/manifest.json",
+          ".opencode/state/artifacts/history/core-001/qa/2026-04-10T05-33-28-878Z-qa.md",
+          ".opencode/state/artifacts/history/core-001/review/2026-04-10T11-01-03-139Z-backlog-verification.md",
+          ".opencode/state/artifacts/history/core-002/qa/2026-04-10T05-50-18-546Z-qa.md",
+          ".opencode/state/artifacts/history/core-002/review/2026-04-10T11-00-55-115Z-backlog-verification.md",
+          ".opencode/state/artifacts/history/core-003/qa/2026-04-10T12-20-37-063Z-qa.md",
+          ".opencode/state/artifacts/history/core-006/review/2026-04-10T12-32-47-750Z-review.md",
+          ".opencode/state/artifacts/history/core-006/qa/2026-04-10T12-34-16-265Z-qa.md",
+          ".opencode/state/artifacts/history/ui-003/qa/2026-04-16T00-49-55-248Z-qa.md",
+          ".opencode/state/artifacts/history/release-001/qa/2026-04-16T01-50-04-166Z-qa.md",
+          ".opencode/state/artifacts/history/remed-002/qa/2026-04-11T13-53-52-706Z-qa.md",
+          ".opencode/state/artifacts/history/finish-validate-001/qa/2026-04-16T01-37-12-863Z-qa.md",
+          ".opencode/state/artifacts/history/remed-013/qa/2026-04-17T02-51-28-457Z-qa.md",
+          ".opencode/state/artifacts/history/remed-013/review/2026-04-17T09-24-29-204Z-backlog-verification.md",
+          ".opencode/state/artifacts/history/remed-014/qa/2026-04-17T02-57-46-804Z-qa.md",
+          ".opencode/state/artifacts/history/remed-014/review/2026-04-17T09-26-13-801Z-backlog-verification.md",
+          ".opencode/state/artifacts/history/remed-030/review/2026-04-17T09-20-11-564Z-review.md",
+          ".opencode/state/artifacts/history/remed-030/qa/2026-04-17T09-21-50-447Z-qa.md",
+          ".opencode/state/artifacts/history/remed-033/review/2026-04-17T10-34-06-118Z-review.md",
+          ".opencode/state/artifacts/history/remed-033/qa/2026-04-17T10-35-55-248Z-qa.md"
+        ],
+        "provenance": "script"
+      },
+      {
+        "code": "EXEC-REMED-001",
+        "severity": "error",
+        "disposition_class": "source_follow_up",
+        "legacy_disposition_class": "source_follow_up",
+        "route": "ticket-pack-builder",
+        "repair_class": "generated-repo remediation ticket",
+        "evidence_grade": "repo-state validation",
+        "source_files": [
+          "tickets/manifest.json",
+          ".opencode/state/reviews/remed-026-review-review.md"
+        ],
+        "provenance": "script"
+      }
+    ],
+    "counts": {
+      "managed_blocker": 1,
+      "manual_prerequisite_blocker": 0,
+      "source_follow_up": 1,
+      "process_state_only": 0,
+      "advisory": 0
+    },
+    "shadow_mode_deltas": []
+  },
+  "ticket_recommendations": [
+    {
+      "id": "REMED-034",
+      "title": "Remediation review artifact does not contain runnable command evidence",
+      "description": "Remediate EXEC-REMED-001 by correcting the validated issue and rerunning the relevant quality checks.",
+      "affected_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-026-review-review.md"
+      ],
+      "suggested_fix_approach": "For remediation tickets with `finding_source`, require the review artifact to record the exact command run, include raw command output, and state the explicit PASS/FAIL result before the review counts as trustworthy closure.",
+      "assignee": "implementer",
+      "source_finding_code": "EXEC-REMED-001",
+      "source_finding_codes": [
+        "EXEC-REMED-001"
+      ],
+      "severity": "error",
+      "route": "ticket-pack-builder",
+      "repair_class": "generated-repo remediation ticket",
+      "summary": "For remediation tickets with `finding_source`, require the review artifact to record the exact command run, include raw command output, and state the explicit PASS/FAIL result before the review counts as trustworthy closure.",
+      "source_files": [
+        "tickets/manifest.json",
+        ".opencode/state/reviews/remed-026-review-review.md"
+      ]
+    },
+    {
+      "id": "REMED-035",
+      "title": "Current artifacts contain explicit verdict headings or labels, but the generated verdict extractor still reports them as unclear",
+      "description": "Remediate WFLOW026 by correcting the validated issue and rerunning the relevant quality checks.",
+      "affected_files": [
+        ".opencode/lib/workflow.ts",
+        "tickets/manifest.json",
+        ".opencode/state/artifacts/history/core-001/qa/2026-04-10T05-33-28-878Z-qa.md",
+        ".opencode/state/artifacts/history/core-001/review/2026-04-10T11-01-03-139Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/core-002/qa/2026-04-10T05-50-18-546Z-qa.md",
+        ".opencode/state/artifacts/history/core-002/review/2026-04-10T11-00-55-115Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/core-003/qa/2026-04-10T12-20-37-063Z-qa.md",
+        ".opencode/state/artifacts/history/core-006/review/2026-04-10T12-32-47-750Z-review.md",
+        ".opencode/state/artifacts/history/core-006/qa/2026-04-10T12-34-16-265Z-qa.md",
+        ".opencode/state/artifacts/history/ui-003/qa/2026-04-16T00-49-55-248Z-qa.md",
+        ".opencode/state/artifacts/history/release-001/qa/2026-04-16T01-50-04-166Z-qa.md",
+        ".opencode/state/artifacts/history/remed-002/qa/2026-04-11T13-53-52-706Z-qa.md",
+        ".opencode/state/artifacts/history/finish-validate-001/qa/2026-04-16T01-37-12-863Z-qa.md",
+        ".opencode/state/artifacts/history/remed-013/qa/2026-04-17T02-51-28-457Z-qa.md",
+        ".opencode/state/artifacts/history/remed-013/review/2026-04-17T09-24-29-204Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/remed-014/qa/2026-04-17T02-57-46-804Z-qa.md",
+        ".opencode/state/artifacts/history/remed-014/review/2026-04-17T09-26-13-801Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/remed-030/review/2026-04-17T09-20-11-564Z-review.md",
+        ".opencode/state/artifacts/history/remed-030/qa/2026-04-17T09-21-50-447Z-qa.md",
+        ".opencode/state/artifacts/history/remed-033/review/2026-04-17T10-34-06-118Z-review.md",
+        ".opencode/state/artifacts/history/remed-033/qa/2026-04-17T10-35-55-248Z-qa.md"
+      ],
+      "suggested_fix_approach": "Keep one shared artifact verdict extractor that accepts the real artifact family in use: plain and markdown-emphasized verdict labels, compact `QA/Review + verdict` headings, `## Decision` headings with the verdict on the next line, and `Overall: PASS/FAIL` labels. Route ticket_lookup and ticket_update through that shared parser instead of treating explicit review or QA verdicts as unclear.",
+      "assignee": "implementer",
+      "source_finding_code": "WFLOW026",
+      "source_finding_codes": [
+        "WFLOW026"
+      ],
+      "severity": "error",
+      "route": "scafforge-repair",
+      "repair_class": "safe Scafforge package change",
+      "summary": "Keep one shared artifact verdict extractor that accepts the real artifact family in use: plain and markdown-emphasized verdict labels, compact `QA/Review + verdict` headings, `## Decision` headings with the verdict on the next line, and `Overall: PASS/FAIL` labels. Route ticket_lookup and ticket_update through that shared parser instead of treating explicit review or QA verdicts as unclear.",
+      "source_files": [
+        ".opencode/lib/workflow.ts",
+        "tickets/manifest.json",
+        ".opencode/state/artifacts/history/core-001/qa/2026-04-10T05-33-28-878Z-qa.md",
+        ".opencode/state/artifacts/history/core-001/review/2026-04-10T11-01-03-139Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/core-002/qa/2026-04-10T05-50-18-546Z-qa.md",
+        ".opencode/state/artifacts/history/core-002/review/2026-04-10T11-00-55-115Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/core-003/qa/2026-04-10T12-20-37-063Z-qa.md",
+        ".opencode/state/artifacts/history/core-006/review/2026-04-10T12-32-47-750Z-review.md",
+        ".opencode/state/artifacts/history/core-006/qa/2026-04-10T12-34-16-265Z-qa.md",
+        ".opencode/state/artifacts/history/ui-003/qa/2026-04-16T00-49-55-248Z-qa.md",
+        ".opencode/state/artifacts/history/release-001/qa/2026-04-16T01-50-04-166Z-qa.md",
+        ".opencode/state/artifacts/history/remed-002/qa/2026-04-11T13-53-52-706Z-qa.md",
+        ".opencode/state/artifacts/history/finish-validate-001/qa/2026-04-16T01-37-12-863Z-qa.md",
+        ".opencode/state/artifacts/history/remed-013/qa/2026-04-17T02-51-28-457Z-qa.md",
+        ".opencode/state/artifacts/history/remed-013/review/2026-04-17T09-24-29-204Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/remed-014/qa/2026-04-17T02-57-46-804Z-qa.md",
+        ".opencode/state/artifacts/history/remed-014/review/2026-04-17T09-26-13-801Z-backlog-verification.md",
+        ".opencode/state/artifacts/history/remed-030/review/2026-04-17T09-20-11-564Z-review.md",
+        ".opencode/state/artifacts/history/remed-030/qa/2026-04-17T09-21-50-447Z-qa.md",
+        ".opencode/state/artifacts/history/remed-033/review/2026-04-17T10-34-06-118Z-review.md",
+        ".opencode/state/artifacts/history/remed-033/qa/2026-04-17T10-35-55-248Z-qa.md"
+      ]
+    }
+  ],
+  "package_work_required_first": false,
+  "recommended_next_step": "subject_repo_repair",
+  "recommended_ticket_payload": "recommended-ticket-payload.json"
+}

@@ -1,38 +1,48 @@
 ---
 name: stack-standards
-description: Hold the project-local standards for languages, frameworks, validation, and runtime assumptions. Use when planning or implementing work that should follow repo-specific engineering conventions.
+description: Repo-specific Godot 4.6 Android standards for Woman vs Horse VB, including free/open asset provenance and credits requirements.
 ---
 
 # Stack Standards
 
 Before applying these rules, call `skill_ping` with `skill_id: "stack-standards"` and `scope: "project"`.
 
-Current scaffold mode: `godot-2d-android-game`
+Current stack: `Godot 4.6 / GDScript / Android export / free-open 2D asset pipeline`
 
-## Repo Standards
+## Core engineering rules
 
-This repo is a Godot 4.6 Android 2D game that uses sourced free/open assets plus Godot-native UI and VFX.
+- Treat this repo as a Godot Android game with sourced free/open assets, not a generic framework-agnostic project.
+- Use typed GDScript for gameplay scripts and keep scene/script changes aligned with the wave-combat loop from the canonical brief.
+- Preserve the approved asset route: Kenney.nl, OpenGameArt.org, Freesound.org, and Google Fonts under the licensing rules already captured in repo-local skills.
+- Any asset addition or replacement must keep `assets/PROVENANCE.md` and CC-BY credit coverage truthful before the ticket can close.
+- Prefer consistent imported asset packs over ad hoc one-off files that break style or provenance traceability.
 
-### Engine And Runtime
-- Keep scene and script references truthful: every `res://` path in `.tscn`, `.tres`, and `project.godot` must exist after edits.
-- Treat warning-free headless load as the minimum bar: invalid UID fallback warnings and missing imports count as real defects.
-- Preserve Android-targeted settings in `project.godot`, `export_presets.cfg`, and `android/scafforge-managed.json`.
-- Prefer concrete node-instance wiring over script-resource indirection for UI signals and gameplay hooks.
+## Godot and asset-pipeline rules
 
-### Quality Gate Commands
+- Script files stay `snake_case.gd`; classes use `PascalCase`; constants use `UPPER_SNAKE_CASE`.
+- Keep touch controls, wave logic, and UI flow compatible with the Android landscape target.
+- Import only verified free/open assets. Reject non-commercial or unknown-license sources.
+- If an asset is CC-BY, the credits scene must surface the attribution before closeout.
+- Do not fabricate placeholder audio or art to satisfy acceptance; VB's finish contract requires real sourced assets with provenance.
 
-- Runtime load: `godot4 --headless --path . --quit`
-- Reference integrity: `rg 'uid://|res://' project.godot scenes scripts assets`
-- Android surfaces after workflow repair: confirm `export_presets.cfg` and `android/scafforge-managed.json` still match the current package contract
-- Asset route truth: review `assets/pipeline.json`, `.opencode/meta/asset-pipeline-bootstrap.json`, and `assets/PROVENANCE.md` together after any asset-route or provenance change
+## Validation commands
 
-### Asset Route
-- Primary asset route is sourced free/open content from Kenney, OpenGameArt, Freesound, and compatible fonts.
-- `blender_agent` should stay disabled in `opencode.jsonc`; this repo is not a Blender-MCP generation route.
-- Track every committed external asset in `assets/PROVENANCE.md`, and keep CC-BY credits aligned with the credits scene requirements from the brief.
-- Keep Godot-native UI themes and VFX aligned with the route metadata in `assets/pipeline.json` instead of inventing side channels.
+Run the narrowest commands that prove the active ticket honestly passes:
 
-### Process
-- Use ticket tools to move lifecycle state; do not hand-edit ticket stage/status without matching artifact evidence.
-- Review and QA artifacts must include explicit PASS/FAIL verdicts and command evidence for remediation tickets.
-- Release-facing work must preserve the finish-validation lane and prove both playable waves and asset/provenance coverage before closeout.
+- Project load / import check: `godot4 --headless --path . --quit`
+- Android export proof: `godot4 --headless --path . --export-debug "Android Debug" build/android/womanvshorsevb-debug.apk`
+
+For asset tickets and remediation follow-up, also verify the exact imported files and provenance entries that changed. Do not treat expected provenance as completed provenance.
+
+## Review and QA expectations
+
+- Review and QA must fail when the project does not load, the Android export fails, or imported assets are missing / broken.
+- Review and QA must fail when any committed asset lacks a matching `assets/PROVENANCE.md` entry.
+- Remediation tickets with `finding_source` must rerun the original failing command or check before approval.
+- Reject fake PASS audio or review artifacts; explicit verdicts in review / QA output must match the actual command result.
+
+## Release-proof expectations
+
+- The canonical release target is `build/android/womanvshorsevb-debug.apk`.
+- Final proof must include working touch controls, playable waves, and truthful sourced-asset presentation.
+- Credits-scene and provenance correctness are part of finish quality, not optional documentation polish.
